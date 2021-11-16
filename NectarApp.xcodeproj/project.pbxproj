@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873026842743DAD800CA31CA /* SingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026832743DAD800CA31CA /* SingInViewController.swift */; };
 		879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0827436FC600252BE0 /* AppDelegate.swift */; };
 		879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0A27436FC600252BE0 /* SceneDelegate.swift */; };
 		879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0C27436FC600252BE0 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		873026832743DAD800CA31CA /* SingInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewController.swift; sourceTree = "<group>"; };
 		879FAC0527436FC600252BE0 /* NectarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NectarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879FAC0827436FC600252BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879FAC0A27436FC600252BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		873026802743D9E500CA31CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				873026822743DAB600CA31CA /* SingIn  */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		873026812743D9F600CA31CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		873026822743DAB600CA31CA /* SingIn  */ = {
+			isa = PBXGroup;
+			children = (
+				873026832743DAD800CA31CA /* SingInViewController.swift */,
+			);
+			path = "SingIn ";
+			sourceTree = "<group>";
+		};
 		879FABFC27436FC600252BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +81,8 @@
 		879FAC0727436FC600252BE0 /* NectarApp */ = {
 			isa = PBXGroup;
 			children = (
+				873026812743D9F600CA31CA /* Models */,
+				873026802743D9E500CA31CA /* Controllers */,
 				879FAC0827436FC600252BE0 /* AppDelegate.swift */,
 				879FAC0A27436FC600252BE0 /* SceneDelegate.swift */,
 				879FAC0C27436FC600252BE0 /* ViewController.swift */,
@@ -137,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873026842743DAD800CA31CA /* SingInViewController.swift in Sources */,
 				879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */,
 				879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */,
 				879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */,
