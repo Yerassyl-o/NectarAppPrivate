@@ -9,9 +9,15 @@ import UIKit
 
 class NumberViewController: UIViewController {
 
+    @IBOutlet weak var numberEnterField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpnumberEnterField()
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension NumberViewController {
+    func setUpnumberEnterField(){
+        numberEnterField.keyboardType = .phonePad
     }
 }
