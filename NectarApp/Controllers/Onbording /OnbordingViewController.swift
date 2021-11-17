@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OnbordingViewController.swift
 //  NectarApp
 //
 //  Created by Yerassyl Orazbekov on 17.11.2021.
@@ -7,11 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OnbordingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 }

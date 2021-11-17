@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LogInViewController.swift
 //  NectarApp
 //
 //  Created by Yerassyl Orazbekov on 17.11.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
