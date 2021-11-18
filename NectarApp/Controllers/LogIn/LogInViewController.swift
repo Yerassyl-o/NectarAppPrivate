@@ -8,6 +8,7 @@
 import UIKit
 
 class LogInViewController: UIViewController {
+    let loginModels = LoginModels()
     var loginSecureText = true
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -15,12 +16,14 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var singUpButton: UIButton!
     @IBOutlet weak var bottomPassword1pxView: UIView!
+    @IBOutlet weak var bottomEmail1pxView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
         passwordTextField.delegate = self
         keyBoardSetUp()
-        setUpnumberEnterFieldPassword()
+        setUpPasswordEnterField()
+        setUpLoginEnterField()
     }
     @IBAction func secureNoSecureAction(_ sender: Any) {
         setUpsecureNoSecure()
@@ -46,9 +49,7 @@ extension LogInViewController {
     }
 }
 
-extension LogInViewController{
-    
-}
+//MARK: SetUp Password text field
 
 extension LogInViewController: UITextFieldDelegate {
     func setUpsecureNoSecure(){
@@ -60,7 +61,7 @@ extension LogInViewController: UITextFieldDelegate {
             loginSecureText = true
         }
     }
-    func setUpnumberEnterFieldPassword(){
+    func setUpPasswordEnterField(){
         passwordTextField.keyboardType = .alphabet
         passwordTextField.isSecureTextEntry = true
         self.passwordTextField.delegate = self
@@ -88,9 +89,35 @@ extension LogInViewController: UITextFieldDelegate {
         }
     }
 }
+//MARK: SetUp Email text field
 
+extension LogInViewController{
+    func setUpLoginEnterField(){
+        emailTextField.keyboardType = .emailAddress
+        self.emailTextField.delegate = self
+        emailTextField.addTarget(self, action: #selector(textFieldDidChangeEmail), for: .editingChanged)
 
+    }
+    @objc func textFieldDidChangeEmail(_ textField: UITextField) {
+        emailEnterSetup()
+    }
 
+    func emailEnterSetup() {
+        print("Hello")
+        let checkEmail = loginModels.checkEmail(passwordTextField.text!)
+        print(checkEmail)
+        if checkEmail == false && emailTextField.text!.count > 0 {
+            print("Hello2")
+            bottomEmail1pxView.backgroundColor = .systemRed
+            
+        } else if checkEmail == true {
+            bottomEmail1pxView.backgroundColor = .systemGreen
+        } else if emailTextField.text!.count == 0 {
+            bottomEmail1pxView.backgroundColor = UIColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
+        }
+       
+    }
+}
 
 
     
