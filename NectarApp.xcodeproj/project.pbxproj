@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		873026842743DAD800CA31CA /* SingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026832743DAD800CA31CA /* SingInViewController.swift */; };
 		873026872744201100CA31CA /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026862744201100CA31CA /* NumberViewController.swift */; };
+		8730269D274612D700CA31CA /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730269C274612D700CA31CA /* VerificationViewController.swift */; };
+		873026A02746133C00CA31CA /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730269F2746133C00CA31CA /* SelectLocationViewController.swift */; };
+		873026A3274613C800CA31CA /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026A2274613C800CA31CA /* LogInViewController.swift */; };
+		873026A6274613E900CA31CA /* SignUpAlternativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026A5274613E900CA31CA /* SignUpAlternativeViewController.swift */; };
+		873026A92746143700CA31CA /* OnbordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026A82746143700CA31CA /* OnbordingViewController.swift */; };
+		873026AC2746539C00CA31CA /* VerificationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026AB2746539C00CA31CA /* VerificationModels.swift */; };
+		873026AF274664C600CA31CA /* phoneMaskModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026AE274664C600CA31CA /* phoneMaskModels.swift */; };
 		879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0827436FC600252BE0 /* AppDelegate.swift */; };
 		879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0A27436FC600252BE0 /* SceneDelegate.swift */; };
 		879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0C27436FC600252BE0 /* ViewController.swift */; };
@@ -20,6 +27,13 @@
 /* Begin PBXFileReference section */
 		873026832743DAD800CA31CA /* SingInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewController.swift; sourceTree = "<group>"; };
 		873026862744201100CA31CA /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
+		8730269C274612D700CA31CA /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		8730269F2746133C00CA31CA /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
+		873026A2274613C800CA31CA /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		873026A5274613E900CA31CA /* SignUpAlternativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAlternativeViewController.swift; sourceTree = "<group>"; };
+		873026A82746143700CA31CA /* OnbordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingViewController.swift; sourceTree = "<group>"; };
+		873026AB2746539C00CA31CA /* VerificationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationModels.swift; sourceTree = "<group>"; };
+		873026AE274664C600CA31CA /* phoneMaskModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneMaskModels.swift; sourceTree = "<group>"; };
 		879FAC0527436FC600252BE0 /* NectarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NectarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879FAC0827436FC600252BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879FAC0A27436FC600252BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +58,11 @@
 		873026802743D9E500CA31CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				873026A72746142500CA31CA /* onbording */,
+				873026A4274613D700CA31CA /* SignUpAlternative */,
+				873026A1274613B700CA31CA /* LogIn */,
+				8730269E2746130F00CA31CA /* SelectLocation */,
+				8730269B27456F5200CA31CA /* Verification */,
 				8730268527441FFF00CA31CA /* Number */,
 				873026822743DAB600CA31CA /* SingIn  */,
 			);
@@ -53,6 +72,8 @@
 		873026812743D9F600CA31CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				873026AD274664AA00CA31CA /* PhoneMask */,
+				873026AA2746538300CA31CA /* Verification */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -71,6 +92,62 @@
 				873026862744201100CA31CA /* NumberViewController.swift */,
 			);
 			path = Number;
+			sourceTree = "<group>";
+		};
+		8730269B27456F5200CA31CA /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				8730269C274612D700CA31CA /* VerificationViewController.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		8730269E2746130F00CA31CA /* SelectLocation */ = {
+			isa = PBXGroup;
+			children = (
+				8730269F2746133C00CA31CA /* SelectLocationViewController.swift */,
+			);
+			path = SelectLocation;
+			sourceTree = "<group>";
+		};
+		873026A1274613B700CA31CA /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				873026A2274613C800CA31CA /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		873026A4274613D700CA31CA /* SignUpAlternative */ = {
+			isa = PBXGroup;
+			children = (
+				873026A5274613E900CA31CA /* SignUpAlternativeViewController.swift */,
+			);
+			path = SignUpAlternative;
+			sourceTree = "<group>";
+		};
+		873026A72746142500CA31CA /* onbording */ = {
+			isa = PBXGroup;
+			children = (
+				873026A82746143700CA31CA /* OnbordingViewController.swift */,
+			);
+			path = onbording;
+			sourceTree = "<group>";
+		};
+		873026AA2746538300CA31CA /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				873026AB2746539C00CA31CA /* VerificationModels.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		873026AD274664AA00CA31CA /* PhoneMask */ = {
+			isa = PBXGroup;
+			children = (
+				873026AE274664C600CA31CA /* phoneMaskModels.swift */,
+			);
+			path = PhoneMask;
 			sourceTree = "<group>";
 		};
 		879FABFC27436FC600252BE0 = {
@@ -175,10 +252,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				873026A02746133C00CA31CA /* SelectLocationViewController.swift in Sources */,
+				8730269D274612D700CA31CA /* VerificationViewController.swift in Sources */,
 				873026842743DAD800CA31CA /* SingInViewController.swift in Sources */,
+				873026A92746143700CA31CA /* OnbordingViewController.swift in Sources */,
+				873026AC2746539C00CA31CA /* VerificationModels.swift in Sources */,
+				873026AF274664C600CA31CA /* phoneMaskModels.swift in Sources */,
 				879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */,
+				873026A3274613C800CA31CA /* LogInViewController.swift in Sources */,
 				879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */,
 				879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */,
+				873026A6274613E900CA31CA /* SignUpAlternativeViewController.swift in Sources */,
 				873026872744201100CA31CA /* NumberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
