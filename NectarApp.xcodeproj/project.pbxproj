@@ -34,6 +34,9 @@
 		873026A82746143700CA31CA /* OnbordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingViewController.swift; sourceTree = "<group>"; };
 		873026AB2746539C00CA31CA /* VerificationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationModels.swift; sourceTree = "<group>"; };
 		873026AE274664C600CA31CA /* phoneMaskModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneMaskModels.swift; sourceTree = "<group>"; };
+		873026B1274671A500CA31CA /* gilroy-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-medium.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-medium.ttf"; sourceTree = "<group>"; };
+		873026B2274671A500CA31CA /* gilroy-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-regular.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-regular.ttf"; sourceTree = "<group>"; };
+		873026B3274671A500CA31CA /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-semibold.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-semibold.ttf"; sourceTree = "<group>"; };
 		879FAC0527436FC600252BE0 /* NectarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NectarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879FAC0827436FC600252BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879FAC0A27436FC600252BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +153,16 @@
 			path = PhoneMask;
 			sourceTree = "<group>";
 		};
+		873026B02746716F00CA31CA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				873026B1274671A500CA31CA /* gilroy-medium.ttf */,
+				873026B2274671A500CA31CA /* gilroy-regular.ttf */,
+				873026B3274671A500CA31CA /* gilroy-semibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		879FABFC27436FC600252BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +184,7 @@
 			children = (
 				873026812743D9F600CA31CA /* Models */,
 				873026802743D9E500CA31CA /* Controllers */,
+				873026B02746716F00CA31CA /* Fonts */,
 				879FAC0827436FC600252BE0 /* AppDelegate.swift */,
 				879FAC0A27436FC600252BE0 /* SceneDelegate.swift */,
 				879FAC0C27436FC600252BE0 /* ViewController.swift */,

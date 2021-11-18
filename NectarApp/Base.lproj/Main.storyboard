@@ -123,6 +123,9 @@
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="contnueFacebookAction:" destination="jMg-Sy-8iX" eventType="touchUpInside" id="gEr-tD-5aj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rze-Kf-owc">
                                 <rect key="frame" x="24" y="651" width="364" height="67"/>
@@ -140,6 +143,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="contnueGoogleAction:" destination="jMg-Sy-8iX" eventType="touchUpInside" id="YhQ-pV-RBb"/>
                                     <segue destination="J1T-9g-1a7" kind="show" id="0dN-E9-hO0"/>
                                 </connections>
                             </button>
@@ -156,6 +160,9 @@
                                     <constraint firstAttribute="height" constant="24" id="BKU-kH-OKy"/>
                                 </constraints>
                                 <state key="normal" title="🇰🇿"/>
+                                <connections>
+                                    <action selector="locationButtonAction:" destination="jMg-Sy-8iX" eventType="touchUpInside" id="hbY-DX-3Zf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+880" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OlY-J7-34M">
                                 <rect key="frame" x="66" y="519" width="324" height="23"/>
@@ -198,6 +205,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qlz-4y-O1F"/>
+                    <connections>
+                        <outlet property="OrSoialMediaText" destination="cG1-vG-DUF" id="AsQ-xY-zPq"/>
+                        <outlet property="bottom1pxView" destination="AOT-LE-Fqc" id="x5G-gx-RGn"/>
+                        <outlet property="facebookButton" destination="IRW-Eg-UEJ" id="PoQ-fz-UAd"/>
+                        <outlet property="googleButton" destination="Rze-Kf-owc" id="teM-WY-N4b"/>
+                        <outlet property="locationButton" destination="a8w-av-DVo" id="O1s-Gy-gnx"/>
+                        <outlet property="mainTitleLabel" destination="87Y-aL-KdY" id="D87-SQ-paG"/>
+                        <outlet property="numberEnterField" destination="OlY-J7-34M" id="xT5-nw-yyj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTQ-wi-dCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -598,7 +614,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="imshuvo97@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d8o-xJ-7n5">
                                         <rect key="frame" x="0.0" y="30.5" width="352" height="23"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24j-he-NTo">
                                         <rect key="frame" x="0.0" y="63.5" width="352" height="1"/>
@@ -649,10 +665,10 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="177" translatesAutoresizingMaskIntoConstraints="NO" id="IbJ-Pf-6tF">
                                         <rect key="frame" x="0.0" y="30.5" width="366" height="23"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mp6-GL-6EX">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mp6-GL-6EX">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfZ-wl-72M">
                                                 <rect key="frame" x="340" y="0.0" width="26" height="23"/>
@@ -662,6 +678,9 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" image="eye.slash" catalog="system"/>
+                                                <connections>
+                                                    <action selector="secureNoSecureAction:" destination="FPG-qb-Udc" eventType="touchUpInside" id="Mvt-B2-WQi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -756,6 +775,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lLx-2S-jp5"/>
+                    <connections>
+                        <outlet property="bottomPassword1pxView" destination="6AS-QT-MTz" id="8dl-e5-4w4"/>
+                        <outlet property="emailTextField" destination="d8o-xJ-7n5" id="6uF-G6-zoe"/>
+                        <outlet property="logInButton" destination="tNZ-ib-t7G" id="xPQ-nc-1OM"/>
+                        <outlet property="passwordTextField" destination="mp6-GL-6EX" id="9WL-Cb-Kcx"/>
+                        <outlet property="secureNoSecureButton" destination="VfZ-wl-72M" id="6V9-CP-wKw"/>
+                        <outlet property="singUpButton" destination="JSJ-2i-fW2" id="NCc-GE-kWf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="05f-0a-G1X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
