@@ -18,6 +18,14 @@
 		873026AF274664C600CA31CA /* phoneMaskModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026AE274664C600CA31CA /* phoneMaskModels.swift */; };
 		873026B62746831900CA31CA /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026B52746831900CA31CA /* LoginModels.swift */; };
 		873026B92747572100CA31CA /* CustomTabBarVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026B82747572100CA31CA /* CustomTabBarVc.swift */; };
+		878182682747AEE8001F8CEF /* AccountInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182662747AEE8001F8CEF /* AccountInfoTableViewCell.swift */; };
+		878182692747AEE8001F8CEF /* AccountInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878182672747AEE8001F8CEF /* AccountInfoTableViewCell.xib */; };
+		8781826E2747B30A001F8CEF /* LogOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781826C2747B30A001F8CEF /* LogOutTableViewCell.swift */; };
+		8781826F2747B30A001F8CEF /* LogOutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8781826D2747B30A001F8CEF /* LogOutTableViewCell.xib */; };
+		878182732747B66B001F8CEF /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182712747B66B001F8CEF /* MenuTableViewCell.swift */; };
+		878182742747B66B001F8CEF /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878182722747B66B001F8CEF /* MenuTableViewCell.xib */; };
+		878182772747B9D5001F8CEF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182762747B9D5001F8CEF /* AccountViewController.swift */; };
+		8781827A2747CA05001F8CEF /* MenuModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182792747CA05001F8CEF /* MenuModels.swift */; };
 		879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0827436FC600252BE0 /* AppDelegate.swift */; };
 		879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0A27436FC600252BE0 /* SceneDelegate.swift */; };
 		879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0C27436FC600252BE0 /* ViewController.swift */; };
@@ -41,6 +49,14 @@
 		873026B3274671A500CA31CA /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-semibold.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-semibold.ttf"; sourceTree = "<group>"; };
 		873026B52746831900CA31CA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		873026B82747572100CA31CA /* CustomTabBarVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVc.swift; sourceTree = "<group>"; };
+		878182662747AEE8001F8CEF /* AccountInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoTableViewCell.swift; sourceTree = "<group>"; };
+		878182672747AEE8001F8CEF /* AccountInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountInfoTableViewCell.xib; sourceTree = "<group>"; };
+		8781826C2747B30A001F8CEF /* LogOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutTableViewCell.swift; sourceTree = "<group>"; };
+		8781826D2747B30A001F8CEF /* LogOutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogOutTableViewCell.xib; sourceTree = "<group>"; };
+		878182712747B66B001F8CEF /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		878182722747B66B001F8CEF /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		878182762747B9D5001F8CEF /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		878182792747CA05001F8CEF /* MenuModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModels.swift; sourceTree = "<group>"; };
 		879FAC0527436FC600252BE0 /* NectarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NectarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879FAC0827436FC600252BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879FAC0A27436FC600252BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +81,7 @@
 		873026802743D9E500CA31CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				878182622747AE61001F8CEF /* Account */,
 				873026B7274756F700CA31CA /* TabBar */,
 				873026A72746142500CA31CA /* onbording */,
 				873026A4274613D700CA31CA /* SignUpAlternative */,
@@ -80,6 +97,7 @@
 		873026812743D9F600CA31CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				878182782747C937001F8CEF /* AccountMenu */,
 				873026B4274682E200CA31CA /* Login */,
 				873026AD274664AA00CA31CA /* PhoneMask */,
 				873026AA2746538300CA31CA /* Verification */,
@@ -185,6 +203,60 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		878182622747AE61001F8CEF /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				878182752747B9AC001F8CEF /* AccountVC */,
+				878182702747B647001F8CEF /* menu */,
+				8781826B2747B2F0001F8CEF /* footer */,
+				878182632747AE86001F8CEF /* header */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		878182632747AE86001F8CEF /* header */ = {
+			isa = PBXGroup;
+			children = (
+				878182662747AEE8001F8CEF /* AccountInfoTableViewCell.swift */,
+				878182672747AEE8001F8CEF /* AccountInfoTableViewCell.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		8781826B2747B2F0001F8CEF /* footer */ = {
+			isa = PBXGroup;
+			children = (
+				8781826C2747B30A001F8CEF /* LogOutTableViewCell.swift */,
+				8781826D2747B30A001F8CEF /* LogOutTableViewCell.xib */,
+			);
+			path = footer;
+			sourceTree = "<group>";
+		};
+		878182702747B647001F8CEF /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				878182712747B66B001F8CEF /* MenuTableViewCell.swift */,
+				878182722747B66B001F8CEF /* MenuTableViewCell.xib */,
+			);
+			path = menu;
+			sourceTree = "<group>";
+		};
+		878182752747B9AC001F8CEF /* AccountVC */ = {
+			isa = PBXGroup;
+			children = (
+				878182762747B9D5001F8CEF /* AccountViewController.swift */,
+			);
+			path = AccountVC;
+			sourceTree = "<group>";
+		};
+		878182782747C937001F8CEF /* AccountMenu */ = {
+			isa = PBXGroup;
+			children = (
+				878182792747CA05001F8CEF /* MenuModels.swift */,
+			);
+			path = AccountMenu;
+			sourceTree = "<group>";
+		};
 		879FABFC27436FC600252BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +347,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				878182742747B66B001F8CEF /* MenuTableViewCell.xib in Resources */,
 				879FAC1527436FC700252BE0 /* LaunchScreen.storyboard in Resources */,
+				8781826F2747B30A001F8CEF /* LogOutTableViewCell.xib in Resources */,
+				878182692747AEE8001F8CEF /* AccountInfoTableViewCell.xib in Resources */,
 				879FAC1227436FC700252BE0 /* Assets.xcassets in Resources */,
 				879FAC1027436FC600252BE0 /* Main.storyboard in Resources */,
 			);
@@ -289,10 +364,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				873026A02746133C00CA31CA /* SelectLocationViewController.swift in Sources */,
+				8781826E2747B30A001F8CEF /* LogOutTableViewCell.swift in Sources */,
+				878182682747AEE8001F8CEF /* AccountInfoTableViewCell.swift in Sources */,
+				8781827A2747CA05001F8CEF /* MenuModels.swift in Sources */,
 				8730269D274612D700CA31CA /* VerificationViewController.swift in Sources */,
 				873026842743DAD800CA31CA /* SingInViewController.swift in Sources */,
+				878182732747B66B001F8CEF /* MenuTableViewCell.swift in Sources */,
 				873026A92746143700CA31CA /* OnbordingViewController.swift in Sources */,
 				873026AC2746539C00CA31CA /* VerificationModels.swift in Sources */,
+				878182772747B9D5001F8CEF /* AccountViewController.swift in Sources */,
 				873026AF274664C600CA31CA /* phoneMaskModels.swift in Sources */,
 				879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */,
 				873026A3274613C800CA31CA /* LogInViewController.swift in Sources */,

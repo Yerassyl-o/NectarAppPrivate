@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountInfoTableViewCell" rowHeight="190" id="KGk-i7-Jjw" customClass="AccountInfoTableViewCell" customModule="NectarApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afsar Hossen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vma-gb-I6P">
+                        <rect key="frame" x="108" y="37" width="115" height="22"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imshuvo97@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S32-KY-meV">
+                        <rect key="frame" x="108" y="60" width="168" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userImage" translatesAutoresizingMaskIntoConstraints="NO" id="Jei-c2-2c5">
+                        <rect key="frame" x="24" y="26" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="ZcP-dr-Nc0"/>
+                            <constraint firstAttribute="width" constant="64" id="hRL-DZ-3ba"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="32"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDy-8O-faI">
+                        <rect key="frame" x="233" y="39" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="E8L-pa-APX"/>
+                            <constraint firstAttribute="width" constant="15" id="Uiq-cu-Npy"/>
+                        </constraints>
+                        <state key="normal" image="editIcon"/>
+                        <connections>
+                            <action selector="userEditButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iWY-GW-xcy"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jei-c2-2c5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="8uB-Y0-fFA"/>
+                    <constraint firstItem="S32-KY-meV" firstAttribute="leading" secondItem="Jei-c2-2c5" secondAttribute="trailing" constant="20" id="Ars-gE-5q7"/>
+                    <constraint firstItem="vma-gb-I6P" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="37" id="NMg-Px-6J3"/>
+                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="IDy-8O-faI" secondAttribute="trailing" constant="166" id="QyA-zw-fo7"/>
+                    <constraint firstItem="IDy-8O-faI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="39" id="f6t-tb-WLq"/>
+                    <constraint firstItem="IDy-8O-faI" firstAttribute="leading" secondItem="vma-gb-I6P" secondAttribute="trailing" constant="10" id="fYA-3n-Ovt"/>
+                    <constraint firstItem="Jei-c2-2c5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="26" id="fdB-G1-d0k"/>
+                    <constraint firstItem="S32-KY-meV" firstAttribute="top" secondItem="vma-gb-I6P" secondAttribute="bottom" constant="1" id="nUW-Ja-BA8"/>
+                    <constraint firstItem="vma-gb-I6P" firstAttribute="leading" secondItem="Jei-c2-2c5" secondAttribute="trailing" constant="20" id="rHq-vI-lQn"/>
+                    <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="S32-KY-meV" secondAttribute="trailing" constant="118" id="wm0-sP-zCL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="userEditButton" destination="IDy-8O-faI" id="yRG-AK-iLw"/>
+                <outlet property="userEmailLabel" destination="S32-KY-meV" id="ESv-zk-0rI"/>
+                <outlet property="userImage" destination="Jei-c2-2c5" id="Ik2-w4-pdI"/>
+                <outlet property="userNameSurnameLabel" destination="vma-gb-I6P" id="pjD-RU-Km6"/>
+            </connections>
+            <point key="canvasLocation" x="252.17391304347828" y="187.16517857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="editIcon" width="61" height="61"/>
+        <image name="userImage" width="255" height="258"/>
+    </resources>
+</document>
