@@ -340,14 +340,26 @@ it’s way to being processed</string>
                     <view key="view" contentMode="scaleToFill" id="MAg-7m-KB9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pzQ-Ns-oz0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MLd-Js-qob"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="leading" secondItem="MLd-Js-qob" secondAttribute="leading" id="4IT-zv-ZrF"/>
+                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="top" secondItem="MAg-7m-KB9" secondAttribute="top" id="N3c-zc-Sx0"/>
+                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="trailing" secondItem="MLd-Js-qob" secondAttribute="trailing" id="OxY-A4-RZM"/>
+                            <constraint firstAttribute="bottom" secondItem="pzQ-Ns-oz0" secondAttribute="bottom" id="oth-JS-ujo"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="8CW-o4-c8h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecS-Ss-1Nl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2810" y="1556"/>
+            <point key="canvasLocation" x="2808.6956521739135" y="1555.5803571428571"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="1rn-q1-TUq">
@@ -357,7 +369,7 @@ it’s way to being processed</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5uE-J3-O80">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5uE-J3-O80">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
