@@ -17,6 +17,7 @@
 		873026AC2746539C00CA31CA /* VerificationModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026AB2746539C00CA31CA /* VerificationModels.swift */; };
 		873026AF274664C600CA31CA /* phoneMaskModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026AE274664C600CA31CA /* phoneMaskModels.swift */; };
 		873026B62746831900CA31CA /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026B52746831900CA31CA /* LoginModels.swift */; };
+		873026B92747572100CA31CA /* CustomTabBarVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026B82747572100CA31CA /* CustomTabBarVc.swift */; };
 		879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0827436FC600252BE0 /* AppDelegate.swift */; };
 		879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0A27436FC600252BE0 /* SceneDelegate.swift */; };
 		879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0C27436FC600252BE0 /* ViewController.swift */; };
@@ -39,6 +40,7 @@
 		873026B2274671A500CA31CA /* gilroy-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-regular.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-regular.ttf"; sourceTree = "<group>"; };
 		873026B3274671A500CA31CA /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-semibold.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-semibold.ttf"; sourceTree = "<group>"; };
 		873026B52746831900CA31CA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		873026B82747572100CA31CA /* CustomTabBarVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVc.swift; sourceTree = "<group>"; };
 		879FAC0527436FC600252BE0 /* NectarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NectarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879FAC0827436FC600252BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879FAC0A27436FC600252BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		873026802743D9E500CA31CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				873026B7274756F700CA31CA /* TabBar */,
 				873026A72746142500CA31CA /* onbording */,
 				873026A4274613D700CA31CA /* SignUpAlternative */,
 				873026A1274613B700CA31CA /* LogIn */,
@@ -172,6 +175,14 @@
 				873026B52746831900CA31CA /* LoginModels.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		873026B7274756F700CA31CA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				873026B82747572100CA31CA /* CustomTabBarVc.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		879FABFC27436FC600252BE0 = {
@@ -290,6 +301,7 @@
 				873026B62746831900CA31CA /* LoginModels.swift in Sources */,
 				873026A6274613E900CA31CA /* SignUpAlternativeViewController.swift in Sources */,
 				873026872744201100CA31CA /* NumberViewController.swift in Sources */,
+				873026B92747572100CA31CA /* CustomTabBarVc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
