@@ -242,14 +242,26 @@
                     <view key="view" contentMode="scaleToFill" id="VZc-2N-Dnp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-fS-jaS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="O4m-Fj-CsS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dZs-fS-jaS" firstAttribute="trailing" secondItem="O4m-Fj-CsS" secondAttribute="trailing" id="47L-M8-XZE"/>
+                            <constraint firstItem="dZs-fS-jaS" firstAttribute="leading" secondItem="O4m-Fj-CsS" secondAttribute="leading" id="HTu-5X-hIm"/>
+                            <constraint firstAttribute="bottom" secondItem="dZs-fS-jaS" secondAttribute="bottom" id="MAN-7q-Dtb"/>
+                            <constraint firstItem="dZs-fS-jaS" firstAttribute="top" secondItem="VZc-2N-Dnp" secondAttribute="top" id="V2u-Y2-IQU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="3HT-2l-KUc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mwj-cy-0tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2006" y="1556"/>
+            <point key="canvasLocation" x="2005.7971014492755" y="1555.5803571428571"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MyU-EG-g0Q">
@@ -333,10 +345,10 @@ it’s way to being processed</string>
             </objects>
             <point key="canvasLocation" x="3622" y="866"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="AYW-Sm-rB0">
             <objects>
-                <viewController id="65d-KL-l88" sceneMemberID="viewController">
+                <viewController id="65d-KL-l88" customClass="FavoritesViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAg-7m-KB9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,7 +356,31 @@ it’s way to being processed</string>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pzQ-Ns-oz0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="65d-KL-l88" id="er9-Bj-EhO"/>
+                                    <outlet property="delegate" destination="65d-KL-l88" id="jVO-su-ubP"/>
+                                </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wm1-wN-PJR">
+                                <rect key="frame" x="0.0" y="414" width="414" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.68627450980000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="VSH-eH-0Gy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Add All To Cart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="19"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addAllToCartButtonAction:" destination="65d-KL-l88" eventType="touchUpInside" id="gsm-kH-RiC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MLd-Js-qob"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -356,6 +392,10 @@ it’s way to being processed</string>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="8CW-o4-c8h"/>
+                    <connections>
+                        <outlet property="addAllToCartButton" destination="wm1-wN-PJR" id="iEZ-BM-fyf"/>
+                        <outlet property="tableView" destination="pzQ-Ns-oz0" id="Q11-Ud-pGx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecS-Ss-1Nl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -370,7 +410,7 @@ it’s way to being processed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5uE-J3-O80">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0jg-oA-Uli" id="vWN-b5-AAc"/>
@@ -384,7 +424,7 @@ it’s way to being processed</string>
                             <constraint firstItem="5uE-J3-O80" firstAttribute="top" secondItem="ron-AF-gcp" secondAttribute="top" id="8jP-xn-gQK"/>
                             <constraint firstItem="5uE-J3-O80" firstAttribute="leading" secondItem="JuB-87-eMn" secondAttribute="leading" id="La6-8g-T2C"/>
                             <constraint firstItem="5uE-J3-O80" firstAttribute="trailing" secondItem="JuB-87-eMn" secondAttribute="trailing" id="dOW-Kn-cvQ"/>
-                            <constraint firstAttribute="bottom" secondItem="5uE-J3-O80" secondAttribute="bottom" id="ntj-Ai-sEX"/>
+                            <constraint firstItem="JuB-87-eMn" firstAttribute="bottom" secondItem="5uE-J3-O80" secondAttribute="bottom" id="eEa-BF-XGb"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="nUW-Nn-bKz"/>

@@ -10,13 +10,15 @@ import UIKit
 class AccountViewController: UIViewController {
     var menuDataBase = MenuModels()
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         registerCustomCells()
     }
-
+    
+    
 }
 
 extension AccountViewController: UITableViewDelegate, UITableViewDataSource {

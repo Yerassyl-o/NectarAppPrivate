@@ -26,6 +26,11 @@
 		878182742747B66B001F8CEF /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878182722747B66B001F8CEF /* MenuTableViewCell.xib */; };
 		878182772747B9D5001F8CEF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182762747B9D5001F8CEF /* AccountViewController.swift */; };
 		8781827A2747CA05001F8CEF /* MenuModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182792747CA05001F8CEF /* MenuModels.swift */; };
+		8781827E2747FF9A001F8CEF /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781827C2747FF9A001F8CEF /* FavoritesTableViewCell.swift */; };
+		8781827F2747FF9A001F8CEF /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8781827D2747FF9A001F8CEF /* FavoritesTableViewCell.xib */; };
+		8781828527480514001F8CEF /* HeaderFavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781828327480514001F8CEF /* HeaderFavoritesTableViewCell.swift */; };
+		8781828627480514001F8CEF /* HeaderFavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8781828427480514001F8CEF /* HeaderFavoritesTableViewCell.xib */; };
+		878182892748067A001F8CEF /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182882748067A001F8CEF /* FavoritesViewController.swift */; };
 		879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0827436FC600252BE0 /* AppDelegate.swift */; };
 		879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0A27436FC600252BE0 /* SceneDelegate.swift */; };
 		879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0C27436FC600252BE0 /* ViewController.swift */; };
@@ -57,6 +62,11 @@
 		878182722747B66B001F8CEF /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		878182762747B9D5001F8CEF /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		878182792747CA05001F8CEF /* MenuModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModels.swift; sourceTree = "<group>"; };
+		8781827C2747FF9A001F8CEF /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		8781827D2747FF9A001F8CEF /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
+		8781828327480514001F8CEF /* HeaderFavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		8781828427480514001F8CEF /* HeaderFavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderFavoritesTableViewCell.xib; sourceTree = "<group>"; };
+		878182882748067A001F8CEF /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		879FAC0527436FC600252BE0 /* NectarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NectarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879FAC0827436FC600252BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879FAC0A27436FC600252BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +91,7 @@
 		873026802743D9E500CA31CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8781827B2747FF7A001F8CEF /* Favorites */,
 				878182622747AE61001F8CEF /* Account */,
 				873026B7274756F700CA31CA /* TabBar */,
 				873026A72746142500CA31CA /* onbording */,
@@ -257,6 +268,42 @@
 			path = AccountMenu;
 			sourceTree = "<group>";
 		};
+		8781827B2747FF7A001F8CEF /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				878182872748063C001F8CEF /* FavoritesVc */,
+				87818282274804E2001F8CEF /* items */,
+				87818280274804D1001F8CEF /* header */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		87818280274804D1001F8CEF /* header */ = {
+			isa = PBXGroup;
+			children = (
+				8781828327480514001F8CEF /* HeaderFavoritesTableViewCell.swift */,
+				8781828427480514001F8CEF /* HeaderFavoritesTableViewCell.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		87818282274804E2001F8CEF /* items */ = {
+			isa = PBXGroup;
+			children = (
+				8781827C2747FF9A001F8CEF /* FavoritesTableViewCell.swift */,
+				8781827D2747FF9A001F8CEF /* FavoritesTableViewCell.xib */,
+			);
+			path = items;
+			sourceTree = "<group>";
+		};
+		878182872748063C001F8CEF /* FavoritesVc */ = {
+			isa = PBXGroup;
+			children = (
+				878182882748067A001F8CEF /* FavoritesViewController.swift */,
+			);
+			path = FavoritesVc;
+			sourceTree = "<group>";
+		};
 		879FABFC27436FC600252BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -347,12 +394,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8781828627480514001F8CEF /* HeaderFavoritesTableViewCell.xib in Resources */,
 				878182742747B66B001F8CEF /* MenuTableViewCell.xib in Resources */,
 				879FAC1527436FC700252BE0 /* LaunchScreen.storyboard in Resources */,
 				8781826F2747B30A001F8CEF /* LogOutTableViewCell.xib in Resources */,
 				878182692747AEE8001F8CEF /* AccountInfoTableViewCell.xib in Resources */,
 				879FAC1227436FC700252BE0 /* Assets.xcassets in Resources */,
 				879FAC1027436FC600252BE0 /* Main.storyboard in Resources */,
+				8781827F2747FF9A001F8CEF /* FavoritesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,12 +417,15 @@
 				878182682747AEE8001F8CEF /* AccountInfoTableViewCell.swift in Sources */,
 				8781827A2747CA05001F8CEF /* MenuModels.swift in Sources */,
 				8730269D274612D700CA31CA /* VerificationViewController.swift in Sources */,
+				8781827E2747FF9A001F8CEF /* FavoritesTableViewCell.swift in Sources */,
+				878182892748067A001F8CEF /* FavoritesViewController.swift in Sources */,
 				873026842743DAD800CA31CA /* SingInViewController.swift in Sources */,
 				878182732747B66B001F8CEF /* MenuTableViewCell.swift in Sources */,
 				873026A92746143700CA31CA /* OnbordingViewController.swift in Sources */,
 				873026AC2746539C00CA31CA /* VerificationModels.swift in Sources */,
 				878182772747B9D5001F8CEF /* AccountViewController.swift in Sources */,
 				873026AF274664C600CA31CA /* phoneMaskModels.swift in Sources */,
+				8781828527480514001F8CEF /* HeaderFavoritesTableViewCell.swift in Sources */,
 				879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */,
 				873026A3274613C800CA31CA /* LogInViewController.swift in Sources */,
 				879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */,
