@@ -1,13 +1,14 @@
 //
-//  FavoritesViewController.swift
+//  MyCartViewController.swift
 //  NectarApp
 //
-//  Created by Yerassyl Orazbekov on 19.11.2021.
+//  Created by Yerassyl Orazbekov on 20.11.2021.
 //
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+class MyCartViewController: UIViewController {
+
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,18 +20,18 @@ class FavoritesViewController: UIViewController {
     }
 }
 
-extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
+extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        7
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderFavoritesTableViewCell", for: indexPath) as! HeaderFavoritesTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderMyCartTableViewCell", for: indexPath) as! HeaderMyCartTableViewCell
             cell.selectionStyle = .none
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesTableViewCell", for: indexPath) as! FavoritesTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MyCartItemsTableViewCell", for: indexPath) as! MyCartItemsTableViewCell
             cell.selectionStyle = .none
             return cell
         }
@@ -40,13 +41,15 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             return 57
         } else {
-            return 114
+            return 156
         }
     }
+    
 }
-extension FavoritesViewController {
+
+extension MyCartViewController {
     func registerCustomCells(){
-        tableView.register(UINib.init(nibName: "FavoritesTableViewCell", bundle: nil), forCellReuseIdentifier: "FavoritesTableViewCell")
-        tableView.register(UINib.init(nibName: "HeaderFavoritesTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderFavoritesTableViewCell")
+        tableView.register(UINib.init(nibName: "HeaderMyCartTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderMyCartTableViewCell")
+        tableView.register(UINib.init(nibName: "MyCartItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "MyCartItemsTableViewCell")
     }
 }

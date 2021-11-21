@@ -18,16 +18,16 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
         self.view.backgroundColor = nil
         delegate = self
         tabBar.layer.shadowColor = UIColor.lightGray.cgColor
-                tabBar.layer.shadowOpacity = 0.5
-                tabBar.layer.shadowOffset = CGSize.zero
-                tabBar.layer.shadowRadius = 5
-                self.tabBar.layer.borderColor = UIColor.clear.cgColor
-                self.tabBar.layer.borderWidth = 0
-                self.tabBar.clipsToBounds = false
-                self.tabBar.backgroundColor = UIColor.white
-                UITabBar.appearance().shadowImage = UIImage()
-                UITabBar.appearance().backgroundImage = UIImage()
-        
+        tabBar.layer.shadowOpacity = 0.5
+        tabBar.layer.shadowOffset = CGSize.zero
+        tabBar.layer.shadowRadius = 5
+        self.tabBar.layer.borderColor = UIColor.clear.cgColor
+        self.tabBar.layer.borderWidth = 0
+        self.tabBar.clipsToBounds = false
+        self.tabBar.backgroundColor = UIColor.white
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        tabBar.unselectedItemTintColor = .black
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -43,9 +43,6 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
 //        self.tabBar.layer.shadowColor = CGColor(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.view.isOpaque = false
-               
-        
-        
     }
     
 }

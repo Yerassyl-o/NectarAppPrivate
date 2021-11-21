@@ -219,26 +219,45 @@
             </objects>
             <point key="canvasLocation" x="736.23188405797111" y="72.991071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore-->
         <scene sceneID="KND-Af-S5a">
             <objects>
-                <viewController id="GgS-RM-SQv" sceneMemberID="viewController">
+                <viewController id="GgS-RM-SQv" customClass="ExploreVcViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ijT-M2-wxc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ts4-7x-5Qj">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GgS-RM-SQv" id="rrs-cx-KnQ"/>
+                                    <outlet property="delegate" destination="GgS-RM-SQv" id="YUR-Ig-r01"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="S29-L4-K5S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ts4-7x-5Qj" secondAttribute="bottom" id="47X-yp-1pV"/>
+                            <constraint firstItem="Ts4-7x-5Qj" firstAttribute="leading" secondItem="S29-L4-K5S" secondAttribute="leading" id="Nkk-o1-IvW"/>
+                            <constraint firstItem="Ts4-7x-5Qj" firstAttribute="top" secondItem="ijT-M2-wxc" secondAttribute="top" id="uQc-Ta-zG1"/>
+                            <constraint firstItem="Ts4-7x-5Qj" firstAttribute="trailing" secondItem="S29-L4-K5S" secondAttribute="trailing" id="w64-g8-4AT"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="a05-bL-tjY"/>
+                    <tabBarItem key="tabBarItem" title="Explore" id="a05-bL-tjY"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ts4-7x-5Qj" id="Tv9-oU-Uxq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vj-iJ-u88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="1556"/>
+            <point key="canvasLocation" x="1221.7391304347827" y="1555.5803571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart-->
         <scene sceneID="H64-d6-c90">
             <objects>
-                <viewController id="z7j-s6-cOp" sceneMemberID="viewController">
+                <viewController id="z7j-s6-cOp" customClass="MyCartViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZc-2N-Dnp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,18 +265,64 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dZs-fS-jaS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="z7j-s6-cOp" id="6oU-qc-sl9"/>
+                                    <outlet property="delegate" destination="z7j-s6-cOp" id="p9D-O0-sFQ"/>
+                                </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjI-ue-JF7">
+                                <rect key="frame" x="24" y="790" width="366" height="67"/>
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.68627450980000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="UU2-L3-Cll"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="67" id="bXJ-Uo-ZOZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="zRN-w8-Mvg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Go to Checkout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="19"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.96" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh9-MB-KlB">
+                                <rect key="frame" x="349" y="812.5" width="41" height="22"/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.61960784313725492" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="TTz-0b-jSq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O4m-Fj-CsS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dZs-fS-jaS" firstAttribute="trailing" secondItem="O4m-Fj-CsS" secondAttribute="trailing" id="47L-M8-XZE"/>
-                            <constraint firstItem="dZs-fS-jaS" firstAttribute="leading" secondItem="O4m-Fj-CsS" secondAttribute="leading" id="HTu-5X-hIm"/>
-                            <constraint firstAttribute="bottom" secondItem="dZs-fS-jaS" secondAttribute="bottom" id="MAN-7q-Dtb"/>
-                            <constraint firstItem="dZs-fS-jaS" firstAttribute="top" secondItem="VZc-2N-Dnp" secondAttribute="top" id="V2u-Y2-IQU"/>
+                            <constraint firstItem="dZs-fS-jaS" firstAttribute="trailing" secondItem="O4m-Fj-CsS" secondAttribute="trailing" id="22q-zD-un0"/>
+                            <constraint firstItem="bjI-ue-JF7" firstAttribute="leading" secondItem="O4m-Fj-CsS" secondAttribute="leading" constant="24" id="5Zz-mT-AFr"/>
+                            <constraint firstAttribute="bottom" secondItem="dZs-fS-jaS" secondAttribute="bottom" id="7qp-ic-aUC"/>
+                            <constraint firstItem="eh9-MB-KlB" firstAttribute="centerY" secondItem="bjI-ue-JF7" secondAttribute="centerY" id="9wW-w8-jA3"/>
+                            <constraint firstItem="dZs-fS-jaS" firstAttribute="leading" secondItem="O4m-Fj-CsS" secondAttribute="leading" id="B8h-e2-tWX"/>
+                            <constraint firstItem="dZs-fS-jaS" firstAttribute="top" secondItem="VZc-2N-Dnp" secondAttribute="top" id="KDx-HC-neZ"/>
+                            <constraint firstItem="bjI-ue-JF7" firstAttribute="trailing" secondItem="eh9-MB-KlB" secondAttribute="trailing" id="UTD-6P-H13"/>
+                            <constraint firstItem="eh9-MB-KlB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VZc-2N-Dnp" secondAttribute="leading" constant="20" symbolic="YES" id="egZ-OV-rkJ"/>
+                            <constraint firstAttribute="bottom" secondItem="bjI-ue-JF7" secondAttribute="bottom" constant="39" id="mja-DP-a1Q"/>
+                            <constraint firstItem="O4m-Fj-CsS" firstAttribute="trailing" secondItem="bjI-ue-JF7" secondAttribute="trailing" constant="24" id="rBx-Ef-cur"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="3HT-2l-KUc"/>
+                    <tabBarItem key="tabBarItem" title="Cart" id="3HT-2l-KUc"/>
+                    <connections>
+                        <outlet property="tableView" destination="dZs-fS-jaS" id="nHQ-Yw-B9U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mwj-cy-0tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -345,7 +410,7 @@ it’s way to being processed</string>
             </objects>
             <point key="canvasLocation" x="3622" y="866"/>
         </scene>
-        <!--Favorites View Controller-->
+        <!--Favorurite-->
         <scene sceneID="AYW-Sm-rB0">
             <objects>
                 <viewController id="65d-KL-l88" customClass="FavoritesViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -361,12 +426,12 @@ it’s way to being processed</string>
                                     <outlet property="delegate" destination="65d-KL-l88" id="jVO-su-ubP"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="wm1-wN-PJR">
-                                <rect key="frame" x="0.0" y="414" width="414" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svg-ha-CNb">
+                                <rect key="frame" x="24" y="707" width="366" height="67"/>
                                 <color key="backgroundColor" red="0.42352941179999998" green="0.68627450980000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="VSH-eH-0Gy"/>
+                                    <constraint firstAttribute="height" constant="67" id="Rwv-Rz-wf6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="b6t-le-XnQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <state key="normal" title="Add All To Cart">
@@ -377,23 +442,22 @@ it’s way to being processed</string>
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="addAllToCartButtonAction:" destination="65d-KL-l88" eventType="touchUpInside" id="gsm-kH-RiC"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MLd-Js-qob"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="leading" secondItem="MLd-Js-qob" secondAttribute="leading" id="4IT-zv-ZrF"/>
-                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="top" secondItem="MAg-7m-KB9" secondAttribute="top" id="N3c-zc-Sx0"/>
-                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="trailing" secondItem="MLd-Js-qob" secondAttribute="trailing" id="OxY-A4-RZM"/>
-                            <constraint firstAttribute="bottom" secondItem="pzQ-Ns-oz0" secondAttribute="bottom" id="oth-JS-ujo"/>
+                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="leading" secondItem="MLd-Js-qob" secondAttribute="leading" id="0Pl-LZ-MRE"/>
+                            <constraint firstItem="MLd-Js-qob" firstAttribute="trailing" secondItem="Svg-ha-CNb" secondAttribute="trailing" constant="24" id="IT0-YT-DWL"/>
+                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="trailing" secondItem="MLd-Js-qob" secondAttribute="trailing" id="KsU-zf-sI7"/>
+                            <constraint firstAttribute="bottom" secondItem="pzQ-Ns-oz0" secondAttribute="bottom" id="b5P-He-bDA"/>
+                            <constraint firstItem="MLd-Js-qob" firstAttribute="bottom" secondItem="Svg-ha-CNb" secondAttribute="bottom" constant="39" id="fvn-YK-U5I"/>
+                            <constraint firstItem="Svg-ha-CNb" firstAttribute="leading" secondItem="MLd-Js-qob" secondAttribute="leading" constant="24" id="yTu-cd-atB"/>
+                            <constraint firstItem="pzQ-Ns-oz0" firstAttribute="top" secondItem="MAg-7m-KB9" secondAttribute="top" id="zgz-TY-zUJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="8CW-o4-c8h"/>
+                    <tabBarItem key="tabBarItem" title="Favorurite" id="8CW-o4-c8h"/>
                     <connections>
-                        <outlet property="addAllToCartButton" destination="wm1-wN-PJR" id="iEZ-BM-fyf"/>
                         <outlet property="tableView" destination="pzQ-Ns-oz0" id="Q11-Ud-pGx"/>
                     </connections>
                 </viewController>
@@ -401,7 +465,7 @@ it’s way to being processed</string>
             </objects>
             <point key="canvasLocation" x="2808.6956521739135" y="1555.5803571428571"/>
         </scene>
-        <!--Account View Controller-->
+        <!--Account-->
         <scene sceneID="1rn-q1-TUq">
             <objects>
                 <viewController id="0jg-oA-Uli" customClass="AccountViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -427,7 +491,7 @@ it’s way to being processed</string>
                             <constraint firstItem="JuB-87-eMn" firstAttribute="bottom" secondItem="5uE-J3-O80" secondAttribute="bottom" id="eEa-BF-XGb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="nUW-Nn-bKz"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="nUW-Nn-bKz"/>
                     <connections>
                         <outlet property="tableView" destination="5uE-J3-O80" id="dVS-xz-M15"/>
                     </connections>
@@ -436,7 +500,7 @@ it’s way to being processed</string>
             </objects>
             <point key="canvasLocation" x="3621.739130434783" y="1555.5803571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Shop-->
         <scene sceneID="jk6-Jm-o25">
             <objects>
                 <viewController id="Ifz-K4-rNq" sceneMemberID="viewController">
@@ -474,7 +538,7 @@ it’s way to being processed</string>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="PLV-5y-ZGk">
+                    <tabBarItem key="tabBarItem" title="Shop" springLoaded="YES" id="PLV-5y-ZGk">
                         <color key="badgeColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <offsetWrapper key="titlePositionAdjustment" horizontal="-2" vertical="-5"/>
                     </tabBarItem>
