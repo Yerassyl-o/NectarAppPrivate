@@ -17,11 +17,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="K3C-K1-9yV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="K3C-K1-9yV">
+                        <rect key="frame" x="24" y="0.0" width="366" height="600"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fUg-9f-2L8">
-                            <size key="itemSize" width="128" height="128"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="fUg-9f-2L8">
+                            <size key="itemSize" width="175" height="190"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -29,13 +29,16 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="K3C-K1-9yV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LpW-ew-BOS"/>
+                    <constraint firstAttribute="trailing" secondItem="K3C-K1-9yV" secondAttribute="trailing" constant="24" id="L8p-iC-eq5"/>
                     <constraint firstAttribute="bottom" secondItem="K3C-K1-9yV" secondAttribute="bottom" id="QMA-Db-rnQ"/>
                     <constraint firstItem="K3C-K1-9yV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="f71-yA-xS6"/>
-                    <constraint firstAttribute="trailing" secondItem="K3C-K1-9yV" secondAttribute="trailing" id="yBe-h6-57V"/>
+                    <constraint firstItem="K3C-K1-9yV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="vzl-5S-hNS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="K3C-K1-9yV" id="LAT-70-tlL"/>
+            </connections>
             <point key="canvasLocation" x="171.01449275362319" y="242.07589285714283"/>
         </tableViewCell>
     </objects>

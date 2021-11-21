@@ -8,16 +8,40 @@
 import UIKit
 
 class ItemsTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        registerCustomCells()
     }
     
+}
+
+extension ItemsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ItemsCollectionViewCell", for: indexPath) as? ItemsCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 175, height: 190)
+    }
+}
+
+extension ItemsTableViewCell{
+    func registerCustomCells(){
+        let customCellNib = UINib(nibName: "ItemsCollectionViewCell", bundle: .main)
+        collectionView.register(customCellNib, forCellWithReuseIdentifier: "ItemsCollectionViewCell")
+    }
 }

@@ -28,8 +28,12 @@ extension ExploreVcViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ExploreHeaderTableViewCell", for: indexPath) as! ExploreHeaderTableViewCell
             cell.selectionStyle = .none
             return cell
-        } else {
+        } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchBarTableViewCell", for: indexPath) as! SearchBarTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsTableViewCell", for: indexPath) as! ItemsTableViewCell
             cell.selectionStyle = .none
             return cell
         }
@@ -41,7 +45,7 @@ extension ExploreVcViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             return 71.5
         } else {
-            return 500
+            return UITableView.automaticDimension
         }
     }
     
@@ -51,5 +55,6 @@ extension ExploreVcViewController {
     func registerCustomCells(){
         tableView.register(UINib.init(nibName: "ExploreHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "ExploreHeaderTableViewCell")
         tableView.register(UINib.init(nibName: "SearchBarTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchBarTableViewCell")
+        tableView.register(UINib.init(nibName: "ItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemsTableViewCell")
     }
 }

@@ -8,7 +8,7 @@
 import UIKit
 
 class MyCartViewController: UIViewController {
-
+    var productDataBase = ProductDataBase()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,10 @@ extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyCartItemsTableViewCell", for: indexPath) as! MyCartItemsTableViewCell
+            let product = productDataBase.getDataBase[indexPath.row - 1]
+            cell.productName.text = product.productName
+            cell.productValue.text = "\(product.productQuantity)\(product.productUnitOfMeasurement), Price"
+            cell.productPriceFor1Item.text = "$\(product.productPrice)"
             cell.selectionStyle = .none
             return cell
         }
