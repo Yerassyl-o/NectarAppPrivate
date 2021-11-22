@@ -16,6 +16,7 @@ class HomeSreenBannerTableViewCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
         registerCustomCells()
+        collectionView.layer.cornerRadius = 8
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -36,6 +36,14 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HomeSreenBannerTableViewCell", for: indexPath) as! HomeSreenBannerTableViewCell
             cell.selectionStyle = .none
             return cell
+        } else if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenCategorySectionTableViewCell", for: indexPath) as! homeScreenCategorySectionTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        } else if indexPath.row == 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenCategorySectionTableViewCell", for: indexPath) as! homeScreenCategorySectionTableViewCell
+            cell.selectionStyle = .none
+            return cell
         } else {
             return UITableViewCell()
         }
@@ -62,5 +70,6 @@ extension HomeScreenViewController {
         tableView.register(UINib.init(nibName: "HomeScreenHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeScreenHeaderTableViewCell")
         tableView.register(UINib.init(nibName: "homeScreeSearchBarTableViewCell", bundle: nil), forCellReuseIdentifier: "homeScreeSearchBarTableViewCell")
         tableView.register(UINib.init(nibName: "HomeSreenBannerTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeSreenBannerTableViewCell")
+        tableView.register(UINib.init(nibName: "homeScreenCategorySectionTableViewCell", bundle: nil), forCellReuseIdentifier: "homeScreenCategorySectionTableViewCell")
     }
 }
