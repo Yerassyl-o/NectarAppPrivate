@@ -8,6 +8,7 @@
 import UIKit
 
 class FavoritesViewController: UIViewController {
+    var productDataBase = ProductDataBase()
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        productDataBase.getDataBase.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,8 +31,13 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         } else {
+            let product = productDataBase.getDataBase[indexPath.row - 1]
             let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesTableViewCell", for: indexPath) as! FavoritesTableViewCell
             cell.selectionStyle = .none
+            cell.productImage.image = product.productImage
+            cell.productName.text = product.productName
+            cell.productPrice.text = "$\(product.productPrice)"
+            cell.productSize.text = "\(product.productQuantity)\(product.productUnitOfMeasurement)"
             return cell
         }
     }

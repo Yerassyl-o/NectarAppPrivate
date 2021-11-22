@@ -287,9 +287,12 @@
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="productPriceSumLabelAction:" destination="z7j-s6-cOp" eventType="touchUpInside" id="FsX-F5-wEs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.96" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh9-MB-KlB">
-                                <rect key="frame" x="349" y="812.5" width="41" height="22"/>
+                                <rect key="frame" x="325" y="812.5" width="41" height="22"/>
                                 <color key="backgroundColor" red="0.28235294117647058" green="0.61960784313725492" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="TTz-0b-jSq"/>
@@ -313,7 +316,7 @@
                             <constraint firstItem="eh9-MB-KlB" firstAttribute="centerY" secondItem="bjI-ue-JF7" secondAttribute="centerY" id="9wW-w8-jA3"/>
                             <constraint firstItem="dZs-fS-jaS" firstAttribute="leading" secondItem="O4m-Fj-CsS" secondAttribute="leading" id="B8h-e2-tWX"/>
                             <constraint firstItem="dZs-fS-jaS" firstAttribute="top" secondItem="VZc-2N-Dnp" secondAttribute="top" id="KDx-HC-neZ"/>
-                            <constraint firstItem="bjI-ue-JF7" firstAttribute="trailing" secondItem="eh9-MB-KlB" secondAttribute="trailing" id="UTD-6P-H13"/>
+                            <constraint firstItem="bjI-ue-JF7" firstAttribute="trailing" secondItem="eh9-MB-KlB" secondAttribute="trailing" constant="24" id="UTD-6P-H13"/>
                             <constraint firstItem="eh9-MB-KlB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VZc-2N-Dnp" secondAttribute="leading" constant="20" symbolic="YES" id="egZ-OV-rkJ"/>
                             <constraint firstAttribute="bottom" secondItem="bjI-ue-JF7" secondAttribute="bottom" constant="39" id="mja-DP-a1Q"/>
                             <constraint firstItem="O4m-Fj-CsS" firstAttribute="trailing" secondItem="bjI-ue-JF7" secondAttribute="trailing" constant="24" id="rBx-Ef-cur"/>
@@ -321,6 +324,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Cart" id="3HT-2l-KUc"/>
                     <connections>
+                        <outlet property="goToCheckoutButton" destination="bjI-ue-JF7" id="lgA-w7-mIF"/>
+                        <outlet property="productPriceSumLabel" destination="eh9-MB-KlB" id="oKc-PD-LYg"/>
                         <outlet property="tableView" destination="dZs-fS-jaS" id="nHQ-Yw-B9U"/>
                     </connections>
                 </viewController>

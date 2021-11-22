@@ -9,6 +9,9 @@ import UIKit
 
 class MyCartViewController: UIViewController {
     var productDataBase = ProductDataBase()
+    var productPriceSumCounter: Double = 0
+    @IBOutlet weak var goToCheckoutButton: UIButton!
+    @IBOutlet weak var productPriceSumLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +20,18 @@ class MyCartViewController: UIViewController {
         registerCustomCells()
         tableView.separatorInset = .init(top: 0, left: 24, bottom: 0, right: 24)
         tableView.separatorColor = .clear
+        productPriceSumLabel.text = "\(productPriceSumCounter)"
+
+        
+    }
+    @IBAction func productPriceSumLabelAction(_ sender: Any) {
     }
 }
 
 extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        7
+        productDataBase.getDataBase.count + 1
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,12 +40,16 @@ extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
             return cell
         } else {
+
             let cell = tableView.dequeueReusableCell(withIdentifier: "MyCartItemsTableViewCell", for: indexPath) as! MyCartItemsTableViewCell
             let product = productDataBase.getDataBase[indexPath.row - 1]
             cell.productName.text = product.productName
             cell.productValue.text = "\(product.productQuantity)\(product.productUnitOfMeasurement), Price"
             cell.productPriceFor1Item.text = "$\(product.productPrice)"
+            cell.productImage.image = product.productImage
             cell.selectionStyle = .none
+            productPriceSumCounter += product.productPrice
+            
             return cell
         }
     }
