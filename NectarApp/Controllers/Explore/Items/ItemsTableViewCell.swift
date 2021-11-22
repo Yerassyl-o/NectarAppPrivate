@@ -14,11 +14,12 @@ class ItemsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         collectionView.dataSource = self
         collectionView.delegate = self
+        registerCustomCells()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        registerCustomCells()
+        
     }
     
 }

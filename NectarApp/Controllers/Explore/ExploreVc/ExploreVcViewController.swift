@@ -16,6 +16,7 @@ class ExploreVcViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         registerCustomCells()
+        tableView.separatorColor = .clear
     }
 }
 extension ExploreVcViewController: UITableViewDelegate, UITableViewDataSource {

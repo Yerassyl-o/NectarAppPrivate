@@ -513,9 +513,8 @@ it’s way to being processed</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-hC-Tv6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="901"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FZo-hC-Tv6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Ifz-K4-rNq" id="dLI-dY-2lq"/>
@@ -525,6 +524,12 @@ it’s way to being processed</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IQT-fW-kzL"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FZo-hC-Tv6" secondAttribute="bottom" id="Bed-g0-Ob1"/>
+                            <constraint firstItem="FZo-hC-Tv6" firstAttribute="top" secondItem="8Fn-9L-RK1" secondAttribute="top" id="Djy-lZ-1cj"/>
+                            <constraint firstItem="FZo-hC-Tv6" firstAttribute="trailing" secondItem="IQT-fW-kzL" secondAttribute="trailing" id="ROP-Xm-3Fm"/>
+                            <constraint firstItem="FZo-hC-Tv6" firstAttribute="leading" secondItem="IQT-fW-kzL" secondAttribute="leading" id="wef-wR-cWq"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Shop" springLoaded="YES" id="PLV-5y-ZGk">

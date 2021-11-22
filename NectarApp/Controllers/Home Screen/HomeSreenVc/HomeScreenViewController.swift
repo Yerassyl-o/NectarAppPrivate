@@ -32,15 +32,25 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreeSearchBarTableViewCell", for: indexPath) as! homeScreeSearchBarTableViewCell
             cell.selectionStyle = .none
             return cell
+        } else if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "HomeSreenBannerTableViewCell", for: indexPath) as! HomeSreenBannerTableViewCell
+            cell.selectionStyle = .none
+            return cell
         } else {
             return UITableViewCell()
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 139
+            return 107
         } else if indexPath.row == 1 {
             return 52
+        } else if indexPath.row == 2 {
+            return 165
+        } else if indexPath.row == 3 {
+            return 327
+        } else if indexPath.row == 4 {
+            return 327
         } else {
             return 200
         }
@@ -48,7 +58,9 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
 }
 extension HomeScreenViewController {
     func registerCustomCells(){
+        
         tableView.register(UINib.init(nibName: "HomeScreenHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeScreenHeaderTableViewCell")
         tableView.register(UINib.init(nibName: "homeScreeSearchBarTableViewCell", bundle: nil), forCellReuseIdentifier: "homeScreeSearchBarTableViewCell")
+        tableView.register(UINib.init(nibName: "HomeSreenBannerTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeSreenBannerTableViewCell")
     }
 }

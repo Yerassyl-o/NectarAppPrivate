@@ -16,30 +16,30 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-//        UITabBar.appearance().shadowImage = UIImage()
-//        UITabBar.appearance().backgroundImage = UIImage()
-//        tabBar.layer.shadowColor = UIColor.lightGray.cgColor
-//        tabBar.layer.shadowOpacity = 0.5
-//        tabBar.layer.shadowOffset = CGSize.zero
-//        tabBar.layer.shadowRadius = 5
-//        self.tabBar.layer.borderColor = UIColor.clear.cgColor
-//        self.tabBar.layer.borderWidth = 0
-//        self.tabBar.clipsToBounds = false
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        tabBar.layer.shadowColor = UIColor.lightGray.cgColor
+        tabBar.layer.shadowOpacity = 0.5
+        tabBar.layer.shadowOffset = CGSize.zero
+        tabBar.layer.shadowRadius = 5
+        self.tabBar.layer.borderColor = UIColor.clear.cgColor
+        self.tabBar.layer.borderWidth = 0
+        self.tabBar.clipsToBounds = false
         self.tabBar.backgroundColor = UIColor.white
         
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-//        tabBar.frame.size.height = 92
-//        tabBar.frame.origin.y = view.frame.height - 92
-//        tabBar.tintColor = UIColor(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
-//        tabBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
+        tabBar.frame.size.height = 92
+        tabBar.frame.origin.y = view.frame.height - 92
+        tabBar.tintColor = UIColor(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
+        tabBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         tabBar.barTintColor = UIColor.cyan
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.tabBar.layer.masksToBounds = true
         self.tabBar.isTranslucent = false
-        self.tabBar.layer.cornerRadius = 20
+        self.tabBar.layer.cornerRadius = 15
 
     }
     
