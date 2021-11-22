@@ -29,8 +29,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$1.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My0-ux-vTp">
-                        <rect key="frame" x="320" y="49" width="45.5" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$1.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My0-ux-vTp">
+                        <rect key="frame" x="323" y="49" width="42.5" height="20"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -63,7 +63,6 @@
                 <constraints>
                     <constraint firstItem="cae-aX-Fyp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="38" id="0BO-aV-A5d"/>
                     <constraint firstAttribute="trailing" secondItem="SWL-ky-nEL" secondAttribute="trailing" constant="24" id="CFt-im-g9r"/>
-                    <constraint firstItem="My0-ux-vTp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="cae-aX-Fyp" secondAttribute="trailing" constant="116" id="FUS-ZN-9uQ"/>
                     <constraint firstItem="My0-ux-vTp" firstAttribute="centerY" secondItem="bYm-aP-MWz" secondAttribute="centerY" id="GW5-89-eXV"/>
                     <constraint firstItem="cae-aX-Fyp" firstAttribute="leading" secondItem="bYm-aP-MWz" secondAttribute="trailing" constant="42" id="Iez-AJ-rxg"/>
                     <constraint firstAttribute="bottom" secondItem="Pmj-ZW-L5q" secondAttribute="bottom" id="JVC-Qp-Lir"/>
@@ -71,11 +70,12 @@
                     <constraint firstItem="SWL-ky-nEL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="53" id="Ptz-ig-WIF"/>
                     <constraint firstItem="bYm-aP-MWz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="U0R-MT-hoh"/>
                     <constraint firstItem="M7s-kK-NsY" firstAttribute="top" secondItem="cae-aX-Fyp" secondAttribute="bottom" constant="4" id="X5u-Yq-xZn"/>
+                    <constraint firstItem="My0-ux-vTp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="M7s-kK-NsY" secondAttribute="trailing" constant="117" id="acI-eQ-HUF"/>
+                    <constraint firstItem="My0-ux-vTp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="cae-aX-Fyp" secondAttribute="trailing" constant="119" id="bPW-dq-Cfx"/>
                     <constraint firstItem="bYm-aP-MWz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="dmK-X9-MvY"/>
-                    <constraint firstItem="My0-ux-vTp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="M7s-kK-NsY" secondAttribute="trailing" constant="114" id="kO4-b4-wUD"/>
                     <constraint firstAttribute="trailing" secondItem="Pmj-ZW-L5q" secondAttribute="trailing" constant="24" id="pfc-Pl-eZK"/>
                     <constraint firstItem="Pmj-ZW-L5q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="vXJ-HI-YsI"/>
-                    <constraint firstItem="SWL-ky-nEL" firstAttribute="leading" relation="lessThanOrEqual" secondItem="My0-ux-vTp" secondAttribute="trailing" constant="16" id="wjq-w0-YxA"/>
+                    <constraint firstItem="SWL-ky-nEL" firstAttribute="leading" secondItem="My0-ux-vTp" secondAttribute="trailing" constant="16" id="wjq-w0-YxA"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

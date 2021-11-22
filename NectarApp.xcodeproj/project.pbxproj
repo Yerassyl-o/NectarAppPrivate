@@ -18,6 +18,11 @@
 		873026AF274664C600CA31CA /* phoneMaskModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026AE274664C600CA31CA /* phoneMaskModels.swift */; };
 		873026B62746831900CA31CA /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026B52746831900CA31CA /* LoginModels.swift */; };
 		873026B92747572100CA31CA /* CustomTabBarVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026B82747572100CA31CA /* CustomTabBarVc.swift */; };
+		8757DB88274B5F9500A04367 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DB87274B5F9500A04367 /* HomeScreenViewController.swift */; };
+		8757DB8D274B60A500A04367 /* HomeScreenHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DB8B274B60A500A04367 /* HomeScreenHeaderTableViewCell.swift */; };
+		8757DB8E274B60A500A04367 /* HomeScreenHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8757DB8C274B60A500A04367 /* HomeScreenHeaderTableViewCell.xib */; };
+		8757DB92274B646000A04367 /* homeScreeSearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8757DB90274B646000A04367 /* homeScreeSearchBarTableViewCell.swift */; };
+		8757DB93274B646000A04367 /* homeScreeSearchBarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8757DB91274B646000A04367 /* homeScreeSearchBarTableViewCell.xib */; };
 		878182682747AEE8001F8CEF /* AccountInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182662747AEE8001F8CEF /* AccountInfoTableViewCell.swift */; };
 		878182692747AEE8001F8CEF /* AccountInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878182672747AEE8001F8CEF /* AccountInfoTableViewCell.xib */; };
 		8781826E2747B30A001F8CEF /* LogOutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8781826C2747B30A001F8CEF /* LogOutTableViewCell.swift */; };
@@ -69,6 +74,11 @@
 		873026B3274671A500CA31CA /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-semibold.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-semibold.ttf"; sourceTree = "<group>"; };
 		873026B52746831900CA31CA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		873026B82747572100CA31CA /* CustomTabBarVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVc.swift; sourceTree = "<group>"; };
+		8757DB87274B5F9500A04367 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		8757DB8B274B60A500A04367 /* HomeScreenHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		8757DB8C274B60A500A04367 /* HomeScreenHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		8757DB90274B646000A04367 /* homeScreeSearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeScreeSearchBarTableViewCell.swift; sourceTree = "<group>"; };
+		8757DB91274B646000A04367 /* homeScreeSearchBarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = homeScreeSearchBarTableViewCell.xib; sourceTree = "<group>"; };
 		878182662747AEE8001F8CEF /* AccountInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoTableViewCell.swift; sourceTree = "<group>"; };
 		878182672747AEE8001F8CEF /* AccountInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountInfoTableViewCell.xib; sourceTree = "<group>"; };
 		8781826C2747B30A001F8CEF /* LogOutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				87818298274A19F5001F8CEF /* Explore */,
+				8757DB84274B5F5300A04367 /* Home Screen */,
 				8781828A2748FC6F001F8CEF /* My Cart */,
 				8781827B2747FF7A001F8CEF /* Favorites */,
 				878182622747AE61001F8CEF /* Account */,
@@ -245,6 +256,42 @@
 				873026B82747572100CA31CA /* CustomTabBarVc.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8757DB84274B5F5300A04367 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				8757DB8F274B643B00A04367 /* homeScreeSearchBar */,
+				8757DB8A274B607F00A04367 /* HomeScreenHeader */,
+				8757DB89274B606B00A04367 /* HomeSreenVc */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		8757DB89274B606B00A04367 /* HomeSreenVc */ = {
+			isa = PBXGroup;
+			children = (
+				8757DB87274B5F9500A04367 /* HomeScreenViewController.swift */,
+			);
+			path = HomeSreenVc;
+			sourceTree = "<group>";
+		};
+		8757DB8A274B607F00A04367 /* HomeScreenHeader */ = {
+			isa = PBXGroup;
+			children = (
+				8757DB8B274B60A500A04367 /* HomeScreenHeaderTableViewCell.swift */,
+				8757DB8C274B60A500A04367 /* HomeScreenHeaderTableViewCell.xib */,
+			);
+			path = HomeScreenHeader;
+			sourceTree = "<group>";
+		};
+		8757DB8F274B643B00A04367 /* homeScreeSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				8757DB90274B646000A04367 /* homeScreeSearchBarTableViewCell.swift */,
+				8757DB91274B646000A04367 /* homeScreeSearchBarTableViewCell.xib */,
+			);
+			path = homeScreeSearchBar;
 			sourceTree = "<group>";
 		};
 		878182622747AE61001F8CEF /* Account */ = {
@@ -532,9 +579,11 @@
 				878182AD274A1B35001F8CEF /* ItemsTableViewCell.xib in Resources */,
 				878182742747B66B001F8CEF /* MenuTableViewCell.xib in Resources */,
 				879FAC1527436FC700252BE0 /* LaunchScreen.storyboard in Resources */,
+				8757DB93274B646000A04367 /* homeScreeSearchBarTableViewCell.xib in Resources */,
 				878182B4274A1C01001F8CEF /* ItemsCollectionViewCell.xib in Resources */,
 				878182922748FD35001F8CEF /* HeaderMyCartTableViewCell.xib in Resources */,
 				8781826F2747B30A001F8CEF /* LogOutTableViewCell.xib in Resources */,
+				8757DB8E274B60A500A04367 /* HomeScreenHeaderTableViewCell.xib in Resources */,
 				878182692747AEE8001F8CEF /* AccountInfoTableViewCell.xib in Resources */,
 				879FAC1227436FC700252BE0 /* Assets.xcassets in Resources */,
 				879FAC1027436FC600252BE0 /* Main.storyboard in Resources */,
@@ -552,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873026A02746133C00CA31CA /* SelectLocationViewController.swift in Sources */,
+				8757DB88274B5F9500A04367 /* HomeScreenViewController.swift in Sources */,
 				8781826E2747B30A001F8CEF /* LogOutTableViewCell.swift in Sources */,
 				878182682747AEE8001F8CEF /* AccountInfoTableViewCell.swift in Sources */,
 				8781827A2747CA05001F8CEF /* MenuModels.swift in Sources */,
@@ -575,6 +625,7 @@
 				873026B62746831900CA31CA /* LoginModels.swift in Sources */,
 				873026A6274613E900CA31CA /* SignUpAlternativeViewController.swift in Sources */,
 				878182B3274A1C01001F8CEF /* ItemsCollectionViewCell.swift in Sources */,
+				8757DB8D274B60A500A04367 /* HomeScreenHeaderTableViewCell.swift in Sources */,
 				878182962748FD53001F8CEF /* MyCartItemsTableViewCell.swift in Sources */,
 				873026872744201100CA31CA /* NumberViewController.swift in Sources */,
 				878182B7274AA02C001F8CEF /* ProductDataBase.swift in Sources */,
@@ -582,6 +633,7 @@
 				878182A6274A1B0D001F8CEF /* SearchBarTableViewCell.swift in Sources */,
 				878182912748FD35001F8CEF /* HeaderMyCartTableViewCell.swift in Sources */,
 				873026B92747572100CA31CA /* CustomTabBarVc.swift in Sources */,
+				8757DB92274B646000A04367 /* homeScreeSearchBarTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

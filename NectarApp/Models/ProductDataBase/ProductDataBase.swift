@@ -28,7 +28,7 @@ class ProductDataBase {
                                       ProductStruct(productName: "Sprite Can",
                                                     productUnitOfMeasurement: "ml",
                                                     productQuantity: 325,
-                                                    productPrice: 1509,
+                                                    productPrice: 1.50,
                                                     productCategory: "Beverages",
                                                     productReview: 5,
                                                     productImage: UIImage(named: "Sprite Can") ?? UIImage(named:"defaultProductImage")!),

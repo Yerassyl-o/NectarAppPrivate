@@ -45,7 +45,7 @@ extension ExploreVcViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 1 {
             return 71.5
         } else {
-            return UITableView.automaticDimension
+            return 700
         }
     }
     
