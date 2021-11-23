@@ -43,6 +43,13 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenCategorySectionTableViewCell", for: indexPath) as! homeScreenCategorySectionTableViewCell
             cell.selectionStyle = .none
+            cell.categoryNameLabel.text = "Best Sellling"
+            return cell
+        } else if indexPath.row == 5 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "GroceriesStoriesTableViewCell", for: indexPath) as! GroceriesStoriesTableViewCell
+            return cell
+        } else if indexPath.row == 6 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductsTableViewCell", for: indexPath) as! ProductsTableViewCell
             return cell
         } else {
             return UITableViewCell()
@@ -59,6 +66,10 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             return 327
         } else if indexPath.row == 4 {
             return 327
+        } else if indexPath.row == 5 {
+            return 174
+        } else if indexPath.row == 6 {
+            return 260
         } else {
             return 200
         }
@@ -71,5 +82,7 @@ extension HomeScreenViewController {
         tableView.register(UINib.init(nibName: "homeScreeSearchBarTableViewCell", bundle: nil), forCellReuseIdentifier: "homeScreeSearchBarTableViewCell")
         tableView.register(UINib.init(nibName: "HomeSreenBannerTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeSreenBannerTableViewCell")
         tableView.register(UINib.init(nibName: "homeScreenCategorySectionTableViewCell", bundle: nil), forCellReuseIdentifier: "homeScreenCategorySectionTableViewCell")
+        tableView.register(UINib.init(nibName: "GroceriesStoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "GroceriesStoriesTableViewCell")
+        tableView.register(UINib.init(nibName: "ProductsTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductsTableViewCell")
     }
 }

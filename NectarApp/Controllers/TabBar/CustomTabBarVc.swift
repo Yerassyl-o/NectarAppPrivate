@@ -12,14 +12,15 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
-        UITabBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().backgroundImage = UIImage()
-        tabBar.layer.shadowColor = UIColor.lightGray.cgColor
-        tabBar.layer.shadowOpacity = 0.5
+//        UITabBar.appearance().shadowImage = UIImage()
+//        UITabBar.appearance().backgroundImage = UIImage()
+        tabBar.layer.shadowColor = UIColor.black.cgColor
+        tabBar.layer.shadowOpacity = 0.3
         tabBar.layer.shadowOffset = CGSize.zero
         tabBar.layer.shadowRadius = 5
         self.tabBar.layer.borderColor = UIColor.clear.cgColor
@@ -35,7 +36,7 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
         tabBar.frame.origin.y = view.frame.height - 92
         tabBar.tintColor = UIColor(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
         tabBar.barTintColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
-        tabBar.barTintColor = UIColor.cyan
+        tabBar.barTintColor = UIColor.white
         self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.tabBar.layer.masksToBounds = true
         self.tabBar.isTranslucent = false
