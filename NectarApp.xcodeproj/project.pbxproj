@@ -159,6 +159,7 @@
 		873026802743D9E500CA31CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8757DBDC274D035E00A04367 /* ProductDetail */,
 				8757DB84274B5F5300A04367 /* Home Screen */,
 				87818298274A19F5001F8CEF /* Explore */,
 				8781828A2748FC6F001F8CEF /* My Cart */,
@@ -414,6 +415,13 @@
 				8757DBD9274CBC0A00A04367 /* ProductsLineTableViewCell.xib */,
 			);
 			path = ProductLine;
+			sourceTree = "<group>";
+		};
+		8757DBDC274D035E00A04367 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		878182622747AE61001F8CEF /* Account */ = {
