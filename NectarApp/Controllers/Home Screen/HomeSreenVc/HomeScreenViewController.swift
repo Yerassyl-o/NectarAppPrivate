@@ -49,7 +49,7 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GroceriesStoriesTableViewCell", for: indexPath) as! GroceriesStoriesTableViewCell
             return cell
         } else if indexPath.row == 6 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductsTableViewCell", for: indexPath) as! ProductsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProductsLineTableViewCell", for: indexPath) as! ProductsLineTableViewCell
             return cell
         } else {
             return UITableViewCell()
@@ -83,6 +83,6 @@ extension HomeScreenViewController {
         tableView.register(UINib.init(nibName: "HomeSreenBannerTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeSreenBannerTableViewCell")
         tableView.register(UINib.init(nibName: "homeScreenCategorySectionTableViewCell", bundle: nil), forCellReuseIdentifier: "homeScreenCategorySectionTableViewCell")
         tableView.register(UINib.init(nibName: "GroceriesStoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "GroceriesStoriesTableViewCell")
-        tableView.register(UINib.init(nibName: "ProductsTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductsTableViewCell")
+        tableView.register(UINib.init(nibName: "ProductsLineTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductsLineTableViewCell")
     }
 }
