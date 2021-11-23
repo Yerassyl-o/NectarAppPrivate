@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3T-ED-mz0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N09-mK-fYI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -219,7 +219,7 @@
             </objects>
             <point key="canvasLocation" x="736.23188405797111" y="72.991071428571431"/>
         </scene>
-        <!--Explore-->
+        <!--Hello-->
         <scene sceneID="KND-Af-S5a">
             <objects>
                 <viewController id="GgS-RM-SQv" customClass="ExploreVcViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -245,14 +245,15 @@
                             <constraint firstItem="Ts4-7x-5Qj" firstAttribute="trailing" secondItem="S29-L4-K5S" secondAttribute="trailing" id="w64-g8-4AT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" id="a05-bL-tjY"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="exploreSvg" id="pWk-fQ-3v0"/>
+                    <navigationItem key="navigationItem" title="Hello" id="wEc-sv-Ue0"/>
                     <connections>
                         <outlet property="tableView" destination="Ts4-7x-5Qj" id="Tv9-oU-Uxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vj-iJ-u88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1221.7391304347827" y="1555.5803571428571"/>
+            <point key="canvasLocation" x="2006" y="1569"/>
         </scene>
         <!--Cart-->
         <scene sceneID="H64-d6-c90">
@@ -271,7 +272,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjI-ue-JF7">
-                                <rect key="frame" x="24" y="805" width="366" height="67"/>
+                                <rect key="frame" x="24" y="722" width="366" height="67"/>
                                 <color key="backgroundColor" red="0.42352941179999998" green="0.68627450980000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="UU2-L3-Cll"/>
@@ -291,7 +292,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.96" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh9-MB-KlB">
-                                <rect key="frame" x="325" y="827.5" width="41" height="22"/>
+                                <rect key="frame" x="325" y="744.5" width="41" height="22"/>
                                 <color key="backgroundColor" red="0.28235294117647058" green="0.61960784313725492" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="TTz-0b-jSq"/>
@@ -317,11 +318,11 @@
                             <constraint firstItem="dZs-fS-jaS" firstAttribute="top" secondItem="VZc-2N-Dnp" secondAttribute="top" id="KDx-HC-neZ"/>
                             <constraint firstItem="bjI-ue-JF7" firstAttribute="trailing" secondItem="eh9-MB-KlB" secondAttribute="trailing" constant="24" id="UTD-6P-H13"/>
                             <constraint firstItem="eh9-MB-KlB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="VZc-2N-Dnp" secondAttribute="leading" constant="20" symbolic="YES" id="egZ-OV-rkJ"/>
-                            <constraint firstAttribute="bottom" secondItem="bjI-ue-JF7" secondAttribute="bottom" constant="24" id="mja-DP-a1Q"/>
+                            <constraint firstItem="O4m-Fj-CsS" firstAttribute="bottom" secondItem="bjI-ue-JF7" secondAttribute="bottom" constant="24" id="mja-DP-a1Q"/>
                             <constraint firstItem="O4m-Fj-CsS" firstAttribute="trailing" secondItem="bjI-ue-JF7" secondAttribute="trailing" constant="24" id="rBx-Ef-cur"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cart" id="3HT-2l-KUc"/>
+                    <tabBarItem key="tabBarItem" title="Cart" image="cartSvg" id="3HT-2l-KUc"/>
                     <connections>
                         <outlet property="goToCheckoutButton" destination="bjI-ue-JF7" id="lgA-w7-mIF"/>
                         <outlet property="productPriceSumLabel" destination="eh9-MB-KlB" id="oKc-PD-LYg"/>
@@ -330,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mwj-cy-0tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2005.7971014492755" y="1555.5803571428571"/>
+            <point key="canvasLocation" x="2907" y="1556"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MyU-EG-g0Q">
@@ -412,7 +413,7 @@ it’s way to being processed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxY-La-pKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3622" y="866"/>
+            <point key="canvasLocation" x="5366.666666666667" y="1555.5803571428571"/>
         </scene>
         <!--Favorurite-->
         <scene sceneID="AYW-Sm-rB0">
@@ -460,14 +461,14 @@ it’s way to being processed</string>
                             <constraint firstItem="pzQ-Ns-oz0" firstAttribute="top" secondItem="MAg-7m-KB9" secondAttribute="top" id="zgz-TY-zUJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorurite" id="8CW-o4-c8h"/>
+                    <tabBarItem key="tabBarItem" title="Favorurite" image="FavoruriteSvg" id="8CW-o4-c8h"/>
                     <connections>
                         <outlet property="tableView" destination="pzQ-Ns-oz0" id="Q11-Ud-pGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecS-Ss-1Nl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2808.6956521739135" y="1555.5803571428571"/>
+            <point key="canvasLocation" x="3718.840579710145" y="1555.5803571428571"/>
         </scene>
         <!--Account-->
         <scene sceneID="1rn-q1-TUq">
@@ -495,14 +496,14 @@ it’s way to being processed</string>
                             <constraint firstItem="JuB-87-eMn" firstAttribute="bottom" secondItem="5uE-J3-O80" secondAttribute="bottom" id="eEa-BF-XGb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="nUW-Nn-bKz"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="AcccountSvg" id="nUW-Nn-bKz"/>
                     <connections>
                         <outlet property="tableView" destination="5uE-J3-O80" id="dVS-xz-M15"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flc-AT-nFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3621.739130434783" y="1555.5803571428571"/>
+            <point key="canvasLocation" x="4531.884057971015" y="1555.5803571428571"/>
         </scene>
         <!--Shop-->
         <scene sceneID="jk6-Jm-o25">
@@ -531,9 +532,8 @@ it’s way to being processed</string>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Shop" springLoaded="YES" id="PLV-5y-ZGk">
+                    <tabBarItem key="tabBarItem" title="Shop" image="shopLogoSvg" springLoaded="YES" id="PLV-5y-ZGk">
                         <color key="badgeColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="-2" vertical="-5"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="FZo-hC-Tv6" id="qPI-4O-I69"/>
@@ -541,12 +541,13 @@ it’s way to being processed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xog-C8-Dje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="386.95652173913044" y="1555.5803571428571"/>
+            <point key="canvasLocation" x="1164" y="1569"/>
         </scene>
         <!--Custom TabA Barvc-->
         <scene sceneID="kaB-9E-vQZ">
             <objects>
                 <tabBarController interfaceStyle="light" id="h3T-ED-mz0" customClass="CustomTabABarvc" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eCm-on-tTm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="6UW-gj-55w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -558,7 +559,7 @@ it’s way to being processed</string>
                     </tabBar>
                     <connections>
                         <segue destination="Ifz-K4-rNq" kind="relationship" relationship="viewControllers" id="caB-rv-suy"/>
-                        <segue destination="GgS-RM-SQv" kind="relationship" relationship="viewControllers" id="yji-hs-BHL"/>
+                        <segue destination="GgS-RM-SQv" kind="relationship" relationship="viewControllers" id="EY7-vl-46B"/>
                         <segue destination="z7j-s6-cOp" kind="relationship" relationship="viewControllers" id="sqJ-dp-5aN"/>
                         <segue destination="65d-KL-l88" kind="relationship" relationship="viewControllers" id="I2Y-in-QvI"/>
                         <segue destination="0jg-oA-Uli" kind="relationship" relationship="viewControllers" id="wVO-he-0cN"/>
@@ -567,6 +568,22 @@ it’s way to being processed</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TdH-gT-azD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2006" y="836"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tCQ-SU-C5u">
+            <objects>
+                <navigationController id="N09-mK-fYI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z8X-wj-GK3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h3T-ED-mz0" kind="relationship" relationship="rootViewController" id="NXs-1j-H1g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8d-ju-yhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="836"/>
         </scene>
         <!--Number View Controller-->
         <scene sceneID="6Et-DM-qzJ">
@@ -947,9 +964,6 @@ it’s way to being processed</string>
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="h3T-ED-mz0" kind="presentation" modalPresentationStyle="fullScreen" id="4px-wR-P5H"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6zE-Gm-meT">
                                 <rect key="frame" x="24" y="340" width="352" height="64.5"/>
@@ -1221,9 +1235,6 @@ it’s way to being processed</string>
                                                         <integer key="value" value="19"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="h3T-ED-mz0" kind="presentation" modalPresentationStyle="fullScreen" id="2Of-sn-VeH"/>
-                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5hM-4Z-qSO">
                                                 <rect key="frame" x="24" y="390.5" width="327" height="64.5"/>
@@ -1488,19 +1499,23 @@ it’s way to being processed</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="laG-kZ-vxL"/>
-        <segue reference="4px-wR-P5H"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="AcccountSvg" width="25" height="25"/>
         <image name="AcceptedLogo" width="1089" height="963"/>
+        <image name="FavoruriteSvg" width="25" height="25"/>
         <image name="Mask" width="1654" height="1498"/>
         <image name="OnboardingBackground" width="1657" height="3585"/>
         <image name="VectorbottomIcon" width="53" height="29"/>
+        <image name="cartSvg" width="23" height="21"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="exploreSvg" width="29" height="19"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="logo2" width="195" height="227"/>
         <image name="logo3" width="193" height="224"/>
         <image name="mapIcon" width="900" height="684"/>
         <image name="nextIcon" width="41" height="73"/>
+        <image name="shopLogoSvg" width="25" height="25"/>
         <image name="verificationPhone" width="1656" height="3585"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

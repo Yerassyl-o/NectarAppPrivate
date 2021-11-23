@@ -35,6 +35,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.32549019607843138" green="0.69411764705882351" blue="0.45882352941176469" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rit-Ul-Iq6" secondAttribute="bottom" constant="21.5" id="0Ds-au-XnK"/>
                             <constraint firstItem="nrb-5u-zC3" firstAttribute="top" secondItem="bcd-Bp-ar6" secondAttribute="top" constant="27" id="3eh-Kp-SVk"/>
                             <constraint firstItem="rit-Ul-Iq6" firstAttribute="top" secondItem="nrb-5u-zC3" secondAttribute="bottom" constant="27" id="D00-wd-YHI"/>
                             <constraint firstItem="rit-Ul-Iq6" firstAttribute="leading" secondItem="bcd-Bp-ar6" secondAttribute="leading" constant="5" id="DZs-Es-Ul9"/>

@@ -9,9 +9,12 @@ import UIKit
 
 class homeScreeSearchBarTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var viewSearch: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        viewSearch.layer.cornerRadius = 15
+        searchTextField.layer.cornerRadius = 15
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

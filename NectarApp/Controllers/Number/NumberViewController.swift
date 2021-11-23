@@ -17,6 +17,8 @@ class NumberViewController: UIViewController {
         super.viewDidLoad()
         setUpnumberEnterField()
         keyBoardSetUp()
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.backgroundColor = .clear
     }
     deinit {
         setupToHideKeyboardOnTapOnView()

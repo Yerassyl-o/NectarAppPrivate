@@ -16,6 +16,7 @@ class HomeScreenViewController: UIViewController {
         tableView.dataSource = self
         registerCustomCells()
         tableView.separatorColor = .clear
+        navigationController?.navigationBar.isHidden = true
     }
 }
 extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
