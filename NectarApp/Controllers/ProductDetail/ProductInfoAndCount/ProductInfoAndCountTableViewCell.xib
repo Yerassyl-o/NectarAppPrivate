@@ -102,6 +102,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="countOfProduct" destination="zt5-Nf-9fn" id="Ak1-9V-eSO"/>
+                <outlet property="productNameLabel" destination="Vg0-PW-gEl" id="VRP-gE-4iz"/>
+                <outlet property="productPrice" destination="uJn-Eb-90F" id="Thl-E2-E2K"/>
+                <outlet property="productQuantityLabel" destination="gJh-E8-cQS" id="bpv-Vm-lzD"/>
             </connections>
             <point key="canvasLocation" x="-23" y="114"/>
         </tableViewCell>

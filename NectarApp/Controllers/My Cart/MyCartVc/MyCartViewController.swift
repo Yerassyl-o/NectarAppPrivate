@@ -21,10 +21,9 @@ class MyCartViewController: UIViewController {
         tableView.separatorInset = .init(top: 0, left: 24, bottom: 0, right: 24)
         tableView.separatorColor = .clear
         productPriceSumLabel.text = "\(productPriceSumCounter)"
-
-        
     }
     @IBAction func productPriceSumLabelAction(_ sender: Any) {
+        
     }
 }
 

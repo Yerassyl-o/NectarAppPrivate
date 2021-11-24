@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N09-mK-fYI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g46-KY-Oic">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -413,7 +413,7 @@ it’s way to being processed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxY-La-pKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5366.666666666667" y="1555.5803571428571"/>
+            <point key="canvasLocation" x="2904" y="2732"/>
         </scene>
         <!--Favorurite-->
         <scene sceneID="AYW-Sm-rB0">
@@ -546,7 +546,7 @@ it’s way to being processed</string>
         <!--Product Detail View Controller-->
         <scene sceneID="ZXi-n0-js0">
             <objects>
-                <viewController id="Cdf-ek-nYK" customClass="ProductDetailViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailViewController" id="Cdf-ek-nYK" customClass="ProductDetailViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ReG-NC-5Hd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -576,11 +576,11 @@ it’s way to being processed</string>
                         <viewLayoutGuide key="safeArea" id="ZW4-SP-mea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="IZw-ni-b1F" firstAttribute="top" secondItem="ReG-NC-5Hd" secondAttribute="top" id="4d8-k1-KUp"/>
                             <constraint firstItem="ZW4-SP-mea" firstAttribute="bottom" secondItem="VQU-cs-imc" secondAttribute="bottom" constant="5" id="7lE-LB-rl3"/>
                             <constraint firstAttribute="bottom" secondItem="IZw-ni-b1F" secondAttribute="bottom" id="APi-7c-2HZ"/>
                             <constraint firstItem="IZw-ni-b1F" firstAttribute="leading" secondItem="ZW4-SP-mea" secondAttribute="leading" id="K67-Hi-LM4"/>
                             <constraint firstItem="IZw-ni-b1F" firstAttribute="trailing" secondItem="ZW4-SP-mea" secondAttribute="trailing" id="o5C-NX-lRr"/>
-                            <constraint firstItem="IZw-ni-b1F" firstAttribute="top" secondItem="ReG-NC-5Hd" secondAttribute="top" id="u8u-66-hxB"/>
                             <constraint firstAttribute="trailing" secondItem="VQU-cs-imc" secondAttribute="trailing" constant="24" id="vig-7D-tgN"/>
                             <constraint firstItem="VQU-cs-imc" firstAttribute="leading" secondItem="ZW4-SP-mea" secondAttribute="leading" constant="24" id="zaS-S7-XfN"/>
                         </constraints>
@@ -591,7 +591,117 @@ it’s way to being processed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBW-hb-2sp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1163.768115942029" y="2337.7232142857142"/>
+            <point key="canvasLocation" x="191" y="1569"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="T0b-W5-YpC">
+            <objects>
+                <viewController id="g46-KY-Oic" customClass="SearchViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jcj-IM-wV1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBV-MF-owg">
+                                <rect key="frame" x="24" y="51" width="334" height="52"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchLogo" translatesAutoresizingMaskIntoConstraints="NO" id="EH4-Sp-DCG">
+                                        <rect key="frame" x="15" y="17" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="6rf-AS-kcw"/>
+                                            <constraint firstAttribute="height" constant="18" id="sNE-VM-U9J"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Store" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gba-Ty-YrZ">
+                                        <rect key="frame" x="43" y="0.0" width="252" height="52"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07S-ez-ALJ">
+                                        <rect key="frame" x="305" y="18" width="16" height="16"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="Vjx-XK-mCw"/>
+                                            <constraint firstAttribute="height" constant="16" id="dQn-Aa-IvS"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.77254901960784317" green="0.77254901960784317" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="clearButtonAction:" destination="g46-KY-Oic" eventType="touchUpInside" id="Fwb-Zn-ykX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="8Yq-ia-q51"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gba-Ty-YrZ" secondAttribute="bottom" id="EHg-w4-TOn"/>
+                                    <constraint firstItem="Gba-Ty-YrZ" firstAttribute="leading" secondItem="EH4-Sp-DCG" secondAttribute="trailing" constant="10" id="GO7-KA-Zd7"/>
+                                    <constraint firstItem="Gba-Ty-YrZ" firstAttribute="centerY" secondItem="HBV-MF-owg" secondAttribute="centerY" id="JxX-nW-iRx"/>
+                                    <constraint firstItem="07S-ez-ALJ" firstAttribute="centerY" secondItem="HBV-MF-owg" secondAttribute="centerY" id="OXS-Jw-7yP"/>
+                                    <constraint firstItem="07S-ez-ALJ" firstAttribute="leading" secondItem="Gba-Ty-YrZ" secondAttribute="trailing" constant="10" id="Ta0-ma-8fh"/>
+                                    <constraint firstItem="EH4-Sp-DCG" firstAttribute="leading" secondItem="HBV-MF-owg" secondAttribute="leading" constant="15" id="XjB-tA-TNy"/>
+                                    <constraint firstItem="EH4-Sp-DCG" firstAttribute="centerY" secondItem="HBV-MF-owg" secondAttribute="centerY" id="gTj-u8-e93"/>
+                                    <constraint firstItem="Gba-Ty-YrZ" firstAttribute="top" secondItem="HBV-MF-owg" secondAttribute="top" id="ncT-7D-Q5Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="07S-ez-ALJ" secondAttribute="trailing" constant="13" id="xr0-Q3-3bG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy2-tB-ctA">
+                                <rect key="frame" x="373" y="68" width="17" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="K3o-S6-gTi"/>
+                                    <constraint firstAttribute="width" constant="17" id="MiC-xX-u5j"/>
+                                </constraints>
+                                <state key="normal" image="settingIcon"/>
+                                <connections>
+                                    <action selector="filterButtonAction:" destination="g46-KY-Oic" eventType="touchUpInside" id="3EH-Lh-BMY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TWX-1V-d5P"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HBV-MF-owg" firstAttribute="top" secondItem="TWX-1V-d5P" secondAttribute="top" constant="7" id="52n-M5-EZy"/>
+                            <constraint firstItem="HBV-MF-owg" firstAttribute="leading" secondItem="TWX-1V-d5P" secondAttribute="leading" constant="24" id="Cac-pJ-dm8"/>
+                            <constraint firstItem="zy2-tB-ctA" firstAttribute="centerY" secondItem="HBV-MF-owg" secondAttribute="centerY" id="E0f-7F-B25"/>
+                            <constraint firstItem="zy2-tB-ctA" firstAttribute="leading" secondItem="HBV-MF-owg" secondAttribute="trailing" constant="15" id="GcW-lF-Nou"/>
+                            <constraint firstItem="TWX-1V-d5P" firstAttribute="trailing" secondItem="zy2-tB-ctA" secondAttribute="trailing" constant="24" id="yOt-UB-mUP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearButton" destination="07S-ez-ALJ" id="GqG-WC-o6f"/>
+                        <outlet property="customSearchBarTextField" destination="Gba-Ty-YrZ" id="E7j-lK-Y1t"/>
+                        <outlet property="customSearchBarView" destination="HBV-MF-owg" id="V34-Go-D9E"/>
+                        <outlet property="filterButton" destination="zy2-tB-ctA" id="Xlm-uX-pXx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I65-bq-8fp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.85507246376812" y="2730.8035714285711"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1iL-YJ-HXZ">
+            <objects>
+                <viewController id="ReU-oM-HKO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XZ4-Lr-6yx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2Aq-K5-0pF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DLw-SF-Ri7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="2731"/>
         </scene>
         <!--Checkout View Controller-->
         <scene sceneID="hc4-qh-AAp">
@@ -681,21 +791,25 @@ it’s way to being processed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Tc-xM-ruy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3165.217391304348" y="2352.7901785714284"/>
+            <point key="canvasLocation" x="2906" y="2139"/>
         </scene>
         <!--Custom TabA Barvc-->
         <scene sceneID="kaB-9E-vQZ">
             <objects>
                 <tabBarController interfaceStyle="light" id="h3T-ED-mz0" customClass="CustomTabABarvc" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eCm-on-tTm"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="6UW-gj-55w">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6UW-gj-55w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.32549019610000002" green="0.69411764710000001" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" systemColor="systemRedColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="Ifz-K4-rNq" kind="relationship" relationship="viewControllers" id="caB-rv-suy"/>
@@ -1656,8 +1770,11 @@ it’s way to being processed</string>
         <image name="logo3" width="193" height="224"/>
         <image name="mapIcon" width="900" height="684"/>
         <image name="nextIcon" width="41" height="73"/>
+        <image name="searchLogo" width="74" height="74"/>
+        <image name="settingIcon" width="70" height="73"/>
         <image name="shopLogoSvg" width="25" height="25"/>
         <image name="verificationPhone" width="1656" height="3585"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -1666,6 +1783,9 @@ it’s way to being processed</string>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

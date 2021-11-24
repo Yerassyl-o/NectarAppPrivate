@@ -10,6 +10,9 @@ import UIKit
 class ProductInfoAndCountTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countOfProduct: UILabel!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productQuantityLabel: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         countOfProduct.layer.borderWidth = 1

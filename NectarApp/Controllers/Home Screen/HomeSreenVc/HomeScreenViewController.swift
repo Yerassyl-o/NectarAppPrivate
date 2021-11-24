@@ -16,9 +16,13 @@ class HomeScreenViewController: UIViewController {
         tableView.dataSource = self
         registerCustomCells()
         tableView.separatorColor = .clear
-        navigationController?.navigationBar.isHidden = true
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+           self.navigationController!.navigationBar.shadowImage = UIImage()
+           self.navigationController!.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.isHidden = true
     }
 }
+
 extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         7

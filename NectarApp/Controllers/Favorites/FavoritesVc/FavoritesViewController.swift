@@ -49,6 +49,13 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
             return 114
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
+            viewController.product = productDataBase.getDataBase[indexPath.row]
+            navigationController?.pushViewController(viewController , animated: true)
+        }
+    }
 }
 extension FavoritesViewController {
     func registerCustomCells(){

@@ -8,7 +8,7 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
-
+    var product: ProductStruct!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +30,27 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 1 {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductInfoAndCountTableViewCell", for: indexPath) as! ProductInfoAndCountTableViewCell
             cell.selectionStyle = .none
+            cell.productPrice.text = "$\(product.productPrice)"
+            cell.productNameLabel.text = "\(product.productName)"
+            cell.productQuantityLabel.text = "\(product.productQuantity)\(product.productUnitOfMeasurement)"
+        
+            return cell
+            
+            
+        } else if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "productDetailTableViewCell", for: indexPath) as! productDetailTableViewCell
+            cell.selectionStyle = .none
+            cell.onProductDetailButtonTap = {
+                self.tableView.reloadData()
+            }
             return cell
         } else {
-            return UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "productDetailTableViewCell", for: indexPath) as! productDetailTableViewCell
+            cell.selectionStyle = .none
+            return cell
         }
     }
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -48,7 +64,9 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
 
 extension ProductDetailViewController {
     func registerCustomCells(){
+        
         tableView.register(UINib.init(nibName: "ProductImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductImagesTableViewCell")
         tableView.register(UINib.init(nibName: "ProductInfoAndCountTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductInfoAndCountTableViewCell")
+        tableView.register(UINib.init(nibName: "productDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "productDetailTableViewCell")
     }
 }

@@ -17,7 +17,6 @@ class ExploreVcViewController: UIViewController {
         tableView.dataSource = self
         registerCustomCells()
         tableView.separatorColor = .clear
-        navigationController?.navigationBar.isHidden = true
     }
 }
 extension ExploreVcViewController: UITableViewDelegate, UITableViewDataSource {
