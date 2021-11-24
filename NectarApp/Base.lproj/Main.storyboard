@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GP5-zT-ZmH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N09-mK-fYI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -670,6 +670,7 @@ it’s way to being processed</string>
                             <constraint firstItem="utG-vM-hFd" firstAttribute="top" secondItem="5As-mY-gUA" secondAttribute="bottom" constant="30" id="pNw-wC-sSZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="S63-kE-TGd"/>
                     <size key="freeformSize" width="414" height="531"/>
                     <connections>
                         <outlet property="closebutton" destination="KbO-No-bLf" id="9yt-uO-Asi"/>
