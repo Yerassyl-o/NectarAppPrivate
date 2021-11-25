@@ -16,10 +16,6 @@ class HomeScreenViewController: UIViewController {
         tableView.dataSource = self
         registerCustomCells()
         tableView.separatorColor = .clear
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
-           self.navigationController!.navigationBar.shadowImage = UIImage()
-           self.navigationController!.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.isHidden = true
     }
 }
 

@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frash Fruits &amp; Vegetable" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rit-Ul-Iq6">
-                                <rect key="frame" x="5" y="130" width="165" height="38.5"/>
+                                <rect key="frame" x="25" y="130" width="125" height="38.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,12 +35,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.32549019607843138" green="0.69411764705882351" blue="0.45882352941176469" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="rit-Ul-Iq6" secondAttribute="bottom" constant="21.5" id="0Ds-au-XnK"/>
                             <constraint firstItem="nrb-5u-zC3" firstAttribute="top" secondItem="bcd-Bp-ar6" secondAttribute="top" constant="27" id="3eh-Kp-SVk"/>
                             <constraint firstItem="rit-Ul-Iq6" firstAttribute="top" secondItem="nrb-5u-zC3" secondAttribute="bottom" constant="27" id="D00-wd-YHI"/>
-                            <constraint firstItem="rit-Ul-Iq6" firstAttribute="leading" secondItem="bcd-Bp-ar6" secondAttribute="leading" constant="5" id="DZs-Es-Ul9"/>
-                            <constraint firstAttribute="trailing" secondItem="rit-Ul-Iq6" secondAttribute="trailing" constant="5" id="Gi6-SM-9e8"/>
+                            <constraint firstAttribute="bottom" secondItem="rit-Ul-Iq6" secondAttribute="bottom" constant="21.5" id="Hau-pr-mds"/>
+                            <constraint firstAttribute="trailing" secondItem="rit-Ul-Iq6" secondAttribute="trailing" constant="25" id="Ug2-hW-Xub"/>
                             <constraint firstItem="nrb-5u-zC3" firstAttribute="centerX" secondItem="bcd-Bp-ar6" secondAttribute="centerX" id="UpA-Ba-Io1"/>
+                            <constraint firstItem="rit-Ul-Iq6" firstAttribute="centerX" secondItem="bcd-Bp-ar6" secondAttribute="centerX" id="qYn-l0-W4R"/>
+                            <constraint firstItem="rit-Ul-Iq6" firstAttribute="leading" secondItem="bcd-Bp-ar6" secondAttribute="leading" constant="25" id="sWL-kM-OwR"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

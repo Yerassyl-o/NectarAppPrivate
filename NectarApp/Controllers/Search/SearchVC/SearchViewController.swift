@@ -8,6 +8,8 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    var dataBaseOfProduct = ProductDataBase()
+    @IBOutlet weak var collectionView: UICollectionView!
     var clearButtonLogic = false
     @IBOutlet weak var customSearchBarView: UIView!
     @IBOutlet weak var customSearchBarTextField: UITextField!
@@ -15,25 +17,73 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var filterButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        clearButton.isHidden = true
-        customSearchBarTextField.addTarget(self, action: #selector(customSearchBarTextFieldChanged), for: .allEditingEvents)
-        setupToHideKeyboardOnTapOnView()
-        customSearchBarTextField.returnKeyType = .search
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.shadowImage = UIImage()
+        setUpCustomSearchBAr()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        registerCustomCells()
     }
     
     @IBAction func clearButtonAction(_ sender: Any) {
         customSearchBarTextField.text = ""
         textFieldEmptySettings()
     }
+    
     @IBAction func filterButtonAction(_ sender: Any) {
+    }
+    
+    
+    
+}
+
+
+extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        dataBaseOfProduct.getDataBase.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"homeScreenCategorySectionElementsCollectionViewCell", for: indexPath) as? homeScreenCategorySectionElementsCollectionViewCell else { return UICollectionViewCell() }
+        let product = dataBaseOfProduct.getDataBase[indexPath.row]
+        cell.productImage.image = product.productImage
+        cell.productName.text = "\(product.productName)"
+        cell.productPrice.text = "$\(product.productPrice)"
+        cell.productValue.text = "\(product.productQuantity)\(product.productUnitOfMeasurement), Price"
+            return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = self.collectionView.frame.width
+        print("dsd")
+        return CGSize(width: (collectionViewWidth - 15)/2, height: 248)
+    }
+    
+    
+}
+extension SearchViewController: UICollectionViewDelegateFlowLayout {}
+
+extension SearchViewController {
+    func registerCustomCells(){
+        let customCellNib = UINib(nibName: "homeScreenCategorySectionElementsCollectionViewCell", bundle: .main)
+        collectionView.register(customCellNib, forCellWithReuseIdentifier: "homeScreenCategorySectionElementsCollectionViewCell")
+    }
+}
+
+
+
+
+
+
+
+extension SearchViewController {
+    func setUpCustomSearchBAr() {
+        clearButton.isHidden = true
+        customSearchBarTextField.addTarget(self, action: #selector(customSearchBarTextFieldChanged), for: .allEditingEvents)
+        setupToHideKeyboardOnTapOnView()
+        customSearchBarTextField.returnKeyType = .search
     }
     @objc func customSearchBarTextFieldChanged(_ textField: UITextField) {
         textFieldEmptySettings()
     }
-}
-extension SearchViewController {
     
     func textFieldEmptySettings() {
         if customSearchBarTextField.text?.count ?? 0 > 0 {
@@ -42,13 +92,7 @@ extension SearchViewController {
             clearButton.isHidden = true
         }
     }
-    
-    
-    
-    
-    
-    
-    
+
     func setupToHideKeyboardOnTapOnView() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
@@ -63,3 +107,4 @@ extension SearchViewController {
         textFieldEmptySettings()
     }
 }
+

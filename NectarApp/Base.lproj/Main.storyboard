@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c6M-Iw-ssF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g46-KY-Oic">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -17,7 +17,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OnboardingBackground" translatesAutoresizingMaskIntoConstraints="NO" id="WvA-zu-ihr">
-                                <rect key="frame" x="0.0" y="-3" width="414" height="902"/>
+                                <rect key="frame" x="-73" y="-69" width="560" height="1034"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1034" id="3u4-Ea-vGf"/>
+                                    <constraint firstAttribute="width" constant="560" id="VHC-fc-Pin"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="nkV-NG-3aX">
                                 <rect key="frame" x="183" y="501.5" width="48.5" height="56.5"/>
@@ -65,20 +69,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="WvA-zu-ihr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Sm-Q2-9az"/>
                             <constraint firstItem="G2l-aC-GSc" firstAttribute="top" secondItem="nkV-NG-3aX" secondAttribute="bottom" constant="35" id="9ia-8e-pMS"/>
-                            <constraint firstAttribute="bottom" secondItem="WvA-zu-ihr" secondAttribute="bottom" constant="-3" id="D51-Lu-sX0"/>
-                            <constraint firstItem="WvA-zu-ihr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EtW-dJ-jBS"/>
+                            <constraint firstItem="WvA-zu-ihr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bz5-RA-CDQ"/>
                             <constraint firstItem="G2l-aC-GSc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="Fx1-TF-zlQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G2l-aC-GSc" secondAttribute="trailing" constant="80" id="N4e-Tp-YU5"/>
-                            <constraint firstItem="WvA-zu-ihr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Npa-KR-kdB"/>
                             <constraint firstItem="jbW-5X-P0t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="31" id="P7b-y7-Tmj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jbW-5X-P0t" secondAttribute="bottom" constant="52" id="RQQ-ne-0Yc"/>
                             <constraint firstItem="nkV-NG-3aX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RWc-LU-MEj"/>
-                            <constraint firstItem="WvA-zu-ihr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZCa-0w-cS6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jbW-5X-P0t" secondAttribute="trailing" constant="31" id="aey-0E-ov2"/>
-                            <constraint firstItem="WvA-zu-ihr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ckn-f4-Fiz"/>
                             <constraint firstItem="Qib-0z-bNo" firstAttribute="top" secondItem="G2l-aC-GSc" secondAttribute="bottom" constant="20" id="fbv-iy-hJH"/>
-                            <constraint firstItem="WvA-zu-ihr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-3" id="k15-wk-JXf"/>
                             <constraint firstItem="Qib-0z-bNo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x5g-yd-dPD"/>
                             <constraint firstItem="jbW-5X-P0t" firstAttribute="top" secondItem="Qib-0z-bNo" secondAttribute="bottom" constant="41" id="yFV-af-Lb3"/>
                         </constraints>
@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-270" y="74"/>
+            <point key="canvasLocation" x="-271.01449275362319" y="73.660714285714278"/>
         </scene>
         <!--Sing In View Controller-->
         <scene sceneID="iHW-Qo-dIa">
@@ -676,6 +676,17 @@ it’s way to being processed</string>
                                     <segue destination="q9F-tZ-e5e" kind="show" id="SYd-eb-Na4"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Ee-GF-A2X">
+                                <rect key="frame" x="24" y="133" width="366" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="15" minimumInteritemSpacing="15" id="8vK-Cb-QGL">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TWX-1V-d5P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -684,12 +695,17 @@ it’s way to being processed</string>
                             <constraint firstItem="HBV-MF-owg" firstAttribute="leading" secondItem="TWX-1V-d5P" secondAttribute="leading" constant="24" id="Cac-pJ-dm8"/>
                             <constraint firstItem="zy2-tB-ctA" firstAttribute="centerY" secondItem="HBV-MF-owg" secondAttribute="centerY" id="E0f-7F-B25"/>
                             <constraint firstItem="zy2-tB-ctA" firstAttribute="leading" secondItem="HBV-MF-owg" secondAttribute="trailing" constant="15" id="GcW-lF-Nou"/>
+                            <constraint firstItem="6Ee-GF-A2X" firstAttribute="top" secondItem="HBV-MF-owg" secondAttribute="bottom" constant="30" id="hvK-p5-Tjw"/>
+                            <constraint firstItem="TWX-1V-d5P" firstAttribute="trailing" secondItem="6Ee-GF-A2X" secondAttribute="trailing" constant="24" id="kCy-Ph-S1U"/>
+                            <constraint firstAttribute="bottom" secondItem="6Ee-GF-A2X" secondAttribute="bottom" id="min-30-y9C"/>
+                            <constraint firstItem="6Ee-GF-A2X" firstAttribute="leading" secondItem="TWX-1V-d5P" secondAttribute="leading" constant="24" id="qWE-Is-l58"/>
                             <constraint firstItem="TWX-1V-d5P" firstAttribute="trailing" secondItem="zy2-tB-ctA" secondAttribute="trailing" constant="24" id="yOt-UB-mUP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6v0-Lr-7Lp"/>
                     <connections>
                         <outlet property="clearButton" destination="07S-ez-ALJ" id="GqG-WC-o6f"/>
+                        <outlet property="collectionView" destination="6Ee-GF-A2X" id="Bhg-ir-DB0"/>
                         <outlet property="customSearchBarTextField" destination="Gba-Ty-YrZ" id="E7j-lK-Y1t"/>
                         <outlet property="customSearchBarView" destination="HBV-MF-owg" id="V34-Go-D9E"/>
                         <outlet property="filterButton" destination="zy2-tB-ctA" id="Xlm-uX-pXx"/>
@@ -697,7 +713,7 @@ it’s way to being processed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I65-bq-8fp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189.85507246376812" y="2730.8035714285711"/>
+            <point key="canvasLocation" x="189.85507246376812" y="2730.1339285714284"/>
         </scene>
         <!--Filters-->
         <scene sceneID="1iL-YJ-HXZ">
@@ -902,9 +918,6 @@ it’s way to being processed</string>
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="h3T-ED-mz0" kind="relationship" relationship="rootViewController" id="NXs-1j-H1g"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8d-ju-yhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -918,11 +931,11 @@ it’s way to being processed</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verificationPhone" translatesAutoresizingMaskIntoConstraints="NO" id="cDC-h5-jqm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="jzj-d0-Lhh">
+                                <rect key="frame" x="-103" y="-84.5" width="620" height="1065"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="ZnL-ot-ZzK"/>
-                                    <constraint firstAttribute="height" constant="896" id="iJV-aC-z1T"/>
+                                    <constraint firstAttribute="height" constant="1065" id="HwI-hV-dMs"/>
+                                    <constraint firstAttribute="width" constant="620" id="rh5-59-6Ab"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your mobile number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtF-co-X9p">
@@ -979,20 +992,19 @@ it’s way to being processed</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7Qs-Xg-bvl" firstAttribute="trailing" secondItem="me4-HR-yWE" secondAttribute="trailing" constant="24" id="2eN-m2-cCl"/>
-                            <constraint firstItem="cDC-h5-jqm" firstAttribute="centerX" secondItem="TqD-yJ-zvH" secondAttribute="centerX" id="4VD-oN-JAS"/>
                             <constraint firstItem="gAL-PM-tql" firstAttribute="centerY" secondItem="me4-HR-yWE" secondAttribute="centerY" id="4zg-2a-vcd"/>
                             <constraint firstItem="GtF-co-X9p" firstAttribute="leading" secondItem="7Qs-Xg-bvl" secondAttribute="leading" constant="24" id="7b0-Vl-FAL"/>
                             <constraint firstItem="7Qs-Xg-bvl" firstAttribute="trailing" secondItem="TOv-6W-btK" secondAttribute="trailing" constant="24" id="Dbe-w6-86o"/>
                             <constraint firstItem="gAL-PM-tql" firstAttribute="top" secondItem="rLv-ZI-AkU" secondAttribute="bottom" constant="14" id="HT1-rE-dkd"/>
                             <constraint firstItem="rLv-ZI-AkU" firstAttribute="top" secondItem="GtF-co-X9p" secondAttribute="bottom" constant="27.5" id="JAr-eo-i0c"/>
-                            <constraint firstAttribute="bottom" secondItem="cDC-h5-jqm" secondAttribute="bottom" id="Qta-76-5A9"/>
+                            <constraint firstItem="jzj-d0-Lhh" firstAttribute="centerY" secondItem="TqD-yJ-zvH" secondAttribute="centerY" id="M5C-53-VeL"/>
                             <constraint firstItem="GtF-co-X9p" firstAttribute="top" secondItem="7Qs-Xg-bvl" secondAttribute="top" constant="52" id="TzW-ze-rdi"/>
                             <constraint firstItem="TOv-6W-btK" firstAttribute="top" secondItem="me4-HR-yWE" secondAttribute="bottom" constant="10" id="Zb1-ut-H7B"/>
+                            <constraint firstItem="jzj-d0-Lhh" firstAttribute="centerX" secondItem="TqD-yJ-zvH" secondAttribute="centerX" id="Zxl-4j-rZA"/>
                             <constraint firstItem="7Qs-Xg-bvl" firstAttribute="bottom" secondItem="0FC-Ud-PHP" secondAttribute="bottom" constant="30" id="cRl-g7-uEF"/>
                             <constraint firstItem="7Qs-Xg-bvl" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="rLv-ZI-AkU" secondAttribute="trailing" constant="282" id="gDi-77-5am"/>
                             <constraint firstItem="me4-HR-yWE" firstAttribute="top" secondItem="rLv-ZI-AkU" secondAttribute="bottom" constant="14" id="kaa-l4-50B"/>
                             <constraint firstItem="TOv-6W-btK" firstAttribute="leading" secondItem="7Qs-Xg-bvl" secondAttribute="leading" constant="24" id="khP-IJ-Sfn"/>
-                            <constraint firstItem="cDC-h5-jqm" firstAttribute="top" secondItem="TqD-yJ-zvH" secondAttribute="top" id="lt2-DL-S4k"/>
                             <constraint firstItem="7Qs-Xg-bvl" firstAttribute="trailing" secondItem="0FC-Ud-PHP" secondAttribute="trailing" constant="24" id="nfb-BA-0oQ"/>
                             <constraint firstItem="7Qs-Xg-bvl" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="GtF-co-X9p" secondAttribute="trailing" constant="107" id="qET-YB-Ujo"/>
                             <constraint firstItem="rLv-ZI-AkU" firstAttribute="leading" secondItem="7Qs-Xg-bvl" secondAttribute="leading" constant="24" id="wQb-jP-i4F"/>
@@ -1019,11 +1031,11 @@ it’s way to being processed</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verificationPhone" translatesAutoresizingMaskIntoConstraints="NO" id="hFb-GW-wlf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="gC4-MN-0lM">
+                                <rect key="frame" x="-103" y="-84.5" width="620" height="1065"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="66y-xM-eJn"/>
-                                    <constraint firstAttribute="height" constant="896" id="Bd6-1U-wf1"/>
+                                    <constraint firstAttribute="width" constant="620" id="7mt-ah-clX"/>
+                                    <constraint firstAttribute="height" constant="1065" id="p7f-lO-dBc"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your 4-digit code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWE-YF-2Ih">
@@ -1084,7 +1096,6 @@ it’s way to being processed</string>
                         <viewLayoutGuide key="safeArea" id="ncQ-TB-ybT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="hFb-GW-wlf" secondAttribute="bottom" id="7LN-lJ-Kii"/>
                             <constraint firstItem="9c0-RZ-n9Q" firstAttribute="leading" secondItem="ncQ-TB-ybT" secondAttribute="leading" constant="24" id="82a-i1-DXg"/>
                             <constraint firstItem="5HE-wX-wek" firstAttribute="top" secondItem="Sce-pX-Cue" secondAttribute="bottom" constant="10" id="BEo-2L-raC"/>
                             <constraint firstItem="5HE-wX-wek" firstAttribute="leading" secondItem="ncQ-TB-ybT" secondAttribute="leading" constant="24" id="CHg-yJ-knl"/>
@@ -1092,12 +1103,12 @@ it’s way to being processed</string>
                             <constraint firstItem="baD-oa-nce" firstAttribute="centerY" secondItem="Vqk-9x-0Eh" secondAttribute="centerY" id="JIY-ak-pp4"/>
                             <constraint firstItem="baD-oa-nce" firstAttribute="leading" secondItem="ncQ-TB-ybT" secondAttribute="leading" constant="24" id="JiQ-T5-wv2"/>
                             <constraint firstItem="ncQ-TB-ybT" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="eWE-YF-2Ih" secondAttribute="trailing" constant="132" id="M6e-se-pBL"/>
-                            <constraint firstItem="hFb-GW-wlf" firstAttribute="top" secondItem="wCs-D9-RJS" secondAttribute="top" id="P0F-Af-LGp"/>
                             <constraint firstItem="9c0-RZ-n9Q" firstAttribute="top" secondItem="eWE-YF-2Ih" secondAttribute="bottom" constant="27" id="RTl-fF-YB5"/>
                             <constraint firstItem="Vqk-9x-0Eh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="baD-oa-nce" secondAttribute="trailing" constant="193" id="ThO-FP-8Ku"/>
                             <constraint firstItem="ncQ-TB-ybT" firstAttribute="bottom" secondItem="Vqk-9x-0Eh" secondAttribute="bottom" constant="30" id="WR2-5o-fwr"/>
-                            <constraint firstItem="hFb-GW-wlf" firstAttribute="centerX" secondItem="wCs-D9-RJS" secondAttribute="centerX" id="Wr2-9a-XUV"/>
                             <constraint firstItem="Sce-pX-Cue" firstAttribute="top" secondItem="9c0-RZ-n9Q" secondAttribute="bottom" constant="14" id="jHQ-Do-V3Y"/>
+                            <constraint firstItem="gC4-MN-0lM" firstAttribute="centerX" secondItem="wCs-D9-RJS" secondAttribute="centerX" id="jtk-EF-Lwg"/>
+                            <constraint firstItem="gC4-MN-0lM" firstAttribute="centerY" secondItem="wCs-D9-RJS" secondAttribute="centerY" id="n6M-vs-KbL"/>
                             <constraint firstItem="ncQ-TB-ybT" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Sce-pX-Cue" secondAttribute="trailing" constant="345" id="o7Y-45-3gO"/>
                             <constraint firstItem="Sce-pX-Cue" firstAttribute="leading" secondItem="ncQ-TB-ybT" secondAttribute="leading" constant="24" id="p5S-vt-LCo"/>
                             <constraint firstItem="ncQ-TB-ybT" firstAttribute="trailing" secondItem="Vqk-9x-0Eh" secondAttribute="trailing" constant="24" id="p9S-Eu-Zbq"/>
@@ -1199,7 +1210,7 @@ it’s way to being processed</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="FPG-qb-Udc" kind="presentation" id="Cad-OZ-bEM"/>
+                                    <segue destination="h3T-ED-mz0" kind="presentation" modalPresentationStyle="fullScreen" id="R39-Zb-TaG"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKz-PQ-HI2">
@@ -1270,9 +1281,12 @@ it’s way to being processed</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="verificationPhone" translatesAutoresizingMaskIntoConstraints="NO" id="wPz-ct-Zda">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="oOS-4k-mHt">
+                                <rect key="frame" x="-103" y="-84.5" width="620" height="1065"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1065" id="tA3-6f-cxb"/>
+                                    <constraint firstAttribute="width" constant="620" id="zmN-0k-Xbt"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNZ-ib-t7G">
                                 <rect key="frame" x="24" y="572" width="366" height="67"/>
@@ -1448,9 +1462,11 @@ it’s way to being processed</string>
                             <constraint firstItem="uJe-iV-FaW" firstAttribute="top" secondItem="tNZ-ib-t7G" secondAttribute="bottom" constant="15" id="Aax-p4-NRD"/>
                             <constraint firstItem="06y-58-frU" firstAttribute="trailing" secondItem="inO-cI-cvL" secondAttribute="trailing" constant="24" id="FAc-7f-WUh"/>
                             <constraint firstItem="tNZ-ib-t7G" firstAttribute="leading" secondItem="06y-58-frU" secondAttribute="leading" constant="24" id="Jxt-Yy-nfs"/>
+                            <constraint firstItem="oOS-4k-mHt" firstAttribute="centerX" secondItem="uRj-JD-ceO" secondAttribute="centerX" id="KUx-id-NIp"/>
                             <constraint firstItem="7Ax-5u-HeO" firstAttribute="centerX" secondItem="uRj-JD-ceO" secondAttribute="centerX" id="NMG-Wm-yhJ"/>
                             <constraint firstItem="06y-58-frU" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="1V8-jV-vlY" secondAttribute="trailing" constant="240" id="T1p-Gs-HCh"/>
                             <constraint firstItem="7Ax-5u-HeO" firstAttribute="top" secondItem="06y-58-frU" secondAttribute="top" constant="33" id="UGZ-qn-1eN"/>
+                            <constraint firstItem="oOS-4k-mHt" firstAttribute="centerY" secondItem="uRj-JD-ceO" secondAttribute="centerY" id="VYm-Ve-wi2"/>
                             <constraint firstItem="06y-58-frU" firstAttribute="trailing" secondItem="tNZ-ib-t7G" secondAttribute="trailing" constant="24" id="ZqU-T3-WMl"/>
                             <constraint firstItem="wSy-JX-RAu" firstAttribute="top" secondItem="1V8-jV-vlY" secondAttribute="bottom" constant="15" id="cg3-vu-PEz"/>
                             <constraint firstItem="6zE-Gm-meT" firstAttribute="leading" secondItem="06y-58-frU" secondAttribute="leading" constant="24" id="do1-XE-Opn"/>
@@ -1494,11 +1510,11 @@ it’s way to being processed</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjk-ex-D6M">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="896"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verificationPhone" translatesAutoresizingMaskIntoConstraints="NO" id="Us3-Qj-dJh">
-                                                <rect key="frame" x="-19.5" y="0.0" width="414" height="896"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="Qa8-oU-yoz">
+                                                <rect key="frame" x="-122.5" y="-84.5" width="620" height="1065"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="896" id="6Ay-qn-Fdw"/>
-                                                    <constraint firstAttribute="width" constant="414" id="pyA-cN-AlE"/>
+                                                    <constraint firstAttribute="width" constant="620" id="eQt-u3-90M"/>
+                                                    <constraint firstAttribute="height" constant="1065" id="y2s-Zj-Lgf"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWa-4V-LaP">
@@ -1734,11 +1750,9 @@ it’s way to being processed</string>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="JgY-vF-NJR" secondAttribute="trailing" constant="24" id="73w-hI-KXl"/>
                                             <constraint firstItem="DpY-OM-yFQ" firstAttribute="top" secondItem="Etq-Ec-hNw" secondAttribute="bottom" constant="40" id="7Vm-dg-Az5"/>
-                                            <constraint firstItem="Us3-Qj-dJh" firstAttribute="top" secondItem="jjk-ex-D6M" secondAttribute="top" id="AAk-ue-qC2"/>
+                                            <constraint firstItem="Qa8-oU-yoz" firstAttribute="centerX" secondItem="jjk-ex-D6M" secondAttribute="centerX" id="7qH-xM-T8z"/>
                                             <constraint firstItem="Bcy-ra-0XK" firstAttribute="centerX" secondItem="jjk-ex-D6M" secondAttribute="centerX" id="AkL-LQ-Ehr"/>
-                                            <constraint firstItem="Us3-Qj-dJh" firstAttribute="centerX" secondItem="jjk-ex-D6M" secondAttribute="centerX" id="CHu-Iy-bY1"/>
                                             <constraint firstItem="D1R-Qs-Iae" firstAttribute="centerX" secondItem="jjk-ex-D6M" secondAttribute="centerX" id="CV7-n7-jsl"/>
-                                            <constraint firstAttribute="bottom" secondItem="Us3-Qj-dJh" secondAttribute="bottom" id="Deu-5u-QuQ"/>
                                             <constraint firstItem="avs-nR-LpW" firstAttribute="top" secondItem="JgY-vF-NJR" secondAttribute="bottom" constant="20" id="IE0-EN-g4S"/>
                                             <constraint firstAttribute="trailing" secondItem="DpY-OM-yFQ" secondAttribute="trailing" constant="24" id="JAr-Wx-sbt"/>
                                             <constraint firstAttribute="trailing" secondItem="avs-nR-LpW" secondAttribute="trailing" constant="24" id="M6b-di-9K4"/>
@@ -1749,6 +1763,7 @@ it’s way to being processed</string>
                                             <constraint firstItem="avs-nR-LpW" firstAttribute="leading" secondItem="jjk-ex-D6M" secondAttribute="leading" constant="24" id="Tgm-LR-Nfa"/>
                                             <constraint firstItem="Etq-Ec-hNw" firstAttribute="leading" secondItem="jjk-ex-D6M" secondAttribute="leading" constant="24" id="VaE-La-tu0"/>
                                             <constraint firstItem="Etq-Ec-hNw" firstAttribute="top" secondItem="eWa-4V-LaP" secondAttribute="bottom" constant="15" id="Wn8-AL-lsB"/>
+                                            <constraint firstItem="Qa8-oU-yoz" firstAttribute="centerY" secondItem="jjk-ex-D6M" secondAttribute="centerY" id="d3J-pZ-fik"/>
                                             <constraint firstItem="5hM-4Z-qSO" firstAttribute="top" secondItem="DpY-OM-yFQ" secondAttribute="bottom" constant="30" id="dwB-js-IUV"/>
                                             <constraint firstAttribute="trailing" secondItem="mQM-LI-yPl" secondAttribute="trailing" constant="24" id="eEa-iY-Y3T"/>
                                             <constraint firstItem="5hM-4Z-qSO" firstAttribute="leading" secondItem="jjk-ex-D6M" secondAttribute="leading" constant="24" id="elG-VD-Kpe"/>
@@ -1866,7 +1881,6 @@ it’s way to being processed</string>
         <image name="searchLogo" width="74" height="74"/>
         <image name="settingIcon" width="70" height="73"/>
         <image name="shopLogoSvg" width="25" height="25"/>
-        <image name="verificationPhone" width="1656" height="3585"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -17,6 +17,7 @@ class homeScreenCategorySectionTableViewCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
         registerCustomCells()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -23,5 +23,6 @@ class homeScreenCategorySectionElementsCollectionViewCell: UICollectionViewCell 
     }
 
     @IBAction func productAddButtonAction(_ sender: Any) {
+        print("hello world")
     }
 }

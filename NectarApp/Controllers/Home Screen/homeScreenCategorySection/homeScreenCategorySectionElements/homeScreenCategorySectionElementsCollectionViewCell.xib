@@ -29,7 +29,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1kg, Priceg" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWm-K4-GF9">
-                                <rect key="frame" x="15" y="156" width="143" height="17"/>
+                                <rect key="frame" x="15" y="156" width="73" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ova-jf-iLE">
-                                <rect key="frame" x="15" y="199.5" width="78.5" height="22"/>
+                                <rect key="frame" x="15" y="199.5" width="48" height="22"/>
                                 <string key="text">$4.99
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -74,19 +74,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zWm-K4-GF9" secondAttribute="trailing" constant="15" id="8we-cJ-ePJ"/>
-                            <constraint firstAttribute="width" constant="173" id="LuA-IJ-iIo"/>
+                            <constraint firstAttribute="trailing" secondItem="7cx-JH-dfP" secondAttribute="trailing" constant="15" id="Cb5-db-VW6"/>
+                            <constraint firstAttribute="bottom" secondItem="xa2-N9-cPy" secondAttribute="bottom" constant="15" id="PAt-6i-gNR"/>
                             <constraint firstAttribute="trailing" secondItem="xa2-N9-cPy" secondAttribute="trailing" constant="14" id="T1p-rc-NTE"/>
-                            <constraint firstItem="xa2-N9-cPy" firstAttribute="leading" secondItem="ova-jf-iLE" secondAttribute="trailing" constant="20" id="TAe-bN-RZz"/>
                             <constraint firstItem="ova-jf-iLE" firstAttribute="leading" secondItem="gUp-Bn-MCW" secondAttribute="leading" constant="15" id="ZBz-Ag-FgR"/>
-                            <constraint firstAttribute="trailing" secondItem="7cx-JH-dfP" secondAttribute="trailing" constant="15" id="cWB-Pw-KZx"/>
-                            <constraint firstAttribute="height" constant="248" id="hMh-RS-29w"/>
+                            <constraint firstItem="xa2-N9-cPy" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ova-jf-iLE" secondAttribute="trailing" constant="50.5" id="eel-ym-rje"/>
                             <constraint firstItem="7cx-JH-dfP" firstAttribute="leading" secondItem="gUp-Bn-MCW" secondAttribute="leading" constant="15" id="hXB-c9-oaU"/>
+                            <constraint firstItem="Yre-sU-SBB" firstAttribute="centerX" secondItem="gUp-Bn-MCW" secondAttribute="centerX" id="hfa-8G-iSZ"/>
                             <constraint firstItem="zWm-K4-GF9" firstAttribute="leading" secondItem="gUp-Bn-MCW" secondAttribute="leading" constant="15" id="niL-cE-Jh6"/>
-                            <constraint firstAttribute="bottom" secondItem="xa2-N9-cPy" secondAttribute="bottom" constant="15" id="ocA-DC-5uz"/>
                             <constraint firstItem="Yre-sU-SBB" firstAttribute="top" secondItem="gUp-Bn-MCW" secondAttribute="top" constant="27" id="s0H-D9-jKl"/>
                             <constraint firstItem="ova-jf-iLE" firstAttribute="centerY" secondItem="xa2-N9-cPy" secondAttribute="centerY" id="ufB-gB-q9b"/>
-                            <constraint firstItem="Yre-sU-SBB" firstAttribute="centerX" secondItem="gUp-Bn-MCW" secondAttribute="centerX" id="wCs-9o-KW7"/>
                             <constraint firstItem="7cx-JH-dfP" firstAttribute="top" secondItem="Yre-sU-SBB" secondAttribute="bottom" constant="27" id="zVA-iJ-pYl"/>
                             <constraint firstItem="zWm-K4-GF9" firstAttribute="top" secondItem="7cx-JH-dfP" secondAttribute="bottom" constant="7" id="zmI-Iq-Mdk"/>
                         </constraints>
@@ -94,9 +91,12 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="gUp-Bn-MCW" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="DlC-QL-fGR"/>
-                <constraint firstItem="gUp-Bn-MCW" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="rsg-qj-eBn"/>
+                <constraint firstItem="gUp-Bn-MCW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3L8-cx-hOB"/>
+                <constraint firstAttribute="trailing" secondItem="gUp-Bn-MCW" secondAttribute="trailing" id="JNY-e1-7mi"/>
+                <constraint firstItem="gUp-Bn-MCW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cyE-WJ-bZa"/>
+                <constraint firstAttribute="bottom" secondItem="gUp-Bn-MCW" secondAttribute="bottom" id="dA6-N4-3u4"/>
             </constraints>
             <size key="customSize" width="191" height="201"/>
             <connections>

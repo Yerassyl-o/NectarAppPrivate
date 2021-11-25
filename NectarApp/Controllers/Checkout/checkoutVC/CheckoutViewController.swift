@@ -8,7 +8,7 @@
 import UIKit
 
 class CheckoutViewController: UIViewController {
-
+    let checkoutMenu = CheckoutMenu()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageNameLabel: UILabel!
     @IBOutlet weak var closebutton: UIButton!
@@ -28,19 +28,24 @@ class CheckoutViewController: UIViewController {
 
 extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        checkoutMenu.getCheckoutMenu.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ParametrElementFooterTableViewCell", for: indexPath) as! ParametrElementFooterTableViewCell
             cell.selectionStyle = .none
             return cell
         }  else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ParametrElementsTableViewCell", for: indexPath) as! ParametrElementsTableViewCell
+            let menu = checkoutMenu.getCheckoutMenu[indexPath.row]
+            cell.parametrNameLabel.text = menu.checkoutMenuName
+            cell.parametrButton.titleLabel?.text = menu.checkoutSettingsName
             cell.selectionStyle = .none
             return cell
         }
+        
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
