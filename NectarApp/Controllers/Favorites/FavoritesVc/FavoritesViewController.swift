@@ -26,11 +26,6 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row == 0 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderFavoritesTableViewCell", for: indexPath) as! HeaderFavoritesTableViewCell
-//            cell.selectionStyle = .none
-//            return cell
-//        } else {
             let product = productDataBase.getDataBase[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesTableViewCell", for: indexPath) as! FavoritesTableViewCell
             cell.selectionStyle = .none
@@ -39,21 +34,15 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.productPrice.text = "$\(product.productPrice)"
             cell.productSize.text = "\(product.productQuantity)\(product.productUnitOfMeasurement)"
             return cell
-//        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row == 0 {
-//            return 57
-//        } else {
             return 114
-//        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
-            print("hello asfgsgs")
             viewController.product = productDataBase.getDataBase[indexPath.row]
             navigationController?.pushViewController(viewController , animated: true)
         }
@@ -62,6 +51,5 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
 extension FavoritesViewController {
     func registerCustomCells(){
         tableView.register(UINib.init(nibName: "FavoritesTableViewCell", bundle: nil), forCellReuseIdentifier: "FavoritesTableViewCell")
-        tableView.register(UINib.init(nibName: "HeaderFavoritesTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderFavoritesTableViewCell")
     }
 }
