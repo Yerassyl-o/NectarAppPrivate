@@ -54,7 +54,8 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewWidth = self.collectionView.frame.width
         print("dsd")
-        return CGSize(width: (collectionViewWidth - 15)/2, height: 248)
+        return CGSize(width: (collectionViewWidth - 20)/2, height: 260)
+        
     }
     
     

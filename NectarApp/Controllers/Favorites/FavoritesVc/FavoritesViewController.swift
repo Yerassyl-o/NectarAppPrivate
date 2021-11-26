@@ -51,7 +51,9 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
+            print("hello asfgsgs")
             viewController.product = productDataBase.getDataBase[indexPath.row]
             navigationController?.pushViewController(viewController , animated: true)
         }
