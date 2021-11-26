@@ -22,16 +22,16 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productDataBase.getDataBase.count + 1
+        productDataBase.getDataBase.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderFavoritesTableViewCell", for: indexPath) as! HeaderFavoritesTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        } else {
-            let product = productDataBase.getDataBase[indexPath.row - 1]
+//        if indexPath.row == 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderFavoritesTableViewCell", for: indexPath) as! HeaderFavoritesTableViewCell
+//            cell.selectionStyle = .none
+//            return cell
+//        } else {
+            let product = productDataBase.getDataBase[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesTableViewCell", for: indexPath) as! FavoritesTableViewCell
             cell.selectionStyle = .none
             cell.productImage.image = product.productImage
@@ -39,15 +39,15 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.productPrice.text = "$\(product.productPrice)"
             cell.productSize.text = "\(product.productQuantity)\(product.productUnitOfMeasurement)"
             return cell
-        }
+//        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 57
-        } else {
+//        if indexPath.row == 0 {
+//            return 57
+//        } else {
             return 114
-        }
+//        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

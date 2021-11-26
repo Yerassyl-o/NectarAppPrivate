@@ -470,14 +470,14 @@ it’s way to being processed</string>
                             <constraint firstItem="pzQ-Ns-oz0" firstAttribute="top" secondItem="MAg-7m-KB9" secondAttribute="top" id="zgz-TY-zUJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorurite" image="FavoruriteSvg" id="8CW-o4-c8h"/>
+                    <navigationItem key="navigationItem" title="Favorurite" id="slm-gp-xXs"/>
                     <connections>
                         <outlet property="tableView" destination="pzQ-Ns-oz0" id="Q11-Ud-pGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecS-Ss-1Nl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3718.840579710145" y="1555.5803571428571"/>
+            <point key="canvasLocation" x="3719" y="2261"/>
         </scene>
         <!--Account-->
         <scene sceneID="1rn-q1-TUq">
@@ -512,7 +512,7 @@ it’s way to being processed</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flc-AT-nFh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4531.884057971015" y="1555.5803571428571"/>
+            <point key="canvasLocation" x="5442.0289855072469" y="1555.5803571428571"/>
         </scene>
         <!--Shop-->
         <scene sceneID="jk6-Jm-o25">
@@ -902,7 +902,7 @@ it’s way to being processed</string>
                         <segue destination="Ifz-K4-rNq" kind="relationship" relationship="viewControllers" id="caB-rv-suy"/>
                         <segue destination="GgS-RM-SQv" kind="relationship" relationship="viewControllers" id="EY7-vl-46B"/>
                         <segue destination="z7j-s6-cOp" kind="relationship" relationship="viewControllers" id="sqJ-dp-5aN"/>
-                        <segue destination="65d-KL-l88" kind="relationship" relationship="viewControllers" id="I2Y-in-QvI"/>
+                        <segue destination="AzU-TT-JnV" kind="relationship" relationship="viewControllers" id="I2Y-in-QvI"/>
                         <segue destination="0jg-oA-Uli" kind="relationship" relationship="viewControllers" id="wVO-he-0cN"/>
                     </connections>
                 </tabBarController>
@@ -1856,6 +1856,31 @@ it’s way to being processed</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oeg-nZ-K0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2073.913043478261" y="2730.1339285714284"/>
+        </scene>
+        <!--Favorurite-->
+        <scene sceneID="WNm-kw-vQH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AzU-TT-JnV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorurite" image="FavoruriteSvg" id="8CW-o4-c8h"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ue0-K1-hnB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="65d-KL-l88" kind="relationship" relationship="rootViewController" id="QsG-k5-tFy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zB9-vU-B6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3718.840579710145" y="1555.5803571428571"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
