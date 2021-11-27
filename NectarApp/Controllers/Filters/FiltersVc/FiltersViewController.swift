@@ -20,7 +20,16 @@ class FiltersViewController: UIViewController {
         tableView.separatorColor = .clear
         tableView.sectionIndexBackgroundColor = .clear
         tableView.backgroundColor = UIColor(red: 242/255, green: 243/255, blue: 242/255, alpha: 1)
+//        navigationController?.navigationBar.topItem?.backButtonTitle = ""
+//        navigationItem.backBarButtonItem?.image = UIImage(systemName: "xmark")
+        let customBackButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(backButton))
+        navigationItem.leftBarButtonItem = customBackButton
+        navigationItem.hidesBackButton = true
     }
+    @objc func backButton(_ button: UIBarButtonItem){
+       print("fgsdflgdsaljhfgasgfagflaegfhagsflgsl")
+    }
+    
 }
 
 extension FiltersViewController: UITableViewDelegate, UITableViewDataSource {

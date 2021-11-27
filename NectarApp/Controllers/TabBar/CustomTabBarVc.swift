@@ -14,6 +14,7 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
     }
 
     var customTabBarView = UIView(frame: .zero)
+    
             
         // MARK: View lifecycle
         
@@ -22,7 +23,6 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
             super.viewDidLoad()
             self.setupTabBarUI()
             self.addCustomTabBarView()
-            
         }
         
         override func viewDidLayoutSubviews() {

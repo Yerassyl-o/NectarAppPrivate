@@ -18,6 +18,9 @@ class FavoritesViewController: UIViewController {
         tableView.separatorInset = .init(top: 0, left: 24, bottom: 0, right: 24)
         tableView.separatorColor = .clear
     }
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
 }
 
 extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -53,3 +56,4 @@ extension FavoritesViewController {
         tableView.register(UINib.init(nibName: "FavoritesTableViewCell", bundle: nil), forCellReuseIdentifier: "FavoritesTableViewCell")
     }
 }
+

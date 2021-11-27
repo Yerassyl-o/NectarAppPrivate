@@ -8,48 +8,54 @@
 import UIKit
 
 class ExploreVcViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+    let exploreCollectionsProductsBase = ExploreCollectionsProducts()
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
+        collectionView.dataSource = self
+        collectionView.delegate = self
         registerCustomCells()
-        tableView.separatorColor = .clear
+        collectionView.sizeToFit()
         navigationController?.navigationBar.shadowImage = UIImage()
     }
 }
-extension ExploreVcViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+extension ExploreVcViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        exploreCollectionsProductsBase.getExploreCollectionsProductsBase.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchBarTableViewCell", for: indexPath) as! SearchBarTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsTableViewCell", for: indexPath) as! ItemsTableViewCell
-            cell.selectionStyle = .none
-            return cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ItemsCollectionViewCell", for: indexPath) as? ItemsCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+        let collectionsProducts = exploreCollectionsProductsBase.getExploreCollectionsProductsBase[indexPath.item]
+        cell.productsGroupImage.image = collectionsProducts.collectionImage
+        cell.productsGroupName.text = collectionsProducts.collectionName
+        cell.itemsView.backgroundColor = collectionsProducts.collectionBackgroundColor
+        cell.itemsView.layer.borderWidth = 1
+        cell.itemsView.layer.borderColor = collectionsProducts.borderColor
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = self.collectionView.frame.width
+        
+        return CGSize(width: (collectionViewWidth - 18)/2, height: 190)
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "CollectionProductsViewController") as? CollectionProductsViewController {
+            navigationController?.pushViewController(viewController , animated: true)
         }
+        
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 71.5
-        } else {
-            return 700
-        }
-    }
-    
-    
 }
-extension ExploreVcViewController {
+extension ExploreVcViewController: UICollectionViewDelegateFlowLayout {
+}
+
+extension ExploreVcViewController{
     func registerCustomCells(){
-        tableView.register(UINib.init(nibName: "SearchBarTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchBarTableViewCell")
-        tableView.register(UINib.init(nibName: "ItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemsTableViewCell")
+        let customCellNib = UINib(nibName: "ItemsCollectionViewCell", bundle: .main)
+        collectionView.register(customCellNib, forCellWithReuseIdentifier: "ItemsCollectionViewCell")
     }
 }
+

@@ -18,8 +18,9 @@
 		870737D3274F788200732BB7 /* SectionFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737D1274F788200732BB7 /* SectionFooterTableViewCell.swift */; };
 		870737D4274F788200732BB7 /* SectionFooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 870737D2274F788200732BB7 /* SectionFooterTableViewCell.xib */; };
 		870737D7274F85A400732BB7 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737D6274F85A400732BB7 /* Checkout.swift */; };
-		870737DA274F982D00732BB7 /* userActionsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737D9274F982D00732BB7 /* userActionsDataBase.swift */; };
+		870737DA274F982D00732BB7 /* UsersDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737D9274F982D00732BB7 /* UsersDataBase.swift */; };
 		870737DD274FAA0B00732BB7 /* ExploreCollectionsProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737DC274FAA0B00732BB7 /* ExploreCollectionsProducts.swift */; };
+		870737E02750EB1600732BB7 /* CollectionProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737DF2750EB1600732BB7 /* CollectionProductsViewController.swift */; };
 		873026842743DAD800CA31CA /* SingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026832743DAD800CA31CA /* SingInViewController.swift */; };
 		873026872744201100CA31CA /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026862744201100CA31CA /* NumberViewController.swift */; };
 		8730269D274612D700CA31CA /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730269C274612D700CA31CA /* VerificationViewController.swift */; };
@@ -112,8 +113,9 @@
 		870737D1274F788200732BB7 /* SectionFooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionFooterTableViewCell.swift; sourceTree = "<group>"; };
 		870737D2274F788200732BB7 /* SectionFooterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionFooterTableViewCell.xib; sourceTree = "<group>"; };
 		870737D6274F85A400732BB7 /* Checkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
-		870737D9274F982D00732BB7 /* userActionsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userActionsDataBase.swift; sourceTree = "<group>"; };
+		870737D9274F982D00732BB7 /* UsersDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataBase.swift; sourceTree = "<group>"; };
 		870737DC274FAA0B00732BB7 /* ExploreCollectionsProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionsProducts.swift; sourceTree = "<group>"; };
+		870737DF2750EB1600732BB7 /* CollectionProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionProductsViewController.swift; sourceTree = "<group>"; };
 		873026832743DAD800CA31CA /* SingInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewController.swift; sourceTree = "<group>"; };
 		873026862744201100CA31CA /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
 		8730269C274612D700CA31CA /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -304,12 +306,12 @@
 			path = Checkout;
 			sourceTree = "<group>";
 		};
-		870737D8274F97EB00732BB7 /* UserActionsData */ = {
+		870737D8274F97EB00732BB7 /* UsersDataBase */ = {
 			isa = PBXGroup;
 			children = (
-				870737D9274F982D00732BB7 /* userActionsDataBase.swift */,
+				870737D9274F982D00732BB7 /* UsersDataBase.swift */,
 			);
-			path = UserActionsData;
+			path = UsersDataBase;
 			sourceTree = "<group>";
 		};
 		870737DB274FA9E900732BB7 /* ExploreCollectionsProducts */ = {
@@ -320,9 +322,19 @@
 			path = ExploreCollectionsProducts;
 			sourceTree = "<group>";
 		};
+		870737DE2750EAE000732BB7 /* CollectionProducts */ = {
+			isa = PBXGroup;
+			children = (
+				870737DF2750EB1600732BB7 /* CollectionProductsViewController.swift */,
+			);
+			path = CollectionProducts;
+			sourceTree = "<group>";
+		};
 		873026802743D9E500CA31CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				873026B7274756F700CA31CA /* TabBar */,
+				870737DE2750EAE000732BB7 /* CollectionProducts */,
 				870737BF274F537C00732BB7 /* Filters */,
 				870737BB274F521E00732BB7 /* NavigationBars */,
 				870737B7274E6D6400732BB7 /* Search */,
@@ -333,7 +345,6 @@
 				8781828A2748FC6F001F8CEF /* My Cart */,
 				8781827B2747FF7A001F8CEF /* Favorites */,
 				878182622747AE61001F8CEF /* Account */,
-				873026B7274756F700CA31CA /* TabBar */,
 				873026A72746142500CA31CA /* onbording */,
 				873026A4274613D700CA31CA /* SignUpAlternative */,
 				873026A1274613B700CA31CA /* LogIn */,
@@ -349,7 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				870737DB274FA9E900732BB7 /* ExploreCollectionsProducts */,
-				870737D8274F97EB00732BB7 /* UserActionsData */,
+				870737D8274F97EB00732BB7 /* UsersDataBase */,
 				870737D5274F858300732BB7 /* Checkout */,
 				870737C3274F66C000732BB7 /* FilterMenu */,
 				878182B5274AA010001F8CEF /* ProductDataBase */,
@@ -1024,7 +1035,7 @@
 				8757DC07274E397700A04367 /* productDetailTableViewCell.swift in Sources */,
 				8757DBEF274D14A700A04367 /* ProductInfoAndCountTableViewCell.swift in Sources */,
 				8757DBE9274D0E4A00A04367 /* ProductImagesCollectionViewCell.swift in Sources */,
-				870737DA274F982D00732BB7 /* userActionsDataBase.swift in Sources */,
+				870737DA274F982D00732BB7 /* UsersDataBase.swift in Sources */,
 				8781826E2747B30A001F8CEF /* LogOutTableViewCell.swift in Sources */,
 				878182682747AEE8001F8CEF /* AccountInfoTableViewCell.swift in Sources */,
 				8757DBB8274BA34800A04367 /* homeScreenCategorySectionTableViewCell.swift in Sources */,
@@ -1035,6 +1046,7 @@
 				8781827E2747FF9A001F8CEF /* FavoritesTableViewCell.swift in Sources */,
 				878182892748067A001F8CEF /* FavoritesViewController.swift in Sources */,
 				873026842743DAD800CA31CA /* SingInViewController.swift in Sources */,
+				870737E02750EB1600732BB7 /* CollectionProductsViewController.swift in Sources */,
 				8757DBF4274DF38000A04367 /* CheckoutViewController.swift in Sources */,
 				878182732747B66B001F8CEF /* MenuTableViewCell.swift in Sources */,
 				8781829A274A1A0C001F8CEF /* ExploreVcViewController.swift in Sources */,
@@ -1234,7 +1246,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Yearassyl.NectarApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1253,7 +1265,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Yearassyl.NectarApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

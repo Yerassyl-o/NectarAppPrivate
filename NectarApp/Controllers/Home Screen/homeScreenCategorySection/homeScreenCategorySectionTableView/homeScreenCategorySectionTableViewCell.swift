@@ -41,6 +41,7 @@ extension homeScreenCategorySectionTableViewCell: UICollectionViewDelegate, UICo
         cell.productValue.text = "\(product.productQuantity)\(product.productUnitOfMeasurement), Price"
             return cell
     }
+    
 }
 extension homeScreenCategorySectionTableViewCell {
     func registerCustomCells(){

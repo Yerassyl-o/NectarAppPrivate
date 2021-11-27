@@ -52,6 +52,16 @@ class ExploreCollectionsProducts{
             collectionName: "Beverages",
             collectionBackgroundColor: UIColor(red: 183/255, green: 223/255, blue: 245/255, alpha: 0.25),
             borderColor: CGColor(red: 183/255, green: 223/255, blue: 245/255, alpha: 1)),
+        ExploreCollectionsProductsStruct(
+            collectionImage: UIImage(named: "Frash Fruits & Vegetable") ?? UIImage(named: "Frash Fruits & Vegetable")!,
+            collectionName: "Frash Fruits & Vegetable",
+            collectionBackgroundColor: UIColor(red: 83/255, green: 177/255, blue: 117/255, alpha: 0.1),
+            borderColor: CGColor(red: 83/255, green: 177/255, blue: 117/255, alpha: 0.7)),
+        ExploreCollectionsProductsStruct(
+            collectionImage: UIImage(named: "Cooking Oil & Ghee") ?? UIImage(named: "Frash Fruits & Vegetable")!,
+            collectionName: "Cooking Oil & Ghee",
+            collectionBackgroundColor: UIColor(red: 248/255, green: 164/255, blue: 76/255, alpha: 0.1),
+            borderColor: CGColor(red: 248/255, green: 164/255, blue: 76/255, alpha: 0.7))
         ]
     var getExploreCollectionsProductsBase: [ExploreCollectionsProductsStruct] {
         return exploreCollectionsProductsBase
