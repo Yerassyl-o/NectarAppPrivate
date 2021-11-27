@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g46-KY-Oic">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -1131,11 +1131,13 @@ it’s way to being processed</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="gC4-MN-0lM">
-                                <rect key="frame" x="-103" y="-84.5" width="620" height="1065"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="WFP-UQ-FxL">
+                                <rect key="frame" x="-102" y="0.0" width="618" height="981"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="620" id="7mt-ah-clX"/>
-                                    <constraint firstAttribute="height" constant="1065" id="p7f-lO-dBc"/>
+                                    <constraint firstAttribute="height" constant="981" id="cSl-vz-rrS"/>
+                                    <constraint firstAttribute="width" constant="618" id="gjA-C7-qe8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="618" id="pgt-22-p5j"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="981" id="wLY-N1-hdq"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your 4-digit code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWE-YF-2Ih">
@@ -1203,12 +1205,12 @@ it’s way to being processed</string>
                             <constraint firstItem="baD-oa-nce" firstAttribute="centerY" secondItem="Vqk-9x-0Eh" secondAttribute="centerY" id="JIY-ak-pp4"/>
                             <constraint firstItem="baD-oa-nce" firstAttribute="leading" secondItem="ncQ-TB-ybT" secondAttribute="leading" constant="24" id="JiQ-T5-wv2"/>
                             <constraint firstItem="ncQ-TB-ybT" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="eWE-YF-2Ih" secondAttribute="trailing" constant="132" id="M6e-se-pBL"/>
+                            <constraint firstItem="WFP-UQ-FxL" firstAttribute="centerX" secondItem="wCs-D9-RJS" secondAttribute="centerX" id="R27-IP-y4o"/>
                             <constraint firstItem="9c0-RZ-n9Q" firstAttribute="top" secondItem="eWE-YF-2Ih" secondAttribute="bottom" constant="27" id="RTl-fF-YB5"/>
                             <constraint firstItem="Vqk-9x-0Eh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="baD-oa-nce" secondAttribute="trailing" constant="193" id="ThO-FP-8Ku"/>
                             <constraint firstItem="ncQ-TB-ybT" firstAttribute="bottom" secondItem="Vqk-9x-0Eh" secondAttribute="bottom" constant="30" id="WR2-5o-fwr"/>
+                            <constraint firstItem="WFP-UQ-FxL" firstAttribute="top" secondItem="wCs-D9-RJS" secondAttribute="top" id="fsS-fw-ecp"/>
                             <constraint firstItem="Sce-pX-Cue" firstAttribute="top" secondItem="9c0-RZ-n9Q" secondAttribute="bottom" constant="14" id="jHQ-Do-V3Y"/>
-                            <constraint firstItem="gC4-MN-0lM" firstAttribute="centerX" secondItem="wCs-D9-RJS" secondAttribute="centerX" id="jtk-EF-Lwg"/>
-                            <constraint firstItem="gC4-MN-0lM" firstAttribute="centerY" secondItem="wCs-D9-RJS" secondAttribute="centerY" id="n6M-vs-KbL"/>
                             <constraint firstItem="ncQ-TB-ybT" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Sce-pX-Cue" secondAttribute="trailing" constant="345" id="o7Y-45-3gO"/>
                             <constraint firstItem="Sce-pX-Cue" firstAttribute="leading" secondItem="ncQ-TB-ybT" secondAttribute="leading" constant="24" id="p5S-vt-LCo"/>
                             <constraint firstItem="ncQ-TB-ybT" firstAttribute="trailing" secondItem="Vqk-9x-0Eh" secondAttribute="trailing" constant="24" id="p9S-Eu-Zbq"/>
@@ -1381,11 +1383,13 @@ it’s way to being processed</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="oOS-4k-mHt">
-                                <rect key="frame" x="-103" y="-84.5" width="620" height="1065"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="rJC-cu-Txi">
+                                <rect key="frame" x="-102" y="0.0" width="618" height="981"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1065" id="tA3-6f-cxb"/>
-                                    <constraint firstAttribute="width" constant="620" id="zmN-0k-Xbt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="618" id="9mx-S7-FLy"/>
+                                    <constraint firstAttribute="height" constant="981" id="caK-5I-xmj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="981" id="fbD-zr-hpB"/>
+                                    <constraint firstAttribute="width" constant="618" id="tAf-GI-PHo"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNZ-ib-t7G">
@@ -1556,19 +1560,19 @@ it’s way to being processed</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6zE-Gm-meT" firstAttribute="top" secondItem="wSy-JX-RAu" secondAttribute="bottom" constant="40" id="1Ru-yg-CG3"/>
+                            <constraint firstItem="rJC-cu-Txi" firstAttribute="top" secondItem="uRj-JD-ceO" secondAttribute="top" id="20G-Q1-QeN"/>
                             <constraint firstItem="06y-58-frU" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="wSy-JX-RAu" secondAttribute="trailing" constant="148" id="5Z3-Gz-OvB"/>
                             <constraint firstItem="wSy-JX-RAu" firstAttribute="leading" secondItem="06y-58-frU" secondAttribute="leading" constant="24" id="5bY-J0-Xzs"/>
                             <constraint firstItem="inO-cI-cvL" firstAttribute="top" secondItem="6zE-Gm-meT" secondAttribute="bottom" constant="30" id="75K-8r-XYZ"/>
                             <constraint firstItem="uJe-iV-FaW" firstAttribute="top" secondItem="tNZ-ib-t7G" secondAttribute="bottom" constant="15" id="Aax-p4-NRD"/>
                             <constraint firstItem="06y-58-frU" firstAttribute="trailing" secondItem="inO-cI-cvL" secondAttribute="trailing" constant="24" id="FAc-7f-WUh"/>
                             <constraint firstItem="tNZ-ib-t7G" firstAttribute="leading" secondItem="06y-58-frU" secondAttribute="leading" constant="24" id="Jxt-Yy-nfs"/>
-                            <constraint firstItem="oOS-4k-mHt" firstAttribute="centerX" secondItem="uRj-JD-ceO" secondAttribute="centerX" id="KUx-id-NIp"/>
                             <constraint firstItem="7Ax-5u-HeO" firstAttribute="centerX" secondItem="uRj-JD-ceO" secondAttribute="centerX" id="NMG-Wm-yhJ"/>
                             <constraint firstItem="06y-58-frU" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="1V8-jV-vlY" secondAttribute="trailing" constant="240" id="T1p-Gs-HCh"/>
                             <constraint firstItem="7Ax-5u-HeO" firstAttribute="top" secondItem="06y-58-frU" secondAttribute="top" constant="33" id="UGZ-qn-1eN"/>
-                            <constraint firstItem="oOS-4k-mHt" firstAttribute="centerY" secondItem="uRj-JD-ceO" secondAttribute="centerY" id="VYm-Ve-wi2"/>
                             <constraint firstItem="06y-58-frU" firstAttribute="trailing" secondItem="tNZ-ib-t7G" secondAttribute="trailing" constant="24" id="ZqU-T3-WMl"/>
                             <constraint firstItem="wSy-JX-RAu" firstAttribute="top" secondItem="1V8-jV-vlY" secondAttribute="bottom" constant="15" id="cg3-vu-PEz"/>
+                            <constraint firstItem="rJC-cu-Txi" firstAttribute="centerX" secondItem="uRj-JD-ceO" secondAttribute="centerX" id="crS-ON-CGI"/>
                             <constraint firstItem="6zE-Gm-meT" firstAttribute="leading" secondItem="06y-58-frU" secondAttribute="leading" constant="24" id="do1-XE-Opn"/>
                             <constraint firstItem="ml8-67-gFz" firstAttribute="leading" relation="lessThanOrEqual" secondItem="06y-58-frU" secondAttribute="leading" constant="274" id="doS-Mu-s7P"/>
                             <constraint firstItem="06y-58-frU" firstAttribute="trailing" secondItem="6zE-Gm-meT" secondAttribute="trailing" constant="38" id="h2Y-xS-CmQ"/>
@@ -1610,11 +1614,11 @@ it’s way to being processed</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjk-ex-D6M">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="896"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="Qa8-oU-yoz">
-                                                <rect key="frame" x="-122.5" y="-84.5" width="620" height="1065"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="yaN-Rl-jdV">
+                                                <rect key="frame" x="-121.5" y="0.0" width="618" height="981"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="620" id="eQt-u3-90M"/>
-                                                    <constraint firstAttribute="height" constant="1065" id="y2s-Zj-Lgf"/>
+                                                    <constraint firstAttribute="height" constant="981" id="4jn-pH-PUC"/>
+                                                    <constraint firstAttribute="width" constant="618" id="vWF-Ho-b86"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWa-4V-LaP">
@@ -1850,7 +1854,6 @@ it’s way to being processed</string>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="JgY-vF-NJR" secondAttribute="trailing" constant="24" id="73w-hI-KXl"/>
                                             <constraint firstItem="DpY-OM-yFQ" firstAttribute="top" secondItem="Etq-Ec-hNw" secondAttribute="bottom" constant="40" id="7Vm-dg-Az5"/>
-                                            <constraint firstItem="Qa8-oU-yoz" firstAttribute="centerX" secondItem="jjk-ex-D6M" secondAttribute="centerX" id="7qH-xM-T8z"/>
                                             <constraint firstItem="Bcy-ra-0XK" firstAttribute="centerX" secondItem="jjk-ex-D6M" secondAttribute="centerX" id="AkL-LQ-Ehr"/>
                                             <constraint firstItem="D1R-Qs-Iae" firstAttribute="centerX" secondItem="jjk-ex-D6M" secondAttribute="centerX" id="CV7-n7-jsl"/>
                                             <constraint firstItem="avs-nR-LpW" firstAttribute="top" secondItem="JgY-vF-NJR" secondAttribute="bottom" constant="20" id="IE0-EN-g4S"/>
@@ -1863,7 +1866,7 @@ it’s way to being processed</string>
                                             <constraint firstItem="avs-nR-LpW" firstAttribute="leading" secondItem="jjk-ex-D6M" secondAttribute="leading" constant="24" id="Tgm-LR-Nfa"/>
                                             <constraint firstItem="Etq-Ec-hNw" firstAttribute="leading" secondItem="jjk-ex-D6M" secondAttribute="leading" constant="24" id="VaE-La-tu0"/>
                                             <constraint firstItem="Etq-Ec-hNw" firstAttribute="top" secondItem="eWa-4V-LaP" secondAttribute="bottom" constant="15" id="Wn8-AL-lsB"/>
-                                            <constraint firstItem="Qa8-oU-yoz" firstAttribute="centerY" secondItem="jjk-ex-D6M" secondAttribute="centerY" id="d3J-pZ-fik"/>
+                                            <constraint firstItem="yaN-Rl-jdV" firstAttribute="centerX" secondItem="jjk-ex-D6M" secondAttribute="centerX" id="dsh-Vb-Mnf"/>
                                             <constraint firstItem="5hM-4Z-qSO" firstAttribute="top" secondItem="DpY-OM-yFQ" secondAttribute="bottom" constant="30" id="dwB-js-IUV"/>
                                             <constraint firstAttribute="trailing" secondItem="mQM-LI-yPl" secondAttribute="trailing" constant="24" id="eEa-iY-Y3T"/>
                                             <constraint firstItem="5hM-4Z-qSO" firstAttribute="leading" secondItem="jjk-ex-D6M" secondAttribute="leading" constant="24" id="elG-VD-Kpe"/>
@@ -1898,6 +1901,7 @@ it’s way to being processed</string>
                         <constraints>
                             <constraint firstItem="JXy-f8-Kja" firstAttribute="top" secondItem="hVa-Ub-t4T" secondAttribute="top" id="CgW-GZ-etd"/>
                             <constraint firstItem="JXy-f8-Kja" firstAttribute="trailing" secondItem="hVa-Ub-t4T" secondAttribute="trailing" id="Riv-5U-SXC"/>
+                            <constraint firstItem="yaN-Rl-jdV" firstAttribute="top" secondItem="hVa-Ub-t4T" secondAttribute="top" id="TLa-vO-DS4"/>
                             <constraint firstItem="JXy-f8-Kja" firstAttribute="bottom" secondItem="hVa-Ub-t4T" secondAttribute="bottom" id="cMv-ix-r8E"/>
                             <constraint firstItem="JXy-f8-Kja" firstAttribute="leading" secondItem="hVa-Ub-t4T" secondAttribute="leading" id="tXv-au-Rgd"/>
                         </constraints>

@@ -43,6 +43,19 @@ extension ProductImagesTableViewCell {
         let customCellNib = UINib(nibName: "ProductImagesCollectionViewCell", bundle: .main)
         collectionView.register(customCellNib, forCellWithReuseIdentifier: "ProductImagesCollectionViewCell")
     }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity
+    velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        targetContentOffset.pointee = scrollView.contentOffset
+        var indexes = self.collectionView.indexPathsForVisibleItems
+        indexes.sort()
+        var index = indexes.first!
+        let cell = self.collectionView.cellForItem(at: index)!
+        let position = self.collectionView.contentOffset.x - cell.frame.origin.x
+        if position > cell.frame.size.width/2{
+            index.row = index.row + 1
+        }
+        self.collectionView.scrollToItem(at: index, at: .left, animated: true )
+    }
 }
 
 extension UIView {

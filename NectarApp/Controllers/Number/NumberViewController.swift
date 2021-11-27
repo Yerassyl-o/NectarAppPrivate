@@ -88,9 +88,6 @@ extension NumberViewController: UITextFieldDelegate {
             bottom1pxView.backgroundColor = UIColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
         }
     }
-    
-    
-    
 }
 
 //MARK: SetUp keyboard

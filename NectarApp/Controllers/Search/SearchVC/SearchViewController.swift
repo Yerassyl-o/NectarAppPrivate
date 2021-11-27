@@ -57,8 +57,6 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return CGSize(width: (collectionViewWidth - 20)/2, height: 260)
         
     }
-    
-    
 }
 extension SearchViewController: UICollectionViewDelegateFlowLayout {}
 
