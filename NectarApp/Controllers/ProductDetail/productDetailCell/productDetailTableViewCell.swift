@@ -8,8 +8,6 @@
 import UIKit
 
 class productDetailTableViewCell: UITableViewCell {
-    
-    let textInformation = "fdauskglfdsgjdfadjsgagfasjkfglajkdsgfljkadsgfjkladgsfsgjkadsjkf"
     var isToggle = false
     @IBOutlet weak var productDetailText: UILabel!
     @IBOutlet weak var productDetailButton: UIButton!
@@ -18,7 +16,6 @@ class productDetailTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        productDetailText.text = textInformation
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,7 +27,7 @@ class productDetailTableViewCell: UITableViewCell {
         
         isToggle.toggle()
     
-        productDetailText.text = isToggle ? textInformation : nil
+        productDetailText.isHidden = isToggle
         onProductDetailButtonTap?()
         
     }

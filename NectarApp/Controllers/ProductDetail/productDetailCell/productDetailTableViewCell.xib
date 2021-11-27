@@ -16,41 +16,65 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryh-1L-ziE">
-                        <rect key="frame" x="24" y="18" width="115" height="22"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oz-NM-CWR">
-                        <rect key="frame" x="24" y="50" width="366" height="50.5"/>
-                        <string key="text">Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.</string>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                        <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJK-g0-6lN">
-                        <rect key="frame" x="381.5" y="22" width="8.5" height="14"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z1x-M1-0lr">
+                        <rect key="frame" x="24" y="18" width="366" height="92"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="MYc-TJ-mw3">
+                                <rect key="frame" x="0.0" y="0.0" width="366" height="31.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryh-1L-ziE">
+                                        <rect key="frame" x="0.0" y="5" width="207.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJK-g0-6lN">
+                                        <rect key="frame" x="357.5" y="9" width="8.5" height="14"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="8.5" id="WuK-LW-sbn"/>
+                                            <constraint firstAttribute="height" constant="14" id="rOi-wE-OoW"/>
+                                        </constraints>
+                                        <state key="normal" image="VectorbackArrowIcon"/>
+                                        <connections>
+                                            <action selector="productDetailButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="w6k-Cp-DrV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ryh-1L-ziE" firstAttribute="leading" secondItem="MYc-TJ-mw3" secondAttribute="leading" id="C9G-wF-Thx"/>
+                                    <constraint firstAttribute="trailing" secondItem="PJK-g0-6lN" secondAttribute="trailing" id="g4R-tb-7km"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oz-NM-CWR">
+                                <rect key="frame" x="0.0" y="41.5" width="366" height="50.5"/>
+                                <string key="text">Apples are nutritious. Apples may be good for weight loss. apples may be good for your heart. As part of a healtful and varied diet.</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <constraints>
-                            <constraint firstAttribute="width" constant="8.5" id="WuK-LW-sbn"/>
-                            <constraint firstAttribute="height" constant="14" id="rOi-wE-OoW"/>
+                            <constraint firstItem="6oz-NM-CWR" firstAttribute="leading" secondItem="Z1x-M1-0lr" secondAttribute="leading" id="Lqc-Fc-lIc"/>
+                            <constraint firstAttribute="bottom" secondItem="6oz-NM-CWR" secondAttribute="bottom" id="TKg-Vs-beZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6oz-NM-CWR" secondAttribute="trailing" id="b20-iS-Bkv"/>
                         </constraints>
-                        <state key="normal" image="VectorbackArrowIcon"/>
-                        <connections>
-                            <action selector="productDetailButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="w6k-Cp-DrV"/>
-                        </connections>
-                    </button>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-EA-Yty">
+                        <rect key="frame" x="24" y="126" width="366" height="1"/>
+                        <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="vwr-Af-wDH"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="6oz-NM-CWR" secondAttribute="bottom" constant="26.5" id="0Wy-vp-aoI"/>
-                    <constraint firstItem="Ryh-1L-ziE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="2LH-8z-uKM"/>
-                    <constraint firstAttribute="trailing" secondItem="6oz-NM-CWR" secondAttribute="trailing" constant="24" id="3iC-DS-yxk"/>
-                    <constraint firstAttribute="trailing" secondItem="PJK-g0-6lN" secondAttribute="trailing" constant="24" id="Bmm-TF-vBA"/>
-                    <constraint firstItem="PJK-g0-6lN" firstAttribute="centerY" secondItem="Ryh-1L-ziE" secondAttribute="centerY" id="Bx3-4l-s95"/>
-                    <constraint firstItem="6oz-NM-CWR" firstAttribute="top" secondItem="Ryh-1L-ziE" secondAttribute="bottom" constant="10" id="DkW-9k-ywS"/>
-                    <constraint firstItem="6oz-NM-CWR" firstAttribute="top" secondItem="Ryh-1L-ziE" secondAttribute="bottom" constant="10" id="GaX-fG-X50"/>
-                    <constraint firstItem="Ryh-1L-ziE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="lBq-Ti-Dsg"/>
-                    <constraint firstItem="6oz-NM-CWR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="qdH-ss-bgu"/>
+                    <constraint firstItem="ruO-EA-Yty" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="8kg-VM-bXy"/>
+                    <constraint firstAttribute="trailing" secondItem="Z1x-M1-0lr" secondAttribute="trailing" constant="24" id="NIT-rR-bhf"/>
+                    <constraint firstItem="ruO-EA-Yty" firstAttribute="top" secondItem="Z1x-M1-0lr" secondAttribute="bottom" constant="16" id="Nt5-zm-jn8"/>
+                    <constraint firstAttribute="trailing" secondItem="ruO-EA-Yty" secondAttribute="trailing" constant="24" id="Wee-X3-kaw"/>
+                    <constraint firstItem="Z1x-M1-0lr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="bjC-Sb-hpa"/>
+                    <constraint firstItem="Z1x-M1-0lr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="dG4-WW-DH0"/>
+                    <constraint firstAttribute="bottom" secondItem="ruO-EA-Yty" secondAttribute="bottom" id="voy-pc-QbU"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

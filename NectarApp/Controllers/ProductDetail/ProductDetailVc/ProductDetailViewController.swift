@@ -8,7 +8,19 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
-    var product: ProductStruct!
+//    var product: ProductStruct!
+    var product = ProductStruct(productName: "Diet Coke",
+                                productUnitOfMeasurement: "ml",
+                                productQuantity: 355,
+                                productPrice: 1.99,
+                                productCategory: "Beverages",
+                                productReview: 4,
+                                productImage: UIImage(named: "Diet Coke") ?? UIImage(named:"defaultProductImage")!)
+    
+    
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +28,7 @@ class ProductDetailViewController: UIViewController {
         tableView.delegate = self
         registerCustomCells()
         tableView.separatorColor = .clear
+        navigationController?.navigationBar.backgroundColor = .red
     }
 }
 
@@ -47,7 +60,14 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
                 self.tableView.reloadData()
             }
             return cell
-        } else {
+        } else if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NutritionsTableViewCell", for: indexPath) as! NutritionsTableViewCell
+            cell.selectionStyle = .none
+            cell.onProductDetailButtonTap = {
+                self.tableView.reloadData()
+            }
+            return cell
+        }  else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "productDetailTableViewCell", for: indexPath) as! productDetailTableViewCell
             cell.selectionStyle = .none
             return cell
@@ -68,5 +88,10 @@ extension ProductDetailViewController {
         tableView.register(UINib.init(nibName: "ProductImagesTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductImagesTableViewCell")
         tableView.register(UINib.init(nibName: "ProductInfoAndCountTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductInfoAndCountTableViewCell")
         tableView.register(UINib.init(nibName: "productDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "productDetailTableViewCell")
+        tableView.register(UINib.init(nibName: "NutritionsTableViewCell", bundle: nil), forCellReuseIdentifier: "NutritionsTableViewCell")
+        
+        
+        
+        
     }
 }
