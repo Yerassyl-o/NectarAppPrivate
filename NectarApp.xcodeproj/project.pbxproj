@@ -21,6 +21,8 @@
 		870737DA274F982D00732BB7 /* UsersDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737D9274F982D00732BB7 /* UsersDataBase.swift */; };
 		870737DD274FAA0B00732BB7 /* ExploreCollectionsProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737DC274FAA0B00732BB7 /* ExploreCollectionsProducts.swift */; };
 		870737E02750EB1600732BB7 /* CollectionProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737DF2750EB1600732BB7 /* CollectionProductsViewController.swift */; };
+		870737EC27521D3100732BB7 /* NutritionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870737EA27521D3100732BB7 /* NutritionsTableViewCell.swift */; };
+		870737ED27521D3100732BB7 /* NutritionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 870737EB27521D3100732BB7 /* NutritionsTableViewCell.xib */; };
 		873026842743DAD800CA31CA /* SingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026832743DAD800CA31CA /* SingInViewController.swift */; };
 		873026872744201100CA31CA /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026862744201100CA31CA /* NumberViewController.swift */; };
 		8730269D274612D700CA31CA /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730269C274612D700CA31CA /* VerificationViewController.swift */; };
@@ -116,6 +118,8 @@
 		870737D9274F982D00732BB7 /* UsersDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataBase.swift; sourceTree = "<group>"; };
 		870737DC274FAA0B00732BB7 /* ExploreCollectionsProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionsProducts.swift; sourceTree = "<group>"; };
 		870737DF2750EB1600732BB7 /* CollectionProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionProductsViewController.swift; sourceTree = "<group>"; };
+		870737EA27521D3100732BB7 /* NutritionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionsTableViewCell.swift; sourceTree = "<group>"; };
+		870737EB27521D3100732BB7 /* NutritionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionsTableViewCell.xib; sourceTree = "<group>"; };
 		873026832743DAD800CA31CA /* SingInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewController.swift; sourceTree = "<group>"; };
 		873026862744201100CA31CA /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
 		8730269C274612D700CA31CA /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +332,15 @@
 				870737DF2750EB1600732BB7 /* CollectionProductsViewController.swift */,
 			);
 			path = CollectionProducts;
+			sourceTree = "<group>";
+		};
+		870737E927521CFC00732BB7 /* NutritionsCell */ = {
+			isa = PBXGroup;
+			children = (
+				870737EA27521D3100732BB7 /* NutritionsTableViewCell.swift */,
+				870737EB27521D3100732BB7 /* NutritionsTableViewCell.xib */,
+			);
+			path = NutritionsCell;
 			sourceTree = "<group>";
 		};
 		873026802743D9E500CA31CA /* Controllers */ = {
@@ -603,6 +616,7 @@
 		8757DBDC274D035E00A04367 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				870737E927521CFC00732BB7 /* NutritionsCell */,
 				8757DC04274E395600A04367 /* productDetailCell */,
 				8757DBEC274D147600A04367 /* ProductInfoAndCount */,
 				8757DBE0274D05BF00A04367 /* ProductImages */,
@@ -1015,6 +1029,7 @@
 				879FAC1027436FC600252BE0 /* Main.storyboard in Resources */,
 				8757DBC6274CA7D600A04367 /* GroceriesStoriesTableViewCell.xib in Resources */,
 				878182A1274A1AE8001F8CEF /* ExploreHeaderTableViewCell.xib in Resources */,
+				870737ED27521D3100732BB7 /* NutritionsTableViewCell.xib in Resources */,
 				8757DC00274DFC9700A04367 /* ParametrElementFooterTableViewCell.xib in Resources */,
 				8757DBDB274CBC0A00A04367 /* ProductsLineTableViewCell.xib in Resources */,
 				8757DBF0274D14A700A04367 /* ProductInfoAndCountTableViewCell.xib in Resources */,
@@ -1035,6 +1050,7 @@
 				8757DC07274E397700A04367 /* productDetailTableViewCell.swift in Sources */,
 				8757DBEF274D14A700A04367 /* ProductInfoAndCountTableViewCell.swift in Sources */,
 				8757DBE9274D0E4A00A04367 /* ProductImagesCollectionViewCell.swift in Sources */,
+				870737EC27521D3100732BB7 /* NutritionsTableViewCell.swift in Sources */,
 				870737DA274F982D00732BB7 /* UsersDataBase.swift in Sources */,
 				8781826E2747B30A001F8CEF /* LogOutTableViewCell.swift in Sources */,
 				878182682747AEE8001F8CEF /* AccountInfoTableViewCell.swift in Sources */,

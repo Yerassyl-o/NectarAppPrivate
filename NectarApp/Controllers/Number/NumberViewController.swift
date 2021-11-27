@@ -16,12 +16,16 @@ class NumberViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpnumberEnterField()
+        setupToHideKeyboardOnTapOnView()
         keyBoardSetUp()
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.backgroundColor = .clear
     }
-    deinit {
-        setupToHideKeyboardOnTapOnView()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
     }
 }
 

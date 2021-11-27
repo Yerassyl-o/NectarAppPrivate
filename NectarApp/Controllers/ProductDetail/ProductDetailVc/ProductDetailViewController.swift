@@ -8,14 +8,14 @@
 import UIKit
 
 class ProductDetailViewController: UIViewController {
-//    var product: ProductStruct!
-    var product = ProductStruct(productName: "Diet Coke",
-                                productUnitOfMeasurement: "ml",
-                                productQuantity: 355,
-                                productPrice: 1.99,
-                                productCategory: "Beverages",
-                                productReview: 4,
-                                productImage: UIImage(named: "Diet Coke") ?? UIImage(named:"defaultProductImage")!)
+    var product: ProductStruct!
+//    var product = ProductStruct(productName: "Diet Coke",
+//                                productUnitOfMeasurement: "ml",
+//                                productQuantity: 355,
+//                                productPrice: 1.99,
+//                                productCategory: "Beverages",
+//                                productReview: 4,
+//                                productImage: UIImage(named: "Diet Coke") ?? UIImage(named:"defaultProductImage")!)
     
     
     
@@ -63,12 +63,9 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
         } else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NutritionsTableViewCell", for: indexPath) as! NutritionsTableViewCell
             cell.selectionStyle = .none
-            cell.onProductDetailButtonTap = {
-                self.tableView.reloadData()
-            }
             return cell
         }  else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "productDetailTableViewCell", for: indexPath) as! productDetailTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "NutritionsTableViewCell", for: indexPath) as! NutritionsTableViewCell
             cell.selectionStyle = .none
             return cell
         }

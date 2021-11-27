@@ -19,6 +19,11 @@ class VerificationViewController: UIViewController {
         setUpTextField()
         keyBoardSetUp()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+    }
 }
 
 
