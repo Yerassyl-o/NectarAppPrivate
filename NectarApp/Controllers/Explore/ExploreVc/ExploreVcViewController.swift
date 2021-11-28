@@ -10,6 +10,9 @@ import UIKit
 class ExploreVcViewController: UIViewController {
     let exploreCollectionsProductsBase = ExploreCollectionsProducts()
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var customSearchBarView: UIView!
+    @IBOutlet weak var customSearchBarTextField: UITextField!
+    @IBOutlet weak var clearButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,8 +21,51 @@ class ExploreVcViewController: UIViewController {
         registerCustomCells()
         collectionView.sizeToFit()
         navigationController?.navigationBar.shadowImage = UIImage()
+        customSearchBarTextField.addTarget(self, action: #selector(MyTextFielAction)
+                                       , for: UIControl.Event.primaryActionTriggered)
+        setupToHideKeyboardOnTapOnView()
+        setUpCustomSearchBAr()
+    }
+    @IBAction func clearButtonAction(_ sender: Any) {
+        customSearchBarTextField.text = ""
+        clearButton.isHidden = true
+    }
+    @objc func MyTextFielAction(textField: UITextField) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
+            viewController.modalPresentationStyle = .popover
+            self.present(viewController, animated: true, completion: nil)
+//            navigationController?.pushViewController(viewController , animated: true)
+        }
+    }
+    func setupToHideKeyboardOnTapOnView() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard))
+
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
+
+extension ExploreVcViewController {
+    func setUpCustomSearchBAr() {
+        clearButton.isHidden = true
+        customSearchBarTextField.addTarget(self, action: #selector(customSearchBarTextFieldChanged), for: .allEditingEvents)
+        customSearchBarTextField.returnKeyType = .search
+    }
+    @objc func customSearchBarTextFieldChanged(_ textField: UITextField) {
+        if customSearchBarTextField.text?.count ?? 0 > 0 {
+            clearButton.isHidden = false
+        } else {
+            clearButton.isHidden = true
+        }
+    }
+}
+
 extension ExploreVcViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         exploreCollectionsProductsBase.getExploreCollectionsProductsBase.count
@@ -44,6 +90,7 @@ extension ExploreVcViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "CollectionProductsViewController") as? CollectionProductsViewController {
+            viewController.productCategory = exploreCollectionsProductsBase.getExploreCollectionsProductsBase[indexPath.row].collectionName
             navigationController?.pushViewController(viewController , animated: true)
         }
         

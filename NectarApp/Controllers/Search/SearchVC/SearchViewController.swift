@@ -9,12 +9,14 @@ import UIKit
 
 class SearchViewController: UIViewController {
     var dataBaseOfProduct = ProductDataBase()
+    
     @IBOutlet weak var collectionView: UICollectionView!
     var clearButtonLogic = false
     @IBOutlet weak var customSearchBarView: UIView!
     @IBOutlet weak var customSearchBarTextField: UITextField!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var filterButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpCustomSearchBAr()
@@ -56,6 +58,14 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
         print("dsd")
         return CGSize(width: (collectionViewWidth - 20)/2, height: 260)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("dasjfghkajlsv")
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
+            viewController.product = dataBaseOfProduct.getDataBase[indexPath.row]
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
 }
 extension SearchViewController: UICollectionViewDelegateFlowLayout {}

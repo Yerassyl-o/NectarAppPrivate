@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g46-KY-Oic">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3T-ED-mz0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -265,6 +265,9 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="clearButtonAction:" destination="GgS-RM-SQv" eventType="editingDidEnd" id="66Q-m3-Pul"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnP-Dh-hde">
                                         <rect key="frame" x="336" y="18" width="17" height="16"/>
@@ -325,7 +328,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Find Product" id="wEc-sv-Ue0"/>
                     <connections>
+                        <outlet property="clearButton" destination="UnP-Dh-hde" id="js4-xy-v7Z"/>
                         <outlet property="collectionView" destination="8Ua-Pz-WY7" id="Ehq-vZ-fo0"/>
+                        <outlet property="customSearchBarTextField" destination="D8e-rA-ndc" id="px0-pA-o9x"/>
+                        <outlet property="customSearchBarView" destination="BMR-U9-wf9" id="K1n-be-5Dl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4vj-iJ-u88" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -682,7 +688,7 @@ it’s way to being processed</string>
         <!--Search View Controller-->
         <scene sceneID="T0b-W5-YpC">
             <objects>
-                <viewController id="g46-KY-Oic" customClass="SearchViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="g46-KY-Oic" customClass="SearchViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jcj-IM-wV1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -800,10 +806,10 @@ it’s way to being processed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNk-ch-kBZ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="842"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FzF-yU-q8g">
-                                        <rect key="frame" x="24" y="20" width="366" height="832"/>
+                                        <rect key="frame" x="24" y="20" width="366" height="822"/>
                                         <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.94901960784313721" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                                         <color key="sectionIndexBackgroundColor" red="0.94901961089999998" green="0.9529411793" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -853,7 +859,7 @@ it’s way to being processed</string>
                             <constraint firstItem="2Aq-K5-0pF" firstAttribute="trailing" secondItem="noa-Fa-ofl" secondAttribute="trailing" constant="24" id="YbS-oi-wdv"/>
                             <constraint firstItem="2Aq-K5-0pF" firstAttribute="trailing" secondItem="jNk-ch-kBZ" secondAttribute="trailing" id="efK-do-pRZ"/>
                             <constraint firstAttribute="bottom" secondItem="noa-Fa-ofl" secondAttribute="bottom" constant="39" id="l2t-C0-iDQ"/>
-                            <constraint firstItem="jNk-ch-kBZ" firstAttribute="top" secondItem="2Aq-K5-0pF" secondAttribute="top" id="rny-Fd-57o"/>
+                            <constraint firstItem="jNk-ch-kBZ" firstAttribute="top" secondItem="2Aq-K5-0pF" secondAttribute="top" constant="10" id="rny-Fd-57o"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Filters" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="pMj-19-Zac"/>
@@ -875,7 +881,7 @@ it’s way to being processed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7FF-nA-GvP">
-                                <rect key="frame" x="24" y="44" width="366" height="818"/>
+                                <rect key="frame" x="24" y="54" width="366" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="15" minimumInteritemSpacing="15" id="dMa-SO-EJp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -891,7 +897,7 @@ it’s way to being processed</string>
                         <constraints>
                             <constraint firstItem="RkV-9l-bII" firstAttribute="bottom" secondItem="7FF-nA-GvP" secondAttribute="bottom" id="Efw-Pd-ubk"/>
                             <constraint firstItem="RkV-9l-bII" firstAttribute="trailing" secondItem="7FF-nA-GvP" secondAttribute="trailing" constant="24" id="W97-t7-Ngy"/>
-                            <constraint firstItem="7FF-nA-GvP" firstAttribute="top" secondItem="RkV-9l-bII" secondAttribute="top" id="Y7B-XV-71T"/>
+                            <constraint firstItem="7FF-nA-GvP" firstAttribute="top" secondItem="RkV-9l-bII" secondAttribute="top" constant="10" id="Y7B-XV-71T"/>
                             <constraint firstItem="7FF-nA-GvP" firstAttribute="leading" secondItem="RkV-9l-bII" secondAttribute="leading" constant="24" id="rLo-LW-TRM"/>
                         </constraints>
                     </view>

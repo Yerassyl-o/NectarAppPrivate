@@ -16,6 +16,7 @@ class HomeScreenViewController: UIViewController {
         tableView.dataSource = self
         registerCustomCells()
         tableView.separatorColor = .clear
+        setupToHideKeyboardOnTapOnView()
     }
 }
 
@@ -74,6 +75,18 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return 200
         }
+    }
+    func setupToHideKeyboardOnTapOnView() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard))
+
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 extension HomeScreenViewController {

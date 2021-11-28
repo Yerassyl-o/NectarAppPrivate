@@ -9,15 +9,25 @@ import UIKit
 
 class CollectionProductsViewController: UIViewController {
     var dataBaseOfProduct = ProductDataBase()
+    var productCategory: String!
+    var productsOfCategory: [ProductStruct] = []
     @IBOutlet weak var collectionView: UICollectionView!
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         registerCustomCells()
-        navigationItem.title = "Beverages"
+        navigationItem.title = productCategory ?? "Error"
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ilterIconSvg"), style: .plain, target: self, action: #selector(filterButton))
+        
+        for item in 0 ..< dataBaseOfProduct.getDataBase.count {
+            if dataBaseOfProduct.getDataBase[item].productCategory == productCategory {
+                productsOfCategory.append(dataBaseOfProduct.getDataBase[item])
+            }
+        }
         
         
             
@@ -33,12 +43,12 @@ class CollectionProductsViewController: UIViewController {
 
 extension CollectionProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        dataBaseOfProduct.getDataBase.count
+        productsOfCategory.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"homeScreenCategorySectionElementsCollectionViewCell", for: indexPath) as? homeScreenCategorySectionElementsCollectionViewCell else { return UICollectionViewCell() }
-        let product = dataBaseOfProduct.getDataBase[indexPath.row]
+        let product = productsOfCategory[indexPath.row]
         cell.productImage.image = product.productImage
         cell.productName.text = "\(product.productName)"
         cell.productPrice.text = "$\(product.productPrice)"
