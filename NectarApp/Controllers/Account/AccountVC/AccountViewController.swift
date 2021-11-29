@@ -36,6 +36,13 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         case 9:
             let cell = tableView.dequeueReusableCell(withIdentifier: "LogOutTableViewCell", for: indexPath) as! LogOutTableViewCell
             cell.selectionStyle = .none
+            cell.logOutButtonTap = {
+                if let viewController = self.storyboard?.instantiateViewController(identifier: "LogInViewController") as? LogInViewController {
+                    viewController.modalPresentationStyle = .fullScreen
+                    self.present(viewController, animated: true, completion: nil)
+                }
+                
+            }
             return cell
             
         default:

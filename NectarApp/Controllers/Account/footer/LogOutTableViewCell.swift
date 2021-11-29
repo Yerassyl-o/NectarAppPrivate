@@ -8,8 +8,10 @@
 import UIKit
 
 class LogOutTableViewCell: UITableViewCell {
-
+    var buttonClicked = false
     @IBOutlet weak var logOutButton: UIButton!
+    var logOutButtonTap: (() -> Void)?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,6 +23,8 @@ class LogOutTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func logOutButtonAction(_ sender: Any) {
+        buttonClicked.toggle()
+        logOutButtonTap?()
     }
     
 }

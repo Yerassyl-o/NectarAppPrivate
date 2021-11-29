@@ -12,6 +12,8 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
+    
+    
 
     var customTabBarView = UIView(frame: .zero)
     
@@ -21,6 +23,7 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
     
         override func viewDidLoad() {
             super.viewDidLoad()
+            
             self.setupTabBarUI()
             self.addCustomTabBarView()
         }

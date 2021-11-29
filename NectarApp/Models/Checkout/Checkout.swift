@@ -14,9 +14,9 @@ struct CheckoutMenuStruct {
 
 class CheckoutMenu {
     let checkoutMenu: [CheckoutMenuStruct] = [CheckoutMenuStruct(checkoutMenuName: "Delivery", checkoutSettingsName: "Select Method"),
-                                              CheckoutMenuStruct(checkoutMenuName: "Delivery", checkoutSettingsName: "💳"),
-                                              CheckoutMenuStruct(checkoutMenuName: "Delivery", checkoutSettingsName: "Pick discount"),
-                                              CheckoutMenuStruct(checkoutMenuName: "Delivery", checkoutSettingsName: "$45.57")]
+                                              CheckoutMenuStruct(checkoutMenuName: "Payment", checkoutSettingsName: "💳"),
+                                              CheckoutMenuStruct(checkoutMenuName: "Promo Code", checkoutSettingsName: "Pick discount"),
+                                              CheckoutMenuStruct(checkoutMenuName: "Total cost", checkoutSettingsName: "$45.57")]
     var getCheckoutMenu: [CheckoutMenuStruct] {
         return checkoutMenu
     }

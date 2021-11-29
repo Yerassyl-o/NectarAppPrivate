@@ -12,6 +12,7 @@ class ProductImagesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var uiViewContainer: UIView!
+    @IBOutlet weak var pageControl: UIPageControl!
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.dataSource = self
@@ -55,6 +56,12 @@ extension ProductImagesTableViewCell {
             index.row = index.row + 1
         }
         self.collectionView.scrollToItem(at: index, at: .left, animated: true )
+    }
+
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.size.width
+        let page = Int(floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1)
+        pageControl.currentPage = Int(page)
     }
 }
 

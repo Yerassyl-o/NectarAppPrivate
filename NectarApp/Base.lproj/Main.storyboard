@@ -371,7 +371,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="productPriceSumLabelAction:" destination="z7j-s6-cOp" eventType="touchUpInside" id="FsX-F5-wEs"/>
+                                    <action selector="goToCheckoutButtonAction:" destination="z7j-s6-cOp" eventType="touchUpInside" id="dTN-ND-u4t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$12.96" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh9-MB-KlB">
@@ -416,30 +416,30 @@
             </objects>
             <point key="canvasLocation" x="2845" y="2290"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Accepted View Controller-->
         <scene sceneID="MyU-EG-g0Q">
             <objects>
-                <viewController id="c6M-Iw-ssF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderAcceptedViewController" id="c6M-Iw-ssF" customClass="OrderAcceptedViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ddc-L6-C1v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mask Group" translatesAutoresizingMaskIntoConstraints="NO" id="Beq-6s-U3n">
-                                <rect key="frame" x="-103" y="-84.5" width="620" height="1065"/>
+                                <rect key="frame" x="-103" y="0.0" width="620" height="1065"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1065" id="Nro-zD-SpT"/>
                                     <constraint firstAttribute="width" constant="620" id="STu-4Q-2ag"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AcceptedLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JwN-ec-O6W">
-                                <rect key="frame" x="72.5" y="151" width="269" height="240"/>
+                                <rect key="frame" x="72.5" y="84" width="269" height="240"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="269" id="8rq-kB-LoE"/>
                                     <constraint firstAttribute="height" constant="240" id="sb5-y8-NQh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5NK-VC-QMu">
-                                <rect key="frame" x="24" y="544" width="366" height="38.5"/>
+                                <rect key="frame" x="24" y="456" width="366" height="38.5"/>
                                 <color key="tintColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
                                 <string key="text">Your items has been placcd and is on 
 it’s way to being processed</string>
@@ -448,7 +448,7 @@ it’s way to being processed</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Order has been accepted s" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYj-nj-Tu9">
-                                <rect key="frame" x="24" y="457" width="366" height="67"/>
+                                <rect key="frame" x="24" y="369" width="366" height="67"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -462,6 +462,9 @@ it’s way to being processed</string>
                                 <state key="normal" title="Back to home">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="backToHomeButtonAction:" destination="c6M-Iw-ssF" eventType="touchUpInside" id="vgA-m0-wAO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql0-KG-NLt">
                                 <rect key="frame" x="24" y="690" width="366" height="67"/>
@@ -479,29 +482,36 @@ it’s way to being processed</string>
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="trackOrderButtonAction:" destination="c6M-Iw-ssF" eventType="touchUpInside" id="LDK-Sh-ktp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="466-M1-Kgd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Beq-6s-U3n" firstAttribute="centerY" secondItem="Ddc-L6-C1v" secondAttribute="centerY" id="AEQ-Ub-YaE"/>
                             <constraint firstItem="5NK-VC-QMu" firstAttribute="top" secondItem="hYj-nj-Tu9" secondAttribute="bottom" constant="20" id="BTh-k3-Rac"/>
                             <constraint firstItem="hYj-nj-Tu9" firstAttribute="leading" secondItem="466-M1-Kgd" secondAttribute="leading" constant="24" id="Ewx-MD-cdt"/>
-                            <constraint firstItem="Beq-6s-U3n" firstAttribute="centerX" secondItem="Ddc-L6-C1v" secondAttribute="centerX" id="GxB-O9-kVR"/>
-                            <constraint firstItem="hYj-nj-Tu9" firstAttribute="top" secondItem="JwN-ec-O6W" secondAttribute="bottom" constant="66" id="Iqt-z7-1ie"/>
+                            <constraint firstItem="hYj-nj-Tu9" firstAttribute="top" secondItem="JwN-ec-O6W" secondAttribute="bottom" constant="45" id="Iqt-z7-1ie"/>
                             <constraint firstItem="JwN-ec-O6W" firstAttribute="centerX" secondItem="Ddc-L6-C1v" secondAttribute="centerX" id="JcV-0F-Piy"/>
+                            <constraint firstItem="Beq-6s-U3n" firstAttribute="centerX" secondItem="Ddc-L6-C1v" secondAttribute="centerX" id="NBI-oJ-rgp"/>
                             <constraint firstItem="ql0-KG-NLt" firstAttribute="leading" secondItem="466-M1-Kgd" secondAttribute="leading" constant="24" id="Ngi-YQ-ee8"/>
                             <constraint firstItem="fBg-gX-AEq" firstAttribute="top" secondItem="ql0-KG-NLt" secondAttribute="bottom" id="RGJ-a6-dKY"/>
                             <constraint firstItem="466-M1-Kgd" firstAttribute="trailing" secondItem="hYj-nj-Tu9" secondAttribute="trailing" constant="24" id="ReS-mi-Vwt"/>
-                            <constraint firstItem="JwN-ec-O6W" firstAttribute="top" secondItem="466-M1-Kgd" secondAttribute="top" constant="107" id="b3J-2D-adC"/>
+                            <constraint firstItem="JwN-ec-O6W" firstAttribute="top" secondItem="466-M1-Kgd" secondAttribute="top" constant="40" id="b3J-2D-adC"/>
                             <constraint firstItem="466-M1-Kgd" firstAttribute="trailing" secondItem="5NK-VC-QMu" secondAttribute="trailing" constant="24" id="bVQ-fL-iH8"/>
                             <constraint firstItem="fBg-gX-AEq" firstAttribute="leading" secondItem="466-M1-Kgd" secondAttribute="leading" constant="24" id="d5b-x5-jaa"/>
                             <constraint firstItem="466-M1-Kgd" firstAttribute="trailing" secondItem="ql0-KG-NLt" secondAttribute="trailing" constant="24" id="joW-RD-EnI"/>
                             <constraint firstItem="5NK-VC-QMu" firstAttribute="leading" secondItem="466-M1-Kgd" secondAttribute="leading" constant="24" id="mTe-pe-HId"/>
                             <constraint firstItem="466-M1-Kgd" firstAttribute="trailing" secondItem="fBg-gX-AEq" secondAttribute="trailing" constant="24" id="qSO-W0-kkb"/>
+                            <constraint firstItem="Beq-6s-U3n" firstAttribute="top" secondItem="Ddc-L6-C1v" secondAttribute="top" id="tMZ-kz-eW2"/>
                             <constraint firstItem="466-M1-Kgd" firstAttribute="bottom" secondItem="fBg-gX-AEq" secondAttribute="bottom" constant="38" id="ulw-3T-8zI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backToHomeButton" destination="fBg-gX-AEq" id="bda-Ga-aac"/>
+                        <outlet property="trackOrderButton" destination="ql0-KG-NLt" id="axf-Ay-j28"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxY-La-pKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -875,7 +885,7 @@ it’s way to being processed</string>
         <!--Collection Products View Controller-->
         <scene sceneID="6m6-lI-o43">
             <objects>
-                <viewController storyboardIdentifier="CollectionProductsViewController" id="jdf-Nj-8NU" customClass="CollectionProductsViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollectionProductsViewController" hidesBottomBarWhenPushed="YES" id="jdf-Nj-8NU" customClass="CollectionProductsViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fE4-FF-XuB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -912,19 +922,19 @@ it’s way to being processed</string>
         <!--Checkout View Controller-->
         <scene sceneID="hc4-qh-AAp">
             <objects>
-                <viewController id="GP5-zT-ZmH" customClass="CheckoutViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CheckoutViewController" id="GP5-zT-ZmH" customClass="CheckoutViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Coc-xR-VJq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="531"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Checkout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5As-mY-gUA">
-                                <rect key="frame" x="24" y="44" width="105.5" height="29"/>
+                                <rect key="frame" x="24" y="64" width="105.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbO-No-bLf">
-                                <rect key="frame" x="374.5" y="51" width="15.5" height="15.5"/>
+                                <rect key="frame" x="374.5" y="71" width="15.5" height="15.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15.5" id="sQB-2c-1lj"/>
                                     <constraint firstAttribute="height" constant="15.5" id="yix-Ri-bKH"/>
@@ -935,11 +945,11 @@ it’s way to being processed</string>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="utG-vM-hFd">
-                                <rect key="frame" x="0.0" y="103" width="414" height="428"/>
+                                <rect key="frame" x="0.0" y="123" width="414" height="408"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAV-JM-uwa">
-                                <rect key="frame" x="24" y="425" width="366" height="67"/>
+                                <rect key="frame" x="24" y="431" width="366" height="67"/>
                                 <color key="backgroundColor" red="0.42352941179999998" green="0.68627450980000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="Lwd-6f-Q5P"/>
@@ -959,7 +969,7 @@ it’s way to being processed</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mb6-y0-5UK">
-                                <rect key="frame" x="0.0" y="102" width="414" height="1"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="1"/>
                                 <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="Upz-4n-eZZ"/>
@@ -973,12 +983,12 @@ it’s way to being processed</string>
                             <constraint firstItem="9VH-Gn-97m" firstAttribute="trailing" secondItem="OAV-JM-uwa" secondAttribute="trailing" constant="24" id="3gp-VW-t2u"/>
                             <constraint firstItem="OAV-JM-uwa" firstAttribute="leading" secondItem="9VH-Gn-97m" secondAttribute="leading" constant="24" id="4oY-Ua-IzI"/>
                             <constraint firstItem="5As-mY-gUA" firstAttribute="leading" secondItem="9VH-Gn-97m" secondAttribute="leading" constant="24" id="BT2-go-xxw"/>
-                            <constraint firstItem="5As-mY-gUA" firstAttribute="top" secondItem="9VH-Gn-97m" secondAttribute="top" id="Dbu-Su-4qQ"/>
+                            <constraint firstItem="5As-mY-gUA" firstAttribute="top" secondItem="9VH-Gn-97m" secondAttribute="top" constant="20" id="Dbu-Su-4qQ"/>
                             <constraint firstItem="9VH-Gn-97m" firstAttribute="trailing" secondItem="mb6-y0-5UK" secondAttribute="trailing" id="LHF-bZ-lIm"/>
                             <constraint firstItem="KbO-No-bLf" firstAttribute="leading" relation="lessThanOrEqual" secondItem="5As-mY-gUA" secondAttribute="trailing" constant="245" id="N9u-D8-TnC"/>
                             <constraint firstItem="KbO-No-bLf" firstAttribute="centerY" secondItem="5As-mY-gUA" secondAttribute="centerY" id="Q5B-Lz-WKo"/>
                             <constraint firstItem="9VH-Gn-97m" firstAttribute="trailing" secondItem="utG-vM-hFd" secondAttribute="trailing" id="VBS-3C-Nqm"/>
-                            <constraint firstItem="9VH-Gn-97m" firstAttribute="bottom" secondItem="OAV-JM-uwa" secondAttribute="bottom" constant="39" id="YLW-Ev-qSZ"/>
+                            <constraint firstItem="9VH-Gn-97m" firstAttribute="bottom" secondItem="OAV-JM-uwa" secondAttribute="bottom" constant="33" id="YLW-Ev-qSZ"/>
                             <constraint firstItem="mb6-y0-5UK" firstAttribute="top" secondItem="5As-mY-gUA" secondAttribute="bottom" constant="29" id="f09-kY-3NL"/>
                             <constraint firstItem="utG-vM-hFd" firstAttribute="bottom" secondItem="9VH-Gn-97m" secondAttribute="bottom" id="fRX-o6-diU"/>
                             <constraint firstItem="mb6-y0-5UK" firstAttribute="leading" secondItem="9VH-Gn-97m" secondAttribute="leading" id="nLp-UL-LmJ"/>
@@ -1002,7 +1012,7 @@ it’s way to being processed</string>
         <!--Custom TabA Barvc-->
         <scene sceneID="kaB-9E-vQZ">
             <objects>
-                <tabBarController interfaceStyle="light" id="h3T-ED-mz0" customClass="CustomTabABarvc" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CustomTabABarvc" interfaceStyle="light" id="h3T-ED-mz0" customClass="CustomTabABarvc" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eCm-on-tTm"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6UW-gj-55w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1384,7 +1394,7 @@ it’s way to being processed</string>
         <!--Log In View Controller-->
         <scene sceneID="LUS-3H-lOs">
             <objects>
-                <viewController id="FPG-qb-Udc" customClass="LogInViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LogInViewController" id="FPG-qb-Udc" customClass="LogInViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uRj-JD-ceO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1413,6 +1423,9 @@ it’s way to being processed</string>
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="h3T-ED-mz0" kind="presentation" modalPresentationStyle="fullScreen" id="isV-yY-pb0"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6zE-Gm-meT">
                                 <rect key="frame" x="24" y="340" width="352" height="64.5"/>
@@ -1686,6 +1699,9 @@ it’s way to being processed</string>
                                                         <integer key="value" value="19"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="h3T-ED-mz0" kind="presentation" modalPresentationStyle="fullScreen" id="IEa-y5-ocF"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5hM-4Z-qSO">
                                                 <rect key="frame" x="24" y="390.5" width="327" height="64.5"/>
@@ -2134,7 +2150,8 @@ it’s way to being processed</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Mnz-r7-umK"/>
+        <segue reference="laG-kZ-vxL"/>
+        <segue reference="IEa-y5-ocF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AcccountSvg" width="25" height="25"/>

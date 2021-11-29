@@ -117,11 +117,9 @@ extension LogInViewController{
     }
 
     func emailEnterSetup() {
-        print("Hello")
         let checkEmail = loginModels.checkEmail(emailTextField.text!)
         print(checkEmail)
         if checkEmail == false && emailTextField.text!.count > 0 {
-            print("Hello2")
             bottomEmail1pxView.backgroundColor = .systemRed
             
         } else if checkEmail == true {

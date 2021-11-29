@@ -19,10 +19,24 @@ class CheckoutViewController: UIViewController {
         tableView.dataSource = self
         tableView.separatorColor = .clear
         registerCustomCells()
+
     }
     @IBAction func closeButtonAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func placeOrderButtonAction(_ sender: Any) {
+        if let viewContoller = storyboard?.instantiateViewController(identifier: "OrderAcceptedViewController") as? OrderAcceptedViewController {
+            viewContoller.modalPresentationStyle = .fullScreen
+            self.present(viewContoller, animated: true, completion: nil)
+            
+        }
+    }
+    override func updateViewConstraints() {
+        self.view.frame.origin.y =  view.frame.size.height - 530
+           self.view.frame.size.height =  530
+           
+        self.view.roundCorners([.topLeft, .topRight], radius: 30.0)
+           super.updateViewConstraints()
     }
 }
 
@@ -40,8 +54,9 @@ extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
         }  else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ParametrElementsTableViewCell", for: indexPath) as! ParametrElementsTableViewCell
             let menu = checkoutMenu.getCheckoutMenu[indexPath.row]
+            print(menu)
             cell.parametrNameLabel.text = menu.checkoutMenuName
-            cell.parametrButton.titleLabel?.text = menu.checkoutSettingsName
+            cell.parametrNameButton.setTitle(menu.checkoutSettingsName, for: .normal)
             cell.selectionStyle = .none
             return cell
         }

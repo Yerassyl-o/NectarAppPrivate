@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionProductsViewController: UIViewController {
+class CollectionProductsViewController: MainViewController {
     var dataBaseOfProduct = ProductDataBase()
     var productCategory: String!
     var productsOfCategory: [ProductStruct] = []

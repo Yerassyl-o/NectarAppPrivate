@@ -49,9 +49,11 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         } else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GroceriesStoriesTableViewCell", for: indexPath) as! GroceriesStoriesTableViewCell
+            cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 6 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductsLineTableViewCell", for: indexPath) as! ProductsLineTableViewCell
+            cell.selectionStyle = .none
             return cell
         } else {
             return UITableViewCell()

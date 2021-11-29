@@ -23,20 +23,20 @@
                             <constraint firstAttribute="height" constant="56" id="srj-Ea-Tv4"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprite Can" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cae-aX-Fyp">
-                        <rect key="frame" x="122" y="38" width="82" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprite Can" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cae-aX-Fyp">
+                        <rect key="frame" x="122" y="38" width="181" height="19.5"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="$1.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My0-ux-vTp">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="$1.50" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My0-ux-vTp">
                         <rect key="frame" x="323" y="49" width="42.5" height="20"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="325ml, Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7s-kK-NsY">
-                        <rect key="frame" x="122" y="62" width="84" height="17"/>
+                        <rect key="frame" x="122" y="61.5" width="84" height="17"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                         <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                     <constraint firstItem="bYm-aP-MWz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="U0R-MT-hoh"/>
                     <constraint firstItem="M7s-kK-NsY" firstAttribute="top" secondItem="cae-aX-Fyp" secondAttribute="bottom" constant="4" id="X5u-Yq-xZn"/>
                     <constraint firstItem="My0-ux-vTp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="M7s-kK-NsY" secondAttribute="trailing" constant="117" id="acI-eQ-HUF"/>
-                    <constraint firstItem="My0-ux-vTp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="cae-aX-Fyp" secondAttribute="trailing" constant="119" id="bPW-dq-Cfx"/>
+                    <constraint firstItem="My0-ux-vTp" firstAttribute="leading" secondItem="cae-aX-Fyp" secondAttribute="trailing" constant="20" id="bPW-dq-Cfx"/>
                     <constraint firstItem="bYm-aP-MWz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="dmK-X9-MvY"/>
                     <constraint firstAttribute="trailing" secondItem="Pmj-ZW-L5q" secondAttribute="trailing" constant="24" id="pfc-Pl-eZK"/>
                     <constraint firstItem="Pmj-ZW-L5q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="vXJ-HI-YsI"/>

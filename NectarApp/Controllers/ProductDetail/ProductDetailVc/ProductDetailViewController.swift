@@ -28,7 +28,12 @@ class ProductDetailViewController: UIViewController {
         tableView.delegate = self
         registerCustomCells()
         tableView.separatorColor = .clear
-        navigationController?.navigationBar.backgroundColor = .red
+        let leftItem = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = leftItem
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        navigationItem.backBarButtonItem = backItem
+        navigationController?.navigationBar.tintColor = .black
     }
 }
 

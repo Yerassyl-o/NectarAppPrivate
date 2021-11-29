@@ -22,8 +22,14 @@ class MyCartViewController: UIViewController {
         tableView.separatorColor = .clear
         productPriceSumLabel.text = "\(productPriceSumCounter)"
     }
-    @IBAction func productPriceSumLabelAction(_ sender: Any) {
-        
+    
+    @IBAction func goToCheckoutButtonAction(_ sender: Any) {
+        if let viewContoller = storyboard?.instantiateViewController(identifier: "CheckoutViewController") as? CheckoutViewController {
+            viewContoller.modalTransitionStyle = .coverVertical
+            viewContoller.modalPresentationStyle = .popover
+            self.present(viewContoller, animated: true, completion: nil)
+            
+        }
     }
 }
 
@@ -47,7 +53,7 @@ extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
             cell.productPriceFor1Item.text = "$\(product.productPrice)"
             cell.productImage.image = product.productImage
             cell.selectionStyle = .none
-            productPriceSumCounter += product.productPrice
+//            productPriceSumCounter += product.productPrice
             
             return cell
 //        }
@@ -65,7 +71,6 @@ extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MyCartViewController {
     func registerCustomCells(){
-//        tableView.register(UINib.init(nibName: "HeaderMyCartTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderMyCartTableViewCell")
         tableView.register(UINib.init(nibName: "MyCartItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "MyCartItemsTableViewCell")
     }
 }
