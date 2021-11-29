@@ -9,7 +9,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
     var dataBaseOfProduct = ProductDataBase()
-    
+    var searchString: String?
+    var searchProductElememts: [ProductStruct] = []
     @IBOutlet weak var collectionView: UICollectionView!
     var clearButtonLogic = false
     @IBOutlet weak var customSearchBarView: UIView!
@@ -19,10 +20,21 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchLogic()
         setUpCustomSearchBAr()
         collectionView.delegate = self
         collectionView.dataSource = self
         registerCustomCells()
+        print(searchString ?? "")
+        customSearchBarTextField.text = searchString
+        customSearchBarTextField.addTarget(self, action: #selector(MyTextFielAction), for: UIControl.Event.primaryActionTriggered)
+        
+    }
+    
+    @objc func MyTextFielAction(textField: UITextField) {
+        searchString = customSearchBarTextField.text
+        searchLogic()
+        collectionView.reloadData()
     }
     
     @IBAction func clearButtonAction(_ sender: Any) {
@@ -31,6 +43,9 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func filterButtonAction(_ sender: Any) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "FiltersViewController") as? FiltersViewController {
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
     
     
@@ -40,12 +55,12 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        dataBaseOfProduct.getDataBase.count
+        searchProductElememts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"homeScreenCategorySectionElementsCollectionViewCell", for: indexPath) as? homeScreenCategorySectionElementsCollectionViewCell else { return UICollectionViewCell() }
-        let product = dataBaseOfProduct.getDataBase[indexPath.row]
+        let product = searchProductElememts[indexPath.row]
         cell.productImage.image = product.productImage
         cell.productName.text = "\(product.productName)"
         cell.productPrice.text = "$\(product.productPrice)"
@@ -76,12 +91,6 @@ extension SearchViewController {
         collectionView.register(customCellNib, forCellWithReuseIdentifier: "homeScreenCategorySectionElementsCollectionViewCell")
     }
 }
-
-
-
-
-
-
 
 extension SearchViewController {
     func setUpCustomSearchBAr() {
@@ -117,3 +126,13 @@ extension SearchViewController {
     }
 }
 
+extension SearchViewController {
+    func searchLogic() {
+        searchProductElememts.removeAll()
+        for element in dataBaseOfProduct.getDataBase {
+            if element.productName.contains(searchString ?? "") {
+                searchProductElememts.append(element)
+            }
+        }
+    }
+}

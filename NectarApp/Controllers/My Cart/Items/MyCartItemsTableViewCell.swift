@@ -23,7 +23,6 @@ class MyCartItemsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         productCount.text = "\(productCounter)"
-        print(productCounter)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,7 +38,6 @@ class MyCartItemsTableViewCell: UITableViewCell {
     @IBAction func plusButtonAction(_ sender: Any) {
         plusCount()
         productCount.text = "\(productCounter)"
-        print(productCounter)
     }
     
     @IBAction func removeProductButtonAction(_ sender: Any) {
@@ -49,7 +47,7 @@ class MyCartItemsTableViewCell: UITableViewCell {
 extension MyCartItemsTableViewCell {
     func plusCount() {
         
-        if productCounter > 1 {
+        if productCounter > 0 {
             productCounter += 1
         }
     }

@@ -33,8 +33,8 @@ class ExploreVcViewController: UIViewController {
     @objc func MyTextFielAction(textField: UITextField) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
             viewController.modalPresentationStyle = .popover
+            viewController.searchString = customSearchBarTextField.text
             self.present(viewController, animated: true, completion: nil)
-//            navigationController?.pushViewController(viewController , animated: true)
         }
     }
     func setupToHideKeyboardOnTapOnView() {
