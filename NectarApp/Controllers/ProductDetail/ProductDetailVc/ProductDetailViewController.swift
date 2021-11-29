@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProductDetailViewController: UIViewController {
+class ProductDetailViewController: MainViewController {
     var product: ProductStruct!
 //    var product = ProductStruct(productName: "Diet Coke",
 //                                productUnitOfMeasurement: "ml",

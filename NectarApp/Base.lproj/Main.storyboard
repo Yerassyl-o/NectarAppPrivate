@@ -648,7 +648,7 @@ it’s way to being processed</string>
         <!--Product Detail View Controller-->
         <scene sceneID="ZXi-n0-js0">
             <objects>
-                <viewController storyboardIdentifier="ProductDetailViewController" id="Cdf-ek-nYK" customClass="ProductDetailViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailViewController" hidesBottomBarWhenPushed="YES" id="Cdf-ek-nYK" customClass="ProductDetailViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ReG-NC-5Hd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -810,7 +810,7 @@ it’s way to being processed</string>
         <!--Filters-->
         <scene sceneID="1iL-YJ-HXZ">
             <objects>
-                <viewController storyboardIdentifier="FiltersViewController" id="ReU-oM-HKO" customClass="FiltersViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FiltersViewController" hidesBottomBarWhenPushed="YES" id="ReU-oM-HKO" customClass="FiltersViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XZ4-Lr-6yx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -891,7 +891,7 @@ it’s way to being processed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7FF-nA-GvP">
-                                <rect key="frame" x="24" y="54" width="366" height="808"/>
+                                <rect key="frame" x="24" y="98" width="366" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="15" minimumInteritemSpacing="15" id="dMa-SO-EJp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -911,13 +911,14 @@ it’s way to being processed</string>
                             <constraint firstItem="7FF-nA-GvP" firstAttribute="leading" secondItem="RkV-9l-bII" secondAttribute="leading" constant="24" id="rLo-LW-TRM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="bUY-Oh-BKe"/>
                     <connections>
                         <outlet property="collectionView" destination="7FF-nA-GvP" id="9Pi-Fj-adp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvB-GC-o1e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2005.7971014492755" y="3002.6785714285711"/>
+            <point key="canvasLocation" x="2915.9420289855075" y="3610.7142857142853"/>
         </scene>
         <!--Checkout View Controller-->
         <scene sceneID="hc4-qh-AAp">
@@ -2147,6 +2148,24 @@ it’s way to being processed</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hte-aV-841" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1394" y="2290"/>
+        </scene>
+        <!--Filters Navigation Contollers-->
+        <scene sceneID="vmA-3g-igf">
+            <objects>
+                <navigationController storyboardIdentifier="FiltersNavigationContollers" automaticallyAdjustsScrollViewInsets="NO" id="wBR-Rh-ir9" customClass="FiltersNavigationContollers" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9BX-io-7nn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jdf-Nj-8NU" kind="relationship" relationship="rootViewController" id="Z79-qu-f9Q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alc-Hg-8vE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005.7971014492755" y="3610.7142857142853"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

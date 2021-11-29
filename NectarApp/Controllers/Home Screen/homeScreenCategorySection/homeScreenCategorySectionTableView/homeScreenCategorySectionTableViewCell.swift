@@ -9,6 +9,7 @@ import UIKit
 
 class homeScreenCategorySectionTableViewCell: UITableViewCell {
     var dataBaseOfProduct = ProductDataBase()
+    var seeAllButtonTap: (() -> Void)?
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var seeAllButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,10 +23,11 @@ class homeScreenCategorySectionTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    @IBAction func seeAllButtonAction(_ sender: Any) {
+        seeAllButtonTap?()
+    }
 }
 extension homeScreenCategorySectionTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

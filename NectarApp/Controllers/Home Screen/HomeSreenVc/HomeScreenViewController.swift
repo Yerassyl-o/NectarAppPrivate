@@ -41,6 +41,12 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenCategorySectionTableViewCell", for: indexPath) as! homeScreenCategorySectionTableViewCell
             cell.selectionStyle = .none
+//            cell.seeAllButtonTap = {
+//                if let viewController = self.storyboard?.instantiateViewController(identifier: "FiltersNavigationContollers") as? FiltersNavigationContollers {
+//                    viewController.modalPresentationStyle = .
+//                    self.present(viewController, animated: true)
+//                }
+//            }
             return cell
         } else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenCategorySectionTableViewCell", for: indexPath) as! homeScreenCategorySectionTableViewCell

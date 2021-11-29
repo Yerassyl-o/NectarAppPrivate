@@ -32,6 +32,9 @@
                         <state key="normal" title="See all">
                             <color key="titleColor" red="0.32549019607843138" green="0.69411764705882351" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <connections>
+                            <action selector="seeAllButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0nz-Tg-MPD"/>
+                        </connections>
                     </button>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xML-zg-gyH">
                         <rect key="frame" x="24" y="49" width="390" height="248"/>
