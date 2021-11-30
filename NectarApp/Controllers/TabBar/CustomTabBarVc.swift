@@ -21,13 +21,13 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate  {
             super.viewDidLoad()
             self.setupTabBarUI()
             self.addCustomTabBarView()
-            self.updateColorTabbarItems()
+//            self.updateColorTabbarItems()
         }
         
         override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
             self.setupCustomTabBarFrame()
-            self.updateColorTabbarItems()
+//            self.updateColorTabbarItems()
         }
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)

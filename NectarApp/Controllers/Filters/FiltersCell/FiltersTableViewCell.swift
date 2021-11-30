@@ -12,6 +12,7 @@ class FiltersTableViewCell: UITableViewCell {
     var buttonlogic = false
     let checkedImage = UIImage(named: "filterChecked")!
     let unCheckedImage = UIImage(named: "filterDontChecked")!
+//    var setChecked: (() -> Voi)
     
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var filterName: UILabel!

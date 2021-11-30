@@ -14,7 +14,6 @@ class SearchViewController: UIViewController {
     var searchString: String?
     var searchProductElememts: [ProductStruct] = []
     var clearButtonLogic = false
-    var getFilter: (() -> Void)?
     var brand: [String]?
     var category: [String]?
     
@@ -31,7 +30,6 @@ class SearchViewController: UIViewController {
         collectionViewSettings()
         registerCustomCells()
         
-        
     }
     
     @IBAction func clearButtonAction(_ sender: Any) {
@@ -41,6 +39,14 @@ class SearchViewController: UIViewController {
     
     @IBAction func filterButtonAction(_ sender: Any) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "FiltersViewController") as? FiltersViewController {
+            
+            viewController.delegate = self
+            
+            viewController.sendData = {
+                viewController.brand = self.brand
+                viewController.category = self.category
+            }
+            
             self.present(viewController, animated: true, completion: nil)
         }
     }
@@ -142,14 +148,14 @@ extension SearchViewController {
     
     func searchLogic() {
         searchProductElememts.removeAll()
-//        for element in dataBaseOfProduct.getDataBase {
-//            if element.productName.contains(searchString ?? "") {
-//                searchProductElememts.append(element)
-//            }
-//        }
+
         searchProductElememts = dataBaseOfProduct.findProduct(productName: searchString ?? "", category: category ?? [""], brand: brand ?? [""])
-//        print(searchProductElememts)
     }
 }
 
 
+extension SearchViewController: FiltersViewControllerDelegate {
+    func buttonClicked() {
+        searchProductElememts = dataBaseOfProduct.findProduct(productName: searchString ?? "", category: category ?? [""], brand: brand ?? [""])
+    }
+}

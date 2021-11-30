@@ -45,11 +45,18 @@ extension MyCartViewController {
     func didLoadSettings(){
         tableView.separatorInset = .init(top: 0, left: 24, bottom: 0, right: 24)
         tableView.separatorColor = .clear
+        
+        tableView.contentInset.bottom = 80
+        
         productPriceSumLabel.text = "\(DefaultDataBase.shared.getMyCartsCosts())"
         productPriceSumLabel.layer.cornerRadius = 20
     }
 }
 extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("\(scrollView.contentOffset.y)")
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dataBase.userCarts.count

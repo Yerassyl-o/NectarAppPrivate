@@ -7,13 +7,25 @@
 
 import UIKit
 
+
+
+protocol FiltersViewControllerDelegate: AnyObject {
+    func buttonClicked()
+}
+
 class FiltersViewController: UIViewController {
     
-    let filterMenuBase = FilterMenu()
+    weak var delegate: FiltersViewControllerDelegate?
     
+    let filterMenuBase = FilterMenu()
+    var viewController: UIViewController?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var applyFilter: UIButton!
+    var brand: [String]?
+    var category: [String]?
+    
+    var sendData:(() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,6 +108,9 @@ extension FiltersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footercell = tableView.dequeueReusableCell(withIdentifier: "SectionFooterTableViewCell") as! SectionFooterTableViewCell
         return footercell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.buttonClicked()
     }
 }
 extension FiltersViewController {

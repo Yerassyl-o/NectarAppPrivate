@@ -138,12 +138,10 @@ extension ProductDetailViewController: ProductInfoAndCountTableViewCellDelegate 
     
     func didClickOnPlus() {
         count += 1
-        print(count)
     }
     
     func didClickOnMinus() {
         count -= 1
-        print(count)
     }
 }
 
