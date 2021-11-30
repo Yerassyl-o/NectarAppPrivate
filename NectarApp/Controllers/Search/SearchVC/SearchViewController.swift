@@ -8,13 +8,15 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+
     
     var dataBaseOfProduct = ProductDataBase()
     var searchString: String?
     var searchProductElememts: [ProductStruct] = []
     var clearButtonLogic = false
     var getFilter: (() -> Void)?
-    var filters: [String]?
+    var brand: [String]?
+    var category: [String]?
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var customSearchBarView: UIView!
@@ -140,11 +142,13 @@ extension SearchViewController {
     
     func searchLogic() {
         searchProductElememts.removeAll()
-        for element in dataBaseOfProduct.getDataBase {
-            if element.productName.contains(searchString ?? "") {
-                searchProductElememts.append(element)
-            }
-        }
+//        for element in dataBaseOfProduct.getDataBase {
+//            if element.productName.contains(searchString ?? "") {
+//                searchProductElememts.append(element)
+//            }
+//        }
+        searchProductElememts = dataBaseOfProduct.findProduct(productName: searchString ?? "", category: category ?? [""], brand: brand ?? [""])
+//        print(searchProductElememts)
     }
 }
 

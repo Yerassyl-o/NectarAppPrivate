@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct ProductStruct: Hashable {
+struct ProductStruct {
     let productName: String
     let productUnitOfMeasurement: String
     let productQuantity: Double
@@ -154,5 +154,46 @@ class ProductDataBase {
     
     var getDataBase: [ProductStruct] {
         return dataBase
+    }
+    
+    
+    
+    func findProduct(productName: String, category: [String], brand: [String]) -> [ProductStruct]{
+        var products: [ProductStruct] = []
+        var helper: [ProductStruct] = []
+        for product in dataBase {
+            if product.productName.contains(productName) {
+                products.append(product)
+            }
+        }
+        
+        for product in products {
+            for index in 0 ..< product.category.count {
+                for indexY in 0 ..< category.count {
+                    if product.category[index] == category[indexY] {
+                        helper.append(product)
+                    }
+                }
+            }
+        }
+        
+        if helper.count != 0 {
+            products = helper
+        }
+        helper.removeAll()
+        
+        for product in products {
+            for indexY in 0 ..< brand.count {
+                if product.brand == brand[indexY] {
+                    helper.append(product)
+                }
+            }
+        }
+        
+        if helper.count != 0 {
+            products = helper
+        }
+        
+        return products
     }
 }
