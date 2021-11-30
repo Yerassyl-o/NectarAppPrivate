@@ -8,11 +8,14 @@
 import UIKit
 
 class FiltersTableViewCell: UITableViewCell {
+    
     var buttonlogic = false
     let checkedImage = UIImage(named: "filterChecked")!
     let unCheckedImage = UIImage(named: "filterDontChecked")!
+    
     @IBOutlet weak var checkButton: UIButton!
     @IBOutlet weak var filterName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +26,7 @@ class FiltersTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
     @IBAction func checkButtonAction(_ sender: Any) {
         if buttonlogic == false {
             checkButton.setImage(checkedImage, for: UIControl.State.normal)
@@ -32,7 +36,6 @@ class FiltersTableViewCell: UITableViewCell {
             filterName.textColor = UIColor(red: 24/255, green: 23/255, blue: 37/255, alpha: 1)
             
         }
-        
         buttonlogic.toggle()
     }
     

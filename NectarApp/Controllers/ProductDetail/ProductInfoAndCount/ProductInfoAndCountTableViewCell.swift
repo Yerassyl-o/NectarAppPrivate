@@ -14,7 +14,6 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
     
     let checkedImage = UIImage(named: "addFavoriteButton")!
     let unCheckedImage = UIImage(named: "addFavoriteButtonSelected")!
-//    var sendCallBack: (() -> Void)?
     
     @IBOutlet weak var countOfProduct: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -28,19 +27,13 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         checkFavorurite()
-        countOfProduct.layer.borderWidth = 1
-        countOfProduct.layer.borderColor = CGColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
-        countOfProduct.layer.cornerRadius = 17
-        productCountLabel.text = "1"
-//        sendCallBack?()
+        settings()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
     }
-    
-    
     
     @IBAction func minusButtonAction(_ sender: Any) {
         
@@ -51,9 +44,10 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
         } else {
             productCountLabel.text = "1"
         }
-//        sendCallBack?()
     }
+    
     @IBAction func plusButtonAction(_ sender: Any) {
+        
         var count: Int = Int(productCountLabel.text ?? "1")!
         if count > 0 {
             count += 1
@@ -61,11 +55,22 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
         } else {
             productCountLabel.text = "1"
         }
-//        sendCallBack?()
     }
     
     @IBAction func addFovoruriteButtonAction(_ sender: Any) {
         checkFavorurite()
+    }
+    
+    
+}
+
+extension ProductInfoAndCountTableViewCell {
+    
+    func settings() {
+        countOfProduct.layer.borderWidth = 1
+        countOfProduct.layer.borderColor = CGColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
+        countOfProduct.layer.cornerRadius = 17
+        productCountLabel.text = "1"
     }
     
     func checkFavorurite() {

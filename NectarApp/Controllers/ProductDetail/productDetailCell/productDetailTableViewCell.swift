@@ -8,7 +8,9 @@
 import UIKit
 
 class productDetailTableViewCell: UITableViewCell {
+    
     var isToggle = false
+    
     @IBOutlet weak var productDetailText: UILabel!
     @IBOutlet weak var productDetailButton: UIButton!
     
@@ -24,11 +26,9 @@ class productDetailTableViewCell: UITableViewCell {
     }
     
     @IBAction func productDetailButtonAction(_ sender: Any) {
-        
         isToggle.toggle()
     
         productDetailText.isHidden = isToggle
         onProductDetailButtonTap?()
-        
     }
 }
