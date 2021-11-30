@@ -9,6 +9,8 @@ import UIKit
 
 class homeScreeSearchBarTableViewCell: UITableViewCell {
     
+    var search: (() -> Void)?
+    
     @IBOutlet weak var customSearchBarView: UIView!
     @IBOutlet weak var customSearchBarTextField: UITextField!
     @IBOutlet weak var clearButton: UIButton!
@@ -49,6 +51,9 @@ extension homeScreeSearchBarTableViewCell {
         }
     }
     
-    @objc func MyTextFielAction(textField: UITextField) {}
+    @objc func MyTextFielAction(textField: UITextField) {
+        search?()
+        customSearchBarTextField.text = ""
+    }
 
 }

@@ -43,7 +43,16 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
             
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreeSearchBarTableViewCell", for: indexPath) as! homeScreeSearchBarTableViewCell
+            
             cell.selectionStyle = .none
+            
+            cell.search = {
+                if let viewController = self.storyboard?.instantiateViewController(identifier: "SearchViewController") as? SearchViewController {
+                    viewController.searchString = cell.customSearchBarTextField.text
+                    self.present(viewController, animated: true, completion: nil)
+                }
+            }
+            
             return cell
             
         } else if indexPath.row == 2 {

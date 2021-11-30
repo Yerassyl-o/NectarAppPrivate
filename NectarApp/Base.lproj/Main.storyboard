@@ -1492,11 +1492,11 @@ it’s way to being processed</string>
                                         <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="177" translatesAutoresizingMaskIntoConstraints="NO" id="IbJ-Pf-6tF">
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IbJ-Pf-6tF">
                                         <rect key="frame" x="0.0" y="30.5" width="366" height="23"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mp6-GL-6EX">
-                                                <rect key="frame" x="0.0" y="0.0" width="163" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="q7c-k4-rYz"/>
                                                 </constraints>
@@ -2173,8 +2173,8 @@ it’s way to being processed</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="laG-kZ-vxL"/>
-        <segue reference="IEa-y5-ocF"/>
+        <segue reference="Mnz-r7-umK"/>
+        <segue reference="isV-yY-pb0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AcccountSvg" width="25" height="25"/>

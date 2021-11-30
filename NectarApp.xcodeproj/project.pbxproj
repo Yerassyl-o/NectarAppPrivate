@@ -129,9 +129,6 @@
 		873026A82746143700CA31CA /* OnbordingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingViewController.swift; sourceTree = "<group>"; };
 		873026AB2746539C00CA31CA /* VerificationModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationModels.swift; sourceTree = "<group>"; };
 		873026AE274664C600CA31CA /* phoneMaskModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phoneMaskModels.swift; sourceTree = "<group>"; };
-		873026B1274671A500CA31CA /* gilroy-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-medium.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-medium.ttf"; sourceTree = "<group>"; };
-		873026B2274671A500CA31CA /* gilroy-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-regular.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-regular.ttf"; sourceTree = "<group>"; };
-		873026B3274671A500CA31CA /* gilroy-semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gilroy-semibold.ttf"; path = "../../../../Downloads/318748081bbc3135ad4deebf54ba77a7/gilroy-semibold.ttf"; sourceTree = "<group>"; };
 		873026B52746831900CA31CA /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		873026B82747572100CA31CA /* CustomTabBarVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarVc.swift; sourceTree = "<group>"; };
 		8757DB87274B5F9500A04367 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -474,16 +471,6 @@
 				873026AE274664C600CA31CA /* phoneMaskModels.swift */,
 			);
 			path = PhoneMask;
-			sourceTree = "<group>";
-		};
-		873026B02746716F00CA31CA /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				873026B1274671A500CA31CA /* gilroy-medium.ttf */,
-				873026B2274671A500CA31CA /* gilroy-regular.ttf */,
-				873026B3274671A500CA31CA /* gilroy-semibold.ttf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		873026B4274682E200CA31CA /* Login */ = {
@@ -911,11 +898,9 @@
 		879FAC0727436FC600252BE0 /* NectarApp */ = {
 			isa = PBXGroup;
 			children = (
+				87EB6FAE2755F9F100A48A6F /* App */,
 				873026812743D9F600CA31CA /* Models */,
 				873026802743D9E500CA31CA /* Controllers */,
-				873026B02746716F00CA31CA /* Fonts */,
-				879FAC0827436FC600252BE0 /* AppDelegate.swift */,
-				879FAC0A27436FC600252BE0 /* SceneDelegate.swift */,
 				879FAC0C27436FC600252BE0 /* ViewController.swift */,
 				879FAC0E27436FC600252BE0 /* Main.storyboard */,
 				879FAC1127436FC700252BE0 /* Assets.xcassets */,
@@ -923,6 +908,15 @@
 				879FAC1627436FC700252BE0 /* Info.plist */,
 			);
 			path = NectarApp;
+			sourceTree = "<group>";
+		};
+		87EB6FAE2755F9F100A48A6F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				879FAC0A27436FC600252BE0 /* SceneDelegate.swift */,
+				879FAC0827436FC600252BE0 /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
