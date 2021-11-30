@@ -13,6 +13,8 @@ class SearchViewController: UIViewController {
     var searchString: String?
     var searchProductElememts: [ProductStruct] = []
     var clearButtonLogic = false
+    var getFilter: (() -> Void)?
+    var filters: [String]?
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var customSearchBarView: UIView!
@@ -26,7 +28,8 @@ class SearchViewController: UIViewController {
         setUpCustomSearchBAr()
         collectionViewSettings()
         registerCustomCells()
-     
+        
+        
     }
     
     @IBAction func clearButtonAction(_ sender: Any) {

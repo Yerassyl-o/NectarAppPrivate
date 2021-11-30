@@ -29,6 +29,7 @@ class MyCartViewController: UIViewController {
         productPriceSumLabel.text = "$\(DefaultDataBase.shared.getMyCartsCosts())"
     }
     
+    
     @IBAction func goToCheckoutButtonAction(_ sender: Any) {
         presentCheckoutViewController()
     }

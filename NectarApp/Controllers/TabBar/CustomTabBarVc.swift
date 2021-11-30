@@ -21,11 +21,13 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate  {
             super.viewDidLoad()
             self.setupTabBarUI()
             self.addCustomTabBarView()
+            self.updateColorTabbarItems()
         }
         
         override func viewDidLayoutSubviews() {
             super.viewDidLayoutSubviews()
             self.setupCustomTabBarFrame()
+            self.updateColorTabbarItems()
         }
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
@@ -60,11 +62,33 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate  {
                 appearance.shadowImage = nil
                 appearance.shadowColor = nil
                 self.tabBar.standardAppearance = appearance
+        
             } else {
                 self.tabBar.shadowImage = UIImage()
                 self.tabBar.backgroundImage = UIImage()
+                
             }
         }
+    
+    func updateColorTabbarItems() {
+        if #available(iOS 13.0, *) {
+            let appearance = self.tabBar.standardAppearance
+            appearance.shadowImage = nil
+            appearance.shadowColor = nil
+            self.tabBar.standardAppearance = appearance
+            
+            appearance.stackedLayoutAppearance.normal.iconColor = .black
+            appearance.stackedLayoutAppearance.selected.iconColor = UIColor(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
+            
+            
+        } else {
+           
+            
+            UITabBar.appearance().tintColor = UIColor(red: 83/255, green: 177/255, blue: 117/255, alpha: 1)
+            UITabBar.appearance().unselectedItemTintColor = .black
+        }
+
+    }
         
         private func addCustomTabBarView() {
             self.customTabBarView.frame = tabBar.frame
@@ -74,7 +98,7 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate  {
             self.customTabBarView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
 
             self.customTabBarView.layer.masksToBounds = false
-            self.customTabBarView.layer.shadowColor = UIColor.black.withAlphaComponent(0.2).cgColor
+            self.customTabBarView.layer.shadowColor = UIColor.black.withAlphaComponent(0.15).cgColor
             self.customTabBarView.layer.shadowOffset = .zero
             self.customTabBarView.layer.shadowOpacity = 1
             self.customTabBarView.layer.shadowRadius = 15

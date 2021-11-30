@@ -30,7 +30,7 @@ class CheckoutViewController: UIViewController {
     
     @IBAction func placeOrderButtonAction(_ sender: Any) {
         
-        if let viewContoller = storyboard?.instantiateViewController(identifier: "OrderAcceptedViewController") as? OrderAcceptedViewController {
+        if let viewContoller = storyboard?.instantiateViewController(identifier: "ErrorViewController") as? ErrorViewController {
             
             viewContoller.modalPresentationStyle = .fullScreen
             

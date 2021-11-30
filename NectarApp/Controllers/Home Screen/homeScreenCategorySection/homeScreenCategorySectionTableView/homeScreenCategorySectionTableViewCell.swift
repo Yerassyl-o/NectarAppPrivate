@@ -10,7 +10,8 @@ import UIKit
 class homeScreenCategorySectionTableViewCell: UITableViewCell {
     
     var dataBaseOfProduct = ProductDataBase()
-    var seeAllButtonTap: (() -> Void)?
+    var productTaped: (() -> Void)?
+    var product: ProductStruct?
     
     @IBOutlet weak var categoryNameLabel: UILabel!
     @IBOutlet weak var seeAllButton: UIButton!
@@ -29,7 +30,6 @@ class homeScreenCategorySectionTableViewCell: UITableViewCell {
     }
     
     @IBAction func seeAllButtonAction(_ sender: Any) {
-        seeAllButtonTap?()
     }
 }
 
@@ -77,6 +77,13 @@ extension homeScreenCategorySectionTableViewCell: UICollectionViewDelegate, UICo
         }
         
         self.collectionView.scrollToItem(at: index, at: .left, animated: true )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let getProduct = dataBaseOfProduct.getDataBase[indexPath.row]
+
+        product = getProduct
+        productTaped?()
     }
 }
 

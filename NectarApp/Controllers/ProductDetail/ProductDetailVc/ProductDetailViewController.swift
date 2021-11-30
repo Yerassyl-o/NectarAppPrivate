@@ -7,24 +7,17 @@
 
 import UIKit
 
+
+
 class ProductDetailViewController: MainViewController {
     
     var defaultDataBase = DefaultDataBase.shared
-    var count: Int?
+    var count: Int = 1
     var productName: String?
     var product: ProductStruct!
-    
-//    var product = ProductStruct(productName: "Diet Coke",
-//                                productUnitOfMeasurement: "ml",
-//                                productQuantity: 355,
-//                                productPrice: "1.99",
-//                                productCategory: "Beverages",
-//                                productReview: 4,
-//                                productImage: UIImage(named: "Diet Coke") ?? UIImage(named:"defaultProductImage")!)
-    
-    
-    
+
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addToBasketButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +28,9 @@ class ProductDetailViewController: MainViewController {
         
     }
     
-    @IBAction func AddToBasketButtonAction(_ sender: Any) {}
+    @IBAction func AddToBasketButtonAction(_ sender: Any) {
+        defaultDataBase.saveMyCart(product: product.productName, count: count)
+    }
 }
 
 extension ProductDetailViewController {
@@ -55,7 +50,9 @@ extension ProductDetailViewController {
         
         navigationItem.backBarButtonItem = backItem
         navigationController?.navigationBar.tintColor = .black
+
     }
+    
 }
 
 extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSource {
@@ -70,7 +67,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductImagesTableViewCell", for: indexPath) as! ProductImagesTableViewCell
             
             cell.selectionStyle = .none
-            cell.productName = self.product.productName
+            cell.productImage = product.productImage
             
             return cell
             
@@ -82,6 +79,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             cell.productPrice.text = "$\(product.productPrice)"
             cell.productNameLabel.text = "\(product.productName)"
             cell.productQuantityLabel.text = "\(product.productQuantity)\(product.productUnitOfMeasurement)"
+            cell.product = self.product
         
             return cell
             
@@ -128,6 +126,25 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
         return UITableView.automaticDimension
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? ProductInfoAndCountTableViewCell {
+            cell.delegate = self
+        }
+    }
+    
+}
+
+extension ProductDetailViewController: ProductInfoAndCountTableViewCellDelegate {
+    
+    func didClickOnPlus() {
+        count += 1
+        print(count)
+    }
+    
+    func didClickOnMinus() {
+        count -= 1
+        print(count)
+    }
 }
 
 extension ProductDetailViewController {

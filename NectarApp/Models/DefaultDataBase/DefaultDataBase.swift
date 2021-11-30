@@ -178,9 +178,9 @@ class DefaultDataBase {
     func checkFavorurite(nameOfproduct: String) -> Bool {
         var isFavorurite = false
         
-        for item in userFavorurite {
-            if item == nameOfproduct {
-                isFavorurite = true
+        for index in 0 ..< userFavorurite.count {
+            if nameOfproduct == userFavorurite[index] {
+                isFavorurite.toggle()
             }
         }
         return isFavorurite

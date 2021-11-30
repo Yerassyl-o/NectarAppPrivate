@@ -7,13 +7,25 @@
 
 import UIKit
 
+protocol GetCount {
+    
+}
+
+protocol ProductInfoAndCountTableViewCellDelegate: AnyObject {
+    func didClickOnPlus()
+    func didClickOnMinus()
+}
+
 class ProductInfoAndCountTableViewCell: UITableViewCell {
+    
+    weak var delegate: ProductInfoAndCountTableViewCellDelegate?
     
     let defaultDataBase = DefaultDataBase.shared
     
-    
-    let checkedImage = UIImage(named: "addFavoriteButton")!
-    let unCheckedImage = UIImage(named: "addFavoriteButtonSelected")!
+    let checkedImage = UIImage(named: "addFavoriteButtonSelected")!
+    let unCheckedImage = UIImage(named: "addFavoriteButton")!
+    var product: ProductStruct?
+
     
     @IBOutlet weak var countOfProduct: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -41,9 +53,12 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
         if count > 1 {
             count -= 1
             productCountLabel.text = "\(count)"
+            delegate?.didClickOnMinus()
         } else {
             productCountLabel.text = "1"
         }
+        
+        
     }
     
     @IBAction func plusButtonAction(_ sender: Any) {
@@ -52,13 +67,17 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
         if count > 0 {
             count += 1
             productCountLabel.text = "\(count)"
+            delegate?.didClickOnPlus()
         } else {
             productCountLabel.text = "1"
         }
     }
     
     @IBAction func addFovoruriteButtonAction(_ sender: Any) {
-        checkFavorurite()
+        removeAdd()
+//        checkFavorurite()
+        
+
     }
     
     
@@ -74,15 +93,27 @@ extension ProductInfoAndCountTableViewCell {
     }
     
     func checkFavorurite() {
-        let isFavorurite = defaultDataBase.checkFavorurite(nameOfproduct:  productNameLabel.text ?? "")
-
+        let isFavorurite = defaultDataBase.checkFavorurite(nameOfproduct:  product?.productName ?? "")
+        
         if isFavorurite == true {
-            addFovoruriteButton.setImage(checkedImage, for: UIControl.State.normal)
-            defaultDataBase.saveFavorurite(nameOfproduct: productNameLabel.text ?? "")
-        } else {
-            addFovoruriteButton.setImage(unCheckedImage, for: UIControl.State.normal)
-            defaultDataBase.removeFavorurite(nameOfproduct: productNameLabel.text ?? "")
             
+            addFovoruriteButton.setImage(checkedImage, for: UIControl.State.normal)
+            
+        } else if isFavorurite == false {
+            
+            addFovoruriteButton.setImage(unCheckedImage, for: UIControl.State.normal)
         }
+    }
+    
+    func removeAdd() {
+        let isFavorurite = defaultDataBase.checkFavorurite(nameOfproduct:  productNameLabel.text ?? "")
+        if isFavorurite == true {
+            defaultDataBase.removeFavorurite(nameOfproduct: productNameLabel.text ?? "")
+            addFovoruriteButton.setImage(unCheckedImage, for: UIControl.State.normal)
+        } else if isFavorurite == false {
+            defaultDataBase.saveFavorurite(nameOfproduct: productNameLabel.text ?? "")
+            addFovoruriteButton.setImage(checkedImage, for: UIControl.State.normal)
+        }
+        print(defaultDataBase.checkFavorurite(nameOfproduct:  productNameLabel.text ?? ""))
     }
 }

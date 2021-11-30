@@ -517,6 +517,106 @@ it’s way to being processed</string>
             </objects>
             <point key="canvasLocation" x="7262" y="2312"/>
         </scene>
+        <!--Error View Controller-->
+        <scene sceneID="6B9-mK-Lc2">
+            <objects>
+                <viewController storyboardIdentifier="ErrorViewController" id="k3c-k7-NEh" customClass="ErrorViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Rr-CZ-iBn">
+                        <rect key="frame" x="0.0" y="0.0" width="364" height="601"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops! Order Failed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXT-lf-qgJ">
+                                <rect key="frame" x="24" y="332" width="316" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSv-EU-ip9">
+                                <rect key="frame" x="26" y="26" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="Afo-Ma-g7Y"/>
+                                    <constraint firstAttribute="height" constant="15" id="DrG-nn-1sF"/>
+                                </constraints>
+                                <state key="normal" image="closeIcon"/>
+                                <connections>
+                                    <action selector="closeButtonAction:" destination="k3c-k7-NEh" eventType="touchUpInside" id="KQ3-Or-SPx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEZ-tn-YXF">
+                                <rect key="frame" x="24" y="465.5" width="316" height="67"/>
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.68627450980000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="m1a-ow-dZy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Please Try Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="19"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="PleaseTryAgainAction:" destination="k3c-k7-NEh" eventType="touchUpInside" id="y5K-GA-zCs"/>
+                                    <action selector="trackOrderButtonAction:" destination="c6M-Iw-ssF" eventType="touchUpInside" id="8tb-Qe-8th"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbK-DD-Ipv">
+                                <rect key="frame" x="24" y="532.5" width="316" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="g67-Ou-1Su"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Back to home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="backToHomeAction:" destination="k3c-k7-NEh" eventType="touchUpInside" id="AQe-1y-knL"/>
+                                    <action selector="backToHomeButtonAction:" destination="c6M-Iw-ssF" eventType="touchUpInside" id="koL-G6-i7f"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrderrFailedImg" translatesAutoresizingMaskIntoConstraints="NO" id="Dy0-pe-khr">
+                                <rect key="frame" x="71" y="60" width="222" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="222" id="Vy4-n1-2jb"/>
+                                    <constraint firstAttribute="height" constant="222" id="y0L-fd-YTI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something went tembly wrong." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG3-ra-Jav">
+                                <rect key="frame" x="24" y="385.5" width="316" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jyn-Do-hOb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HG3-ra-Jav" firstAttribute="top" secondItem="eXT-lf-qgJ" secondAttribute="bottom" constant="20" id="1Wh-eZ-Nde"/>
+                            <constraint firstItem="IEZ-tn-YXF" firstAttribute="top" secondItem="HG3-ra-Jav" secondAttribute="bottom" constant="60" id="3YS-kN-vI1"/>
+                            <constraint firstItem="IEZ-tn-YXF" firstAttribute="leading" secondItem="jyn-Do-hOb" secondAttribute="leading" constant="24" id="5tH-IZ-URi"/>
+                            <constraint firstItem="gbK-DD-Ipv" firstAttribute="top" secondItem="IEZ-tn-YXF" secondAttribute="bottom" id="6RN-Gm-63X"/>
+                            <constraint firstItem="jyn-Do-hOb" firstAttribute="trailing" secondItem="eXT-lf-qgJ" secondAttribute="trailing" constant="24" id="AWI-qG-CZG"/>
+                            <constraint firstItem="Dy0-pe-khr" firstAttribute="top" secondItem="2Rr-CZ-iBn" secondAttribute="top" constant="60" id="E3G-k2-IVh"/>
+                            <constraint firstItem="Dy0-pe-khr" firstAttribute="centerX" secondItem="2Rr-CZ-iBn" secondAttribute="centerX" id="G7e-YB-4K0"/>
+                            <constraint firstItem="eXT-lf-qgJ" firstAttribute="leading" secondItem="jyn-Do-hOb" secondAttribute="leading" constant="24" id="GPd-yt-wo8"/>
+                            <constraint firstItem="uSv-EU-ip9" firstAttribute="top" secondItem="2Rr-CZ-iBn" secondAttribute="top" constant="26" id="Gdd-gs-NCJ"/>
+                            <constraint firstItem="jyn-Do-hOb" firstAttribute="trailing" secondItem="HG3-ra-Jav" secondAttribute="trailing" constant="24" id="QHO-ko-i7Z"/>
+                            <constraint firstItem="HG3-ra-Jav" firstAttribute="leading" secondItem="jyn-Do-hOb" secondAttribute="leading" constant="24" id="QNm-k1-bSo"/>
+                            <constraint firstAttribute="trailing" secondItem="IEZ-tn-YXF" secondAttribute="trailing" constant="24" id="RkT-Dm-4he"/>
+                            <constraint firstItem="eXT-lf-qgJ" firstAttribute="top" secondItem="Dy0-pe-khr" secondAttribute="bottom" constant="50" id="ZDH-SC-Quh"/>
+                            <constraint firstAttribute="trailing" secondItem="gbK-DD-Ipv" secondAttribute="trailing" constant="24" id="lZV-Nf-Aur"/>
+                            <constraint firstItem="uSv-EU-ip9" firstAttribute="leading" secondItem="2Rr-CZ-iBn" secondAttribute="leading" constant="26" id="qU0-6w-zYz"/>
+                            <constraint firstItem="gbK-DD-Ipv" firstAttribute="leading" secondItem="2Rr-CZ-iBn" secondAttribute="leading" constant="24" id="vRe-aH-rA8"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="364" height="601"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TS9-wJ-w7D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8150.7246376811599" y="2322.65625"/>
+        </scene>
         <!--Favorurite-->
         <scene sceneID="AYW-Sm-rB0">
             <objects>
@@ -674,30 +774,30 @@ it’s way to being processed</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="AddToBasketButton:" destination="Cdf-ek-nYK" eventType="touchUpInside" id="35s-Q2-tdr"/>
-                                    <action selector="AddToBasketButtonAction:" destination="Cdf-ek-nYK" eventType="touchUpInside" id="HbX-i3-zT8"/>
+                                    <action selector="AddToBasketButtonAction:" destination="Cdf-ek-nYK" eventType="touchUpInside" id="esg-Wl-JXR"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZW4-SP-mea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IZw-ni-b1F" firstAttribute="top" secondItem="ReG-NC-5Hd" secondAttribute="top" id="4d8-k1-KUp"/>
                             <constraint firstItem="ZW4-SP-mea" firstAttribute="bottom" secondItem="VQU-cs-imc" secondAttribute="bottom" constant="5" id="7lE-LB-rl3"/>
                             <constraint firstAttribute="bottom" secondItem="IZw-ni-b1F" secondAttribute="bottom" id="APi-7c-2HZ"/>
                             <constraint firstItem="IZw-ni-b1F" firstAttribute="leading" secondItem="ZW4-SP-mea" secondAttribute="leading" id="K67-Hi-LM4"/>
                             <constraint firstItem="IZw-ni-b1F" firstAttribute="trailing" secondItem="ZW4-SP-mea" secondAttribute="trailing" id="o5C-NX-lRr"/>
                             <constraint firstAttribute="trailing" secondItem="VQU-cs-imc" secondAttribute="trailing" constant="24" id="vig-7D-tgN"/>
+                            <constraint firstItem="IZw-ni-b1F" firstAttribute="top" secondItem="ReG-NC-5Hd" secondAttribute="top" id="wLf-Qi-VLl"/>
                             <constraint firstItem="VQU-cs-imc" firstAttribute="leading" secondItem="ZW4-SP-mea" secondAttribute="leading" constant="24" id="zaS-S7-XfN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addToBasketButton" destination="VQU-cs-imc" id="6t2-B0-eru"/>
                         <outlet property="tableView" destination="IZw-ni-b1F" id="fR7-Db-UpW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBW-hb-2sp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562" y="2290"/>
+            <point key="canvasLocation" x="-562.31884057971024" y="2289.5089285714284"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="T0b-W5-YpC">
@@ -860,6 +960,7 @@ it’s way to being processed</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="applyFilterAction:" destination="ReU-oM-HKO" eventType="touchUpInside" id="Pb1-rc-kRE"/>
                                     <action selector="placeOrderButtonAction:" destination="GP5-zT-ZmH" eventType="touchUpInside" id="F41-hm-I2y"/>
                                 </connections>
                             </button>
@@ -878,6 +979,7 @@ it’s way to being processed</string>
                     </view>
                     <navigationItem key="navigationItem" title="Filters" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="pMj-19-Zac"/>
                     <connections>
+                        <outlet property="applyFilter" destination="noa-Fa-ofl" id="JhC-Ru-ll6"/>
                         <outlet property="backView" destination="jNk-ch-kBZ" id="C8h-5n-Nb4"/>
                         <outlet property="tableView" destination="FzF-yU-q8g" id="YEk-0i-SaT"/>
                     </connections>
@@ -2183,6 +2285,7 @@ it’s way to being processed</string>
         <image name="Mask" width="1654" height="1498"/>
         <image name="Mask Group" width="1657" height="3584"/>
         <image name="OnboardingBackground" width="1657" height="3585"/>
+        <image name="OrderrFailedImg" width="890" height="889"/>
         <image name="VectorbottomIcon" width="53" height="29"/>
         <image name="cartSvg" width="23" height="21"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>

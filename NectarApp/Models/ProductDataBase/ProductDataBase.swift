@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct ProductStruct {
+struct ProductStruct: Hashable {
     let productName: String
     let productUnitOfMeasurement: String
     let productQuantity: Double

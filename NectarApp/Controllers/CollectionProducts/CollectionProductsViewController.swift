@@ -22,6 +22,7 @@ class CollectionProductsViewController: MainViewController {
         registerCustomCells()
         navBarSettings()
         
+        
     }
 }
 
@@ -74,6 +75,13 @@ extension CollectionProductsViewController: UICollectionViewDelegate, UICollecti
         let collectionViewWidth = self.collectionView.frame.width
         return CGSize(width: (collectionViewWidth - 20)/2, height: 260)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let viewController = self.storyboard?.instantiateViewController(identifier: "ProductDetailViewController") as? ProductDetailViewController {
+            viewController.product = productsOfCategory[indexPath.row]
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
     }
 }
 extension CollectionProductsViewController: UICollectionViewDelegateFlowLayout {}

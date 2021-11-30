@@ -13,6 +13,7 @@ class FiltersViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var applyFilter: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,12 @@ class FiltersViewController: UIViewController {
         navBArSettings()
         
     }
+    
+    @IBAction func applyFilterAction(_ sender: Any) {
+    }
 }
+
+
 
 extension FiltersViewController {
     
@@ -36,12 +42,14 @@ extension FiltersViewController {
     
     func navBArSettings() {
         let customBackButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(backButton))
+        
         navigationItem.leftBarButtonItem = customBackButton
         navigationItem.hidesBackButton = true
+       
     }
     
     @objc func backButton(_ button: UIBarButtonItem){
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }
 extension FiltersViewController: UITableViewDelegate, UITableViewDataSource {

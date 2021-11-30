@@ -9,7 +9,7 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
     
-    var productDataBase = DefaultDataBase.shared.userFavorurite
+    var productDataBase = DefaultDataBase.shared
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,6 +17,11 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
         registerCustomCells()
         tableViewSettings()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("bskjfbadsjlkbkjbjksdbgdaskldsa")
+        tableView.reloadData()
     }
 }
 
@@ -34,14 +39,14 @@ extension FavoritesViewController {
 extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productDataBase.count
+        productDataBase.userFavorurite.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesTableViewCell", for: indexPath) as! FavoritesTableViewCell
         
-            let productInfo = productDataBase[indexPath.row]
+        let productInfo = productDataBase.userFavorurite[indexPath.row]
             let product = DefaultDataBase.shared.findProducts(name: productInfo)
         
             cell.selectionStyle = .none
@@ -61,7 +66,7 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
        
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
             
-            let productInfo = productDataBase[indexPath.row]
+            let productInfo = productDataBase.userFavorurite[indexPath.row]
             let product = DefaultDataBase.shared.findProducts(name: productInfo)
             
             viewController.product = product

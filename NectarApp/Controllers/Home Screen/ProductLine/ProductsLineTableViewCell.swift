@@ -10,6 +10,8 @@ import UIKit
 class ProductsLineTableViewCell: UITableViewCell {
     
     var dataBaseOfProduct = ProductDataBase()
+    var productTaped: (() -> Void)?
+    var product: ProductStruct?
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -69,6 +71,12 @@ extension ProductsLineTableViewCell: UICollectionViewDelegate, UICollectionViewD
         }
         
         self.collectionView.scrollToItem(at: index, at: .left, animated: true )
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        product = dataBaseOfProduct.getDataBase[indexPath.row]
+        productTaped?()
+
     }
 }
 

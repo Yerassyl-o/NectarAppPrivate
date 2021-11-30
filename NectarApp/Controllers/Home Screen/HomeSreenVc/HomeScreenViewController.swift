@@ -63,12 +63,26 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenCategorySectionTableViewCell", for: indexPath) as! homeScreenCategorySectionTableViewCell
             cell.selectionStyle = .none
+            cell.productTaped = {
+                if let viewController = self.storyboard?.instantiateViewController(identifier: "ProductDetailViewController") as? ProductDetailViewController {
+                    viewController.product = cell.product
+                    self.present(viewController, animated: true, completion: nil)
+                }
+            }
             return cell
             
         } else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "homeScreenCategorySectionTableViewCell", for: indexPath) as! homeScreenCategorySectionTableViewCell
             cell.selectionStyle = .none
             cell.categoryNameLabel.text = "Best Sellling"
+            
+            cell.productTaped = {
+                if let viewController = self.storyboard?.instantiateViewController(identifier: "ProductDetailViewController") as? ProductDetailViewController {
+                    viewController.product = cell.product
+                    self.present(viewController, animated: true, completion: nil)
+                }
+            }
+            
             return cell
             
         } else if indexPath.row == 5 {
@@ -79,12 +93,19 @@ extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource {
         } else if indexPath.row == 6 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductsLineTableViewCell", for: indexPath) as! ProductsLineTableViewCell
             cell.selectionStyle = .none
+            cell.productTaped = {
+                if let viewController = self.storyboard?.instantiateViewController(identifier: "ProductDetailViewController") as? ProductDetailViewController {
+                    viewController.product = cell.product
+                    self.present(viewController, animated: true, completion: nil)
+                }
+            }
             return cell
             
         } else {
             return UITableViewCell()
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
