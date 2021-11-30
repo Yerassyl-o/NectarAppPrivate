@@ -8,6 +8,8 @@
 import UIKit
 
 class homeScreenCategorySectionElementsCollectionViewCell: UICollectionViewCell {
+    
+    let dataBase = DefaultDataBase.shared
 
     @IBOutlet weak var productView: UIView!
     @IBOutlet weak var productImage: UIImageView!
@@ -23,6 +25,7 @@ class homeScreenCategorySectionElementsCollectionViewCell: UICollectionViewCell 
     }
 
     @IBAction func productAddButtonAction(_ sender: Any) {
-        print("hello world")
+        dataBase.saveMyCart(product: productName.text ?? "Pepsi Can", count: 1)
+        
     }
 }

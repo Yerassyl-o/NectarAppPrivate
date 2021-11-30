@@ -56,7 +56,12 @@ extension CheckoutViewController: UITableViewDelegate, UITableViewDataSource {
             let menu = checkoutMenu.getCheckoutMenu[indexPath.row]
             print(menu)
             cell.parametrNameLabel.text = menu.checkoutMenuName
-            cell.parametrNameButton.setTitle(menu.checkoutSettingsName, for: .normal)
+            if indexPath.row == 3 {
+                let cost = DefaultDataBase.shared.getMyCartsCosts()
+                cell.parametrNameButton.setTitle("$\(cost)", for: .normal)
+            } else {
+                cell.parametrNameButton.setTitle(menu.checkoutSettingsName, for: .normal)
+            }
             cell.selectionStyle = .none
             return cell
         }

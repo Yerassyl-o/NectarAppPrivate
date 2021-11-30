@@ -8,16 +8,17 @@
 import UIKit
 
 class ProductDetailViewController: MainViewController {
+    var defaultDataBase = DefaultDataBase.shared
+    var count: Int?
+    var productName: String?
     var product: ProductStruct!
 //    var product = ProductStruct(productName: "Diet Coke",
 //                                productUnitOfMeasurement: "ml",
 //                                productQuantity: 355,
-//                                productPrice: 1.99,
+//                                productPrice: "1.99",
 //                                productCategory: "Beverages",
 //                                productReview: 4,
 //                                productImage: UIImage(named: "Diet Coke") ?? UIImage(named:"defaultProductImage")!)
-    
-    
     
     
     
@@ -35,6 +36,19 @@ class ProductDetailViewController: MainViewController {
         navigationItem.backBarButtonItem = backItem
         navigationController?.navigationBar.tintColor = .black
     }
+    @IBAction func AddToBasketButtonAction(_ sender: Any) {
+//        if let viewController = storyboard?.instantiateViewController(identifier: "ProductInfoAndCountTableViewCell") as? ProductInfoAndCountTableViewCell {
+//            viewController.sendCallBack = {
+//                viewController.sendCallBack = {
+//                    self.productName = viewController.productNameLabel.text
+//                    self.count = Int(viewController.productCountLabel.text ?? "1")
+//                }
+//                self.defaultDataBase.saveMyCart(product: self.productName ?? "", count: self.count ?? 1)
+//            }
+//
+//        }
+       
+    }
 }
 
 extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSource {
@@ -46,6 +60,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductImagesTableViewCell", for: indexPath) as! ProductImagesTableViewCell
             cell.selectionStyle = .none
+            cell.productName = self.product.productName
             return cell
         } else if indexPath.row == 1 {
             
@@ -54,7 +69,9 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             cell.productPrice.text = "$\(product.productPrice)"
             cell.productNameLabel.text = "\(product.productName)"
             cell.productQuantityLabel.text = "\(product.productQuantity)\(product.productUnitOfMeasurement)"
-        
+            
+            
+            
             return cell
             
             
@@ -67,6 +84,10 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             return cell
         } else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "NutritionsTableViewCell", for: indexPath) as! NutritionsTableViewCell
+            cell.selectionStyle = .none
+            return cell
+        }  else if indexPath.row == 4 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewTableViewCell", for: indexPath) as! ReviewTableViewCell
             cell.selectionStyle = .none
             return cell
         }  else {
@@ -91,6 +112,7 @@ extension ProductDetailViewController {
         tableView.register(UINib.init(nibName: "ProductInfoAndCountTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductInfoAndCountTableViewCell")
         tableView.register(UINib.init(nibName: "productDetailTableViewCell", bundle: nil), forCellReuseIdentifier: "productDetailTableViewCell")
         tableView.register(UINib.init(nibName: "NutritionsTableViewCell", bundle: nil), forCellReuseIdentifier: "NutritionsTableViewCell")
+        tableView.register(UINib.init(nibName: "ReviewTableViewCell", bundle: nil), forCellReuseIdentifier: "ReviewTableViewCell")
         
         
         

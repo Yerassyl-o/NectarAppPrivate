@@ -25,6 +25,8 @@
 		870737ED27521D3100732BB7 /* NutritionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 870737EB27521D3100732BB7 /* NutritionsTableViewCell.xib */; };
 		87241F6C275493150082B83F /* OrderAcceptedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87241F6B275493150082B83F /* OrderAcceptedViewController.swift */; };
 		87241F6F2754BBD70082B83F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87241F6E2754BBD70082B83F /* MainViewController.swift */; };
+		87241F73275542D10082B83F /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87241F71275542D10082B83F /* ReviewTableViewCell.swift */; };
+		87241F74275542D10082B83F /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87241F72275542D10082B83F /* ReviewTableViewCell.xib */; };
 		873026842743DAD800CA31CA /* SingInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026832743DAD800CA31CA /* SingInViewController.swift */; };
 		873026872744201100CA31CA /* NumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873026862744201100CA31CA /* NumberViewController.swift */; };
 		8730269D274612D700CA31CA /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8730269C274612D700CA31CA /* VerificationViewController.swift */; };
@@ -124,6 +126,8 @@
 		870737EB27521D3100732BB7 /* NutritionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NutritionsTableViewCell.xib; sourceTree = "<group>"; };
 		87241F6B275493150082B83F /* OrderAcceptedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAcceptedViewController.swift; sourceTree = "<group>"; };
 		87241F6E2754BBD70082B83F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		87241F71275542D10082B83F /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
+		87241F72275542D10082B83F /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
 		873026832743DAD800CA31CA /* SingInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewController.swift; sourceTree = "<group>"; };
 		873026862744201100CA31CA /* NumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewController.swift; sourceTree = "<group>"; };
 		8730269C274612D700CA31CA /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
@@ -361,6 +365,15 @@
 				87241F6E2754BBD70082B83F /* MainViewController.swift */,
 			);
 			path = MainVC;
+			sourceTree = "<group>";
+		};
+		87241F70275542B00082B83F /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				87241F71275542D10082B83F /* ReviewTableViewCell.swift */,
+				87241F72275542D10082B83F /* ReviewTableViewCell.xib */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		873026802743D9E500CA31CA /* Controllers */ = {
@@ -638,6 +651,7 @@
 		8757DBDC274D035E00A04367 /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				87241F70275542B00082B83F /* Review */,
 				870737E927521CFC00732BB7 /* NutritionsCell */,
 				8757DC04274E395600A04367 /* productDetailCell */,
 				8757DBEC274D147600A04367 /* ProductInfoAndCount */,
@@ -1025,6 +1039,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8781828627480514001F8CEF /* HeaderFavoritesTableViewCell.xib in Resources */,
+				87241F74275542D10082B83F /* ReviewTableViewCell.xib in Resources */,
 				8757DBE6274D061A00A04367 /* ProductImagesTableViewCell.xib in Resources */,
 				8757DB98274B846600A04367 /* HomeSreenBannerTableViewCell.xib in Resources */,
 				878182A7274A1B0D001F8CEF /* SearchBarTableViewCell.xib in Resources */,
@@ -1108,6 +1123,7 @@
 				8757DBC0274BA39100A04367 /* homeScreenCategorySectionElementsCollectionViewCell.swift in Sources */,
 				87241F6F2754BBD70082B83F /* MainViewController.swift in Sources */,
 				8757DBDF274D039D00A04367 /* ProductDetailViewController.swift in Sources */,
+				87241F73275542D10082B83F /* ReviewTableViewCell.swift in Sources */,
 				870737C9274F6A7000732BB7 /* FiltersTableViewCell.swift in Sources */,
 				879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */,
 				879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */,

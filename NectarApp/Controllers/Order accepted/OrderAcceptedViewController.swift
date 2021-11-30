@@ -15,8 +15,7 @@ class OrderAcceptedViewController: UIViewController {
     @IBOutlet weak var backToHomeButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        DefaultDataBase.shared.removeAllUserCart()
     }
     @IBAction func trackOrderButtonAction(_ sender: Any) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: "CustomTabABarvc") as? CustomTabABarvc {

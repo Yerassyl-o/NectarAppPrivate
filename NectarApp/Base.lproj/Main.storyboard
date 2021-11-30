@@ -341,7 +341,7 @@
         <!--My Cart-->
         <scene sceneID="H64-d6-c90">
             <objects>
-                <viewController id="z7j-s6-cOp" customClass="MyCartViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyCartViewController" id="z7j-s6-cOp" customClass="MyCartViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZc-2N-Dnp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -673,6 +673,10 @@ it’s way to being processed</string>
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="AddToBasketButton:" destination="Cdf-ek-nYK" eventType="touchUpInside" id="35s-Q2-tdr"/>
+                                    <action selector="AddToBasketButtonAction:" destination="Cdf-ek-nYK" eventType="touchUpInside" id="HbX-i3-zT8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZW4-SP-mea"/>

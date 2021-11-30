@@ -9,7 +9,7 @@ import UIKit
 
 class ProductImagesTableViewCell: UITableViewCell {
     var dateBaseOfProduct = ProductDataBase()
-
+    var productName: String?
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var uiViewContainer: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -34,6 +34,7 @@ extension ProductImagesTableViewCell: UICollectionViewDelegate, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ProductImagesCollectionViewCell", for: indexPath) as? ProductImagesCollectionViewCell else { return UICollectionViewCell() }
+        cell.productImage.image = UIImage(named: "productName")
 //        cell.productImage.image = dateBaseOfProduct.getDataBase[5].productImage
         return cell
     }

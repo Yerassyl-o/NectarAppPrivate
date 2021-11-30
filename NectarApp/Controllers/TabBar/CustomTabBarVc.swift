@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
+class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate  {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -17,13 +17,8 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
 
     var customTabBarView = UIView(frame: .zero)
     
-            
-        // MARK: View lifecycle
-        
-    
         override func viewDidLoad() {
             super.viewDidLoad()
-            
             self.setupTabBarUI()
             self.addCustomTabBarView()
         }
@@ -32,8 +27,13 @@ class CustomTabABarvc: UITabBarController, UITabBarControllerDelegate {
             super.viewDidLayoutSubviews()
             self.setupCustomTabBarFrame()
         }
-
-                
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+           
+            tabBarController?.delegate = self
+            tabBarController?.tabBar.delegate = self
+        }
+        
         private func setupCustomTabBarFrame() {
             let height = self.view.safeAreaInsets.bottom + 64
             

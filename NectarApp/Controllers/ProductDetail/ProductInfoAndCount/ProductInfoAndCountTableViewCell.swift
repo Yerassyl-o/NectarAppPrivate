@@ -9,13 +9,13 @@ import UIKit
 
 class ProductInfoAndCountTableViewCell: UITableViewCell {
     
-    
+    let defaultDataBase = DefaultDataBase.shared
     
     
     let checkedImage = UIImage(named: "addFavoriteButton")!
     let unCheckedImage = UIImage(named: "addFavoriteButtonSelected")!
+//    var sendCallBack: (() -> Void)?
     
-    var logicAddFovoruriteButton = false
     @IBOutlet weak var countOfProduct: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productQuantityLabel: UILabel!
@@ -24,12 +24,15 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var productCountLabel: UILabel!
     @IBOutlet weak var addFovoruriteButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        checkFavorurite()
         countOfProduct.layer.borderWidth = 1
         countOfProduct.layer.borderColor = CGColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
         countOfProduct.layer.cornerRadius = 17
         productCountLabel.text = "1"
+//        sendCallBack?()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,7 +40,10 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
         
     }
     
+    
+    
     @IBAction func minusButtonAction(_ sender: Any) {
+        
         var count: Int = Int(productCountLabel.text ?? "1")!
         if count > 1 {
             count -= 1
@@ -45,6 +51,7 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
         } else {
             productCountLabel.text = "1"
         }
+//        sendCallBack?()
     }
     @IBAction func plusButtonAction(_ sender: Any) {
         var count: Int = Int(productCountLabel.text ?? "1")!
@@ -54,17 +61,23 @@ class ProductInfoAndCountTableViewCell: UITableViewCell {
         } else {
             productCountLabel.text = "1"
         }
+//        sendCallBack?()
     }
+    
     @IBAction func addFovoruriteButtonAction(_ sender: Any) {
-        
-        if logicAddFovoruriteButton == false {
+        checkFavorurite()
+    }
+    
+    func checkFavorurite() {
+        let isFavorurite = defaultDataBase.checkFavorurite(nameOfproduct:  productNameLabel.text ?? "")
+
+        if isFavorurite == true {
             addFovoruriteButton.setImage(checkedImage, for: UIControl.State.normal)
-            logicAddFovoruriteButton.toggle()
+            defaultDataBase.saveFavorurite(nameOfproduct: productNameLabel.text ?? "")
         } else {
             addFovoruriteButton.setImage(unCheckedImage, for: UIControl.State.normal)
-            logicAddFovoruriteButton.toggle()
+            defaultDataBase.removeFavorurite(nameOfproduct: productNameLabel.text ?? "")
             
         }
-        
     }
 }
