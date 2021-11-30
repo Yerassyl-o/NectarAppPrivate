@@ -28,6 +28,7 @@ class LogInViewController: UIViewController {
         setUpLoginEnterField()
         
     }
+    
     @IBAction func secureNoSecureAction(_ sender: Any) {
         setUpsecureNoSecure()
     }
@@ -43,9 +44,7 @@ extension LogInViewController {
     }
     
     func setupToHideKeyboardOnTapOnView() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-            target: self,
-            action: #selector(dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
 
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)

@@ -8,11 +8,11 @@
 import UIKit
 
 class MyCartItemsTableViewCell: UITableViewCell {
+    
     var removeProductButtonTap: (() -> Void)?
     var counterButtonsTap: (() -> Void)?
-//    var shareCount: Int {
-//        return productCounter
-//    }
+    var dataBase = DefaultDataBase.shared
+
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productValue: UILabel!
@@ -22,8 +22,6 @@ class MyCartItemsTableViewCell: UITableViewCell {
     @IBOutlet weak var removeProductButton: UIButton!
     @IBOutlet weak var productCount: UILabel!
     
-    var dataBase = DefaultDataBase.shared
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         productCount.text = "\(dataBase.getCountOfElement(nameOfProduct: productName.text!))"
@@ -32,10 +30,12 @@ class MyCartItemsTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
     @IBAction func minusButtonAction(_ sender: Any) {
         minusCount()
         productCount.text = "\(dataBase.getCountOfElement(nameOfProduct: productName.text!))"
     }
+    
     @IBAction func plusButtonAction(_ sender: Any) {
         plusCount()
         productCount.text = "\(dataBase.getCountOfElement(nameOfProduct: productName.text!))"
@@ -57,6 +57,7 @@ extension MyCartItemsTableViewCell {
         }
         
     }
+    
     func minusCount() {
         if dataBase.getCountOfElement(nameOfProduct: productName.text!) > 1 {
             DefaultDataBase.shared.minusCountMyCart(nameOfProduct: productName.text ?? "")

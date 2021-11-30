@@ -9,8 +9,8 @@ import UIKit
 
 class MyCartViewController: UIViewController {
     
-//    var productDataBase = ProductDataBase()
     var dataBase = DefaultDataBase.shared
+    
     @IBOutlet weak var goToCheckoutButton: UIButton!
     @IBOutlet weak var productPriceSumLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -18,11 +18,9 @@ class MyCartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableViewSettings()
         registerCustomCells()
         didLoadSettings()
-        
         
     }
     
@@ -36,6 +34,20 @@ class MyCartViewController: UIViewController {
     }
 }
 
+extension MyCartViewController {
+    
+    func tableViewSettings() {
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    func didLoadSettings(){
+        tableView.separatorInset = .init(top: 0, left: 24, bottom: 0, right: 24)
+        tableView.separatorColor = .clear
+        productPriceSumLabel.text = "\(DefaultDataBase.shared.getMyCartsCosts())"
+        productPriceSumLabel.layer.cornerRadius = 20
+    }
+}
 extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,12 +99,5 @@ extension MyCartViewController {
             self.present(viewContoller, animated: true, completion: nil)
             
         }
-    }
-    
-    func didLoadSettings(){
-        tableView.separatorInset = .init(top: 0, left: 24, bottom: 0, right: 24)
-        tableView.separatorColor = .clear
-        productPriceSumLabel.text = "\(DefaultDataBase.shared.getMyCartsCosts())"
-        productPriceSumLabel.layer.cornerRadius = 20
     }
 }

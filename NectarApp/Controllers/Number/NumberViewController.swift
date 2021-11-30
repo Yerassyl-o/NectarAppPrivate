@@ -8,18 +8,23 @@
 import UIKit
 
 class NumberViewController: UIViewController {
+    
     let phoneMaskModel = PhoneMaskModel()
     var logic = [true, true, true]
+    
     @IBOutlet weak var numberEnterField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var bottom1pxView: UIView!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         setUpnumberEnterField()
         setupToHideKeyboardOnTapOnView()
         keyBoardSetUp()
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.backgroundColor = .clear
+        setUpNavBar()
+      
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -27,6 +32,7 @@ class NumberViewController: UIViewController {
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
     }
+    
 }
 
 //MARK: SetUp text field
@@ -37,7 +43,6 @@ extension NumberViewController: UITextFieldDelegate {
         self.numberEnterField.delegate = self
         numberEnterField.text = "+77"
         numberEnterField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-
     }
         
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -53,7 +58,9 @@ extension NumberViewController: UITextFieldDelegate {
         if numberEnterField.text!.count <= 15 && numberEnterField.text!.count > 1 {
             switch numberEnterField.text!.count {
             case 2: numberEnterField.text! = "+77"
+                
             case 5: if logic[0] == true {
+                
                 numberEnterField!.text = numberEnterField.text! + "-"
                 logic[0] = false
                 print(logic[0])
@@ -63,6 +70,7 @@ extension NumberViewController: UITextFieldDelegate {
                 print(logic[0])
             }
             bottom1pxView.backgroundColor = .systemRed
+            
             case 9: if logic[1] == true {
                 numberEnterField!.text = numberEnterField.text! + "-"
                 logic[1] = false
@@ -70,6 +78,7 @@ extension NumberViewController: UITextFieldDelegate {
                 numberEnterField.deleteBackward()
                 logic[1] = true
             }
+            
             case 12: if logic[2] == true {
                 numberEnterField!.text = numberEnterField.text! + "-"
                 logic[2] = false
@@ -78,7 +87,9 @@ extension NumberViewController: UITextFieldDelegate {
                 logic[2] = true
             }
             bottom1pxView.backgroundColor = .systemRed
+            
             case 15: bottom1pxView.backgroundColor = .systemGreen
+                
             default: break
             }
         } else if numberEnterField.text!.count > 15 && numberEnterField.text!.count > 1 {
@@ -108,4 +119,11 @@ extension NumberViewController {
         view.endEditing(true)
     }
     
+}
+
+extension NumberViewController {
+    func setUpNavBar(){
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.backgroundColor = .clear
+    }
 }

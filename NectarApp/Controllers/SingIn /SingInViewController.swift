@@ -38,17 +38,20 @@ class SingInViewController: UIViewController {
 
 // MARK: SetUp NavController
 extension SingInViewController {
+    
     func setUpNavController() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
     }
+    
 }
 
 
@@ -123,9 +126,11 @@ extension SingInViewController: UITextFieldDelegate {
 
 // MARK: KeyBoard
 extension SingInViewController {
+    
     func keyBoardSetUp() {
         setupToHideKeyboardOnTapOnView()
     }
+    
     func setupToHideKeyboardOnTapOnView() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,

@@ -8,6 +8,7 @@
 import UIKit
 
 class VerificationViewController: UIViewController {
+    
     let verificationModels = VerificationModels()
     var logic = [true,true,true,true]
     
@@ -58,6 +59,7 @@ extension VerificationViewController {
 
 //MARK: SetUp TextFieldVerifaction
 extension VerificationViewController {
+    
     func codeEnterSetup() {
         if codeEnterTextField.text!.count <= 7 && codeEnterTextField.text!.count > 0 {
             switch codeEnterTextField.text!.count {
@@ -70,6 +72,7 @@ extension VerificationViewController {
                     logic[0] = true
                 }
                 bottom1pxView.backgroundColor = .systemRed
+                
             case 3:
                 if logic[1] == true {
                     codeEnterTextField!.text = codeEnterTextField.text! + "-"
@@ -78,6 +81,7 @@ extension VerificationViewController {
                     codeEnterTextField.deleteBackward()
                     logic[1] = true
                 }
+                
             case 5:
                 if logic[2] == true {
                     codeEnterTextField!.text = codeEnterTextField.text! + "-"
@@ -87,15 +91,16 @@ extension VerificationViewController {
                     logic[2] = true
                 }
                 bottom1pxView.backgroundColor = .systemRed
+                
             case 7:
                 bottom1pxView.backgroundColor = .systemGreen
+                
             default:
                 break
             }
         } else if codeEnterTextField.text!.count > 7 && codeEnterTextField.text!.count > 0 {
             codeEnterTextField.deleteBackward()
-        }
-        else if codeEnterTextField.text!.count == 0 {
+        } else if codeEnterTextField.text!.count == 0 {
             bottom1pxView.backgroundColor = UIColor(red: 226/255, green: 226/255, blue: 226/255, alpha: 1)
         }
     }
