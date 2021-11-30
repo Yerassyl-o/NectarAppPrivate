@@ -15,6 +15,7 @@ struct FilterMenuStruct {
 class FilterMenu {
     let filters: [FilterMenuStruct] = [FilterMenuStruct(filterName: "Categories", filters: ["Eggs","Noodles And Pasta", "Chips and Crips", "Fast food"]),
                                        FilterMenuStruct(filterName: "Brand", filters: ["Individual Callection", "Cocola", "Ifrad", "Kazi Farmas"])]
+    
     var getFilters: [FilterMenuStruct] {
         return filters
     }

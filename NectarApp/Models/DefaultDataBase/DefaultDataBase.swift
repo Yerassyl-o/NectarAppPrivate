@@ -67,6 +67,7 @@ class DefaultDataBase {
         }
         return returnProduct
     }
+    
     // MARK: MyCart methods
     func saveMyCart(product: String, count: Int){
         var logic = false
