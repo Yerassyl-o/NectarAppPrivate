@@ -8,55 +8,127 @@
 import UIKit
 
 class ExploreVcViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
+    
+    let exploreCollectionsProductsBase = ExploreCollectionsProducts()
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var customSearchBarView: UIView!
+    @IBOutlet weak var customSearchBarTextField: UITextField!
+    @IBOutlet weak var clearButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.delegate = self
-        tableView.dataSource = self
+        colectionViewSetting()
         registerCustomCells()
-        tableView.separatorColor = .clear
-        navigationController?.navigationBar.isHidden = true
-    }
-}
-extension ExploreVcViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        setUpNavBAr()
+        setupToHideKeyboardOnTapOnView()
+        setUpCustomSearchBAr()
+        
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ExploreHeaderTableViewCell", for: indexPath) as! ExploreHeaderTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        } else if indexPath.row == 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SearchBarTableViewCell", for: indexPath) as! SearchBarTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemsTableViewCell", for: indexPath) as! ItemsTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        }
+    @IBAction func clearButtonAction(_ sender: Any) {
+        customSearchBarTextField.text = ""
+        clearButton.isHidden = true
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 57
-        } else if indexPath.row == 1 {
-            return 71.5
-        } else {
-            return 700
-        }
-    }
-    
     
 }
+
 extension ExploreVcViewController {
-    func registerCustomCells(){
-        tableView.register(UINib.init(nibName: "ExploreHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "ExploreHeaderTableViewCell")
-        tableView.register(UINib.init(nibName: "SearchBarTableViewCell", bundle: nil), forCellReuseIdentifier: "SearchBarTableViewCell")
-        tableView.register(UINib.init(nibName: "ItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "ItemsTableViewCell")
+    
+    func setUpNavBAr(){
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    func colectionViewSetting(){
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.sizeToFit()
+    }
+    
+    func setUpCustomSearchBAr() {
+        customSearchBarTextField.addTarget(self, action: #selector(MyTextFielAction), for: UIControl.Event.primaryActionTriggered)
+        customSearchBarTextField.addTarget(self, action: #selector(customSearchBarTextFieldChanged), for: .allEditingEvents)
+        customSearchBarTextField.returnKeyType = .search
+        clearButton.isHidden = true
+    }
+    
+    func setupToHideKeyboardOnTapOnView() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func MyTextFielAction(textField: UITextField) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController {
+            
+            viewController.modalPresentationStyle = .popover
+            viewController.searchString = customSearchBarTextField.text
+            
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
+    
+    @objc func customSearchBarTextFieldChanged(_ textField: UITextField) {
+        if customSearchBarTextField.text?.count ?? 0 > 0 {
+            clearButton.isHidden = false
+        } else {
+            clearButton.isHidden = true
+        }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    
+    
+}
+
+extension ExploreVcViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        exploreCollectionsProductsBase.getExploreCollectionsProductsBase.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"ItemsCollectionViewCell", for: indexPath) as? ItemsCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+        let collectionsProducts = exploreCollectionsProductsBase.getExploreCollectionsProductsBase[indexPath.item]
+        
+        cell.productsGroupImage.image = collectionsProducts.collectionImage
+        cell.productsGroupName.text = collectionsProducts.collectionName
+        cell.itemsView.backgroundColor = collectionsProducts.collectionBackgroundColor
+        cell.itemsView.layer.borderWidth = 1
+        cell.itemsView.layer.borderColor = collectionsProducts.borderColor
+        
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = self.collectionView.frame.width
+        
+        return CGSize(width: (collectionViewWidth - 18)/2, height: 190)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "CollectionProductsViewController") as? CollectionProductsViewController {
+            
+            viewController.productCategory = exploreCollectionsProductsBase.getExploreCollectionsProductsBase[indexPath.row].collectionName
+            
+            navigationController?.pushViewController(viewController , animated: true)
+        }
+        
     }
 }
+extension ExploreVcViewController: UICollectionViewDelegateFlowLayout {}
+
+extension ExploreVcViewController{
+    
+    func registerCustomCells(){
+        let customCellNib = UINib(nibName: "ItemsCollectionViewCell", bundle: .main)
+        collectionView.register(customCellNib, forCellWithReuseIdentifier: "ItemsCollectionViewCell")
+    }
+}
+

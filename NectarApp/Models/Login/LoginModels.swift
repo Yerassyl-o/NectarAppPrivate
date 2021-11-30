@@ -8,16 +8,21 @@
 import Foundation
 
 class LoginModels {
+    
     private let charForRemove: Set<Character> = ["@", "."]
+    
     func checkEmail(_ email: String) -> Bool {
         let count = email.count
         var str = email
+        
         str.removeAll(where: { charForRemove.contains($0) } )
+        
         if str.count == (count - charForRemove.count) {
             return true
         } else {
             return false
         }
     }
+    
 }
 

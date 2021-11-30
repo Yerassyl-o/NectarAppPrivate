@@ -12,19 +12,16 @@ class ParametrElementsTableViewCell: UITableViewCell {
     @IBOutlet weak var parametrNameLabel: UILabel!
     @IBOutlet weak var parametrNameButton: UIButton!
     @IBOutlet weak var parametrButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
-    @IBAction func parametrButtonAction(_ sender: Any) {
-    }
-    @IBAction func parametrNameButtonAction(_ sender: Any) {
-    }
+    @IBAction func parametrButtonAction(_ sender: Any) {}
+    @IBAction func parametrNameButtonAction(_ sender: Any) {}
 }

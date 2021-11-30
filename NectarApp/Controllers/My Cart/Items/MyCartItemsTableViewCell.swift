@@ -8,10 +8,11 @@
 import UIKit
 
 class MyCartItemsTableViewCell: UITableViewCell {
-    var productCounter = 1
-    var shareCount: Int {
-        return productCounter
-    }
+    
+    var removeProductButtonTap: (() -> Void)?
+    var counterButtonsTap: (() -> Void)?
+    var dataBase = DefaultDataBase.shared
+
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productValue: UILabel!
@@ -20,44 +21,46 @@ class MyCartItemsTableViewCell: UITableViewCell {
     @IBOutlet weak var productPriceFor1Item: UILabel!
     @IBOutlet weak var removeProductButton: UIButton!
     @IBOutlet weak var productCount: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        productCount.text = "\(productCounter)"
-        print(productCounter)
+        productCount.text = "\(dataBase.getCountOfElement(nameOfProduct: productName.text!))"
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
+    
     @IBAction func minusButtonAction(_ sender: Any) {
         minusCount()
-        productCount.text = "\(productCounter)"
-        print(productCounter)
+        productCount.text = "\(dataBase.getCountOfElement(nameOfProduct: productName.text!))"
     }
+    
     @IBAction func plusButtonAction(_ sender: Any) {
         plusCount()
-        productCount.text = "\(productCounter)"
-        print(productCounter)
+        productCount.text = "\(dataBase.getCountOfElement(nameOfProduct: productName.text!))"
+        counterButtonsTap?()
     }
     
     @IBAction func removeProductButtonAction(_ sender: Any) {
+        DefaultDataBase.shared.removeMyCart(nameOfProduct: productName.text ?? "")
+        removeProductButtonTap?()
+        counterButtonsTap?()
     }
 }
 
 extension MyCartItemsTableViewCell {
     func plusCount() {
         
-        if productCounter > 1 {
-            productCounter += 1
+        if dataBase.getCountOfElement(nameOfProduct: productName.text!) > 0 {
+            DefaultDataBase.shared.plusCountMyCart(nameOfProduct: productName.text ?? "")
         }
+        
     }
+    
     func minusCount() {
-        if productCounter != 1 {
-            productCounter -= 1
-        } else {
-            productCounter = 1
+        if dataBase.getCountOfElement(nameOfProduct: productName.text!) > 1 {
+            DefaultDataBase.shared.minusCountMyCart(nameOfProduct: productName.text ?? "")
         }
     }
 }

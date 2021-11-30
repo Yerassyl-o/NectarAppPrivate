@@ -10,6 +10,7 @@ import UIKit
 class HomeSreenBannerCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var bannerImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

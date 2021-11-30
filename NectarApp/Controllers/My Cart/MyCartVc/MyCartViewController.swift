@@ -8,65 +8,104 @@
 import UIKit
 
 class MyCartViewController: UIViewController {
-    var productDataBase = ProductDataBase()
-    var productPriceSumCounter: Double = 0
+    
+    var dataBase = DefaultDataBase.shared
+    
     @IBOutlet weak var goToCheckoutButton: UIButton!
     @IBOutlet weak var productPriceSumLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+        
+        tableViewSettings()
         registerCustomCells()
-        tableView.separatorInset = .init(top: 0, left: 24, bottom: 0, right: 24)
-        tableView.separatorColor = .clear
-        productPriceSumLabel.text = "\(productPriceSumCounter)"
-
+        didLoadSettings()
         
     }
-    @IBAction func productPriceSumLabelAction(_ sender: Any) {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        productPriceSumLabel.text = "$\(DefaultDataBase.shared.getMyCartsCosts())"
+    }
+    
+    
+    @IBAction func goToCheckoutButtonAction(_ sender: Any) {
+        presentCheckoutViewController()
     }
 }
 
+extension MyCartViewController {
+    
+    func tableViewSettings() {
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    func didLoadSettings(){
+        tableView.separatorInset = .init(top: 0, left: 24, bottom: 0, right: 24)
+        tableView.separatorColor = .clear
+        
+        tableView.contentInset.bottom = 80
+        
+        productPriceSumLabel.text = "\(DefaultDataBase.shared.getMyCartsCosts())"
+        productPriceSumLabel.layer.cornerRadius = 20
+    }
+}
 extension MyCartViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("\(scrollView.contentOffset.y)")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productDataBase.getDataBase.count + 1
+        dataBase.userCarts.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderMyCartTableViewCell", for: indexPath) as! HeaderMyCartTableViewCell
-            cell.selectionStyle = .none
-            return cell
-        } else {
 
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MyCartItemsTableViewCell", for: indexPath) as! MyCartItemsTableViewCell
-            let product = productDataBase.getDataBase[indexPath.row - 1]
-            cell.productName.text = product.productName
-            cell.productValue.text = "\(product.productQuantity)\(product.productUnitOfMeasurement), Price"
-            cell.productPriceFor1Item.text = "$\(product.productPrice)"
-            cell.productImage.image = product.productImage
-            cell.selectionStyle = .none
-            productPriceSumCounter += product.productPrice
-            
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyCartItemsTableViewCell", for: indexPath) as! MyCartItemsTableViewCell
+        let productInfo = dataBase.userCarts[indexPath.row].productName
+        let product = dataBase.findProducts(name: productInfo)
+        
+        cell.productName.text = product.productName
+        cell.productValue.text = "\(product.productQuantity)\(product.productUnitOfMeasurement), Price"
+        cell.productPriceFor1Item.text = "$\(product.productPrice)"
+        cell.productImage.image = product.productImage
+        cell.productCount.text = "\(dataBase.userCarts[indexPath.row].count)"
+        
+        cell.removeProductButtonTap = {
+            self.tableView.reloadData()
         }
+        
+        cell.counterButtonsTap = {
+            self.productPriceSumLabel.text = "$\(DefaultDataBase.shared.getMyCartsCosts())"
+        }
+        
+        cell.selectionStyle = .none
+            
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 57
-        } else {
-            return 156
-        }
+        return 156
     }
     
 }
 
 extension MyCartViewController {
+    
     func registerCustomCells(){
-        tableView.register(UINib.init(nibName: "HeaderMyCartTableViewCell", bundle: nil), forCellReuseIdentifier: "HeaderMyCartTableViewCell")
         tableView.register(UINib.init(nibName: "MyCartItemsTableViewCell", bundle: nil), forCellReuseIdentifier: "MyCartItemsTableViewCell")
+    }
+    
+    func presentCheckoutViewController() {
+        if let viewContoller = storyboard?.instantiateViewController(identifier: "CheckoutViewController") as? CheckoutViewController {
+            viewContoller.modalTransitionStyle = .coverVertical
+            viewContoller.modalPresentationStyle = .popover
+            self.present(viewContoller, animated: true, completion: nil)
+            
+        }
     }
 }

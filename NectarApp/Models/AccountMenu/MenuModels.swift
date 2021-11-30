@@ -23,6 +23,7 @@ class MenuModels {
                                        MenuStruct(icon: UIImage(named: "Help") ?? UIImage(named: "logo3")!, menuName: "Help"),
                                        MenuStruct(icon: UIImage(named: "About") ?? UIImage(named: "logo3")!, menuName: "About")
     ]
+    
     var menuBaseDataGet:[MenuStruct] {
         return menuBaseData
     }

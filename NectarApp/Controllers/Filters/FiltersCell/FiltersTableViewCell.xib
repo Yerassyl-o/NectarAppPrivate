@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FiltersTableViewCell" id="KGk-i7-Jjw" customClass="FiltersTableViewCell" customModule="NectarApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-de-lFL">
+                        <rect key="frame" x="0.0" y="10" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="n00-va-uDw"/>
+                            <constraint firstAttribute="height" constant="24" id="rQV-lg-CwG"/>
+                        </constraints>
+                        <color key="tintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="filterDontChecked"/>
+                        <connections>
+                            <action selector="checkButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="MHc-0o-nOK"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eggs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-xQ-LkX">
+                        <rect key="frame" x="37" y="10" width="377" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="K8V-ku-ohW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <color key="textColor" red="0.094117647058823528" green="0.090196078431372548" blue="0.14509803921568626" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.94901960784313721" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="wPB-de-lFL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="2jC-7s-UeM"/>
+                    <constraint firstItem="h3S-xQ-LkX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="4a4-O5-Vyz"/>
+                    <constraint firstItem="wPB-de-lFL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TFH-cF-IVE"/>
+                    <constraint firstItem="h3S-xQ-LkX" firstAttribute="centerY" secondItem="wPB-de-lFL" secondAttribute="centerY" id="W4l-fT-Oj6"/>
+                    <constraint firstItem="h3S-xQ-LkX" firstAttribute="leading" secondItem="wPB-de-lFL" secondAttribute="trailing" constant="13" id="aOF-Wn-fFo"/>
+                    <constraint firstAttribute="trailing" secondItem="h3S-xQ-LkX" secondAttribute="trailing" id="clH-4V-h8M"/>
+                    <constraint firstAttribute="bottom" secondItem="h3S-xQ-LkX" secondAttribute="bottom" constant="10" id="l6O-Og-ChO"/>
+                    <constraint firstAttribute="bottom" secondItem="wPB-de-lFL" secondAttribute="bottom" constant="10" id="rcA-lG-841"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.94901960784313721" alpha="0.89803921568627454" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="checkButton" destination="wPB-de-lFL" id="tcz-Wi-bcr"/>
+                <outlet property="filterName" destination="h3S-xQ-LkX" id="zez-Qh-oxs"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="filterDontChecked" width="97" height="97"/>
+    </resources>
+</document>
