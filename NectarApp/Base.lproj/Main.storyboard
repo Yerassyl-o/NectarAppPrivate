@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h3T-ED-mz0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--Onbording View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnbordingViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnbordingViewController" id="BYZ-38-t0r" customClass="OnbordingViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +63,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="Ego-JZ-t7M" kind="presentation" modalPresentationStyle="fullScreen" id="UKL-9y-IeA"/>
+                                    <action selector="onButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nvU-2e-Cgs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -91,7 +92,7 @@
         <!--Sing In View Controller-->
         <scene sceneID="iHW-Qo-dIa">
             <objects>
-                <viewController id="jMg-Sy-8iX" customClass="SingInViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SingInViewController" id="jMg-Sy-8iX" customClass="SingInViewController" customModule="NectarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="akZ-UD-03h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +145,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="contnueGoogleAction:" destination="jMg-Sy-8iX" eventType="touchUpInside" id="YhQ-pV-RBb"/>
-                                    <segue destination="J1T-9g-1a7" kind="show" id="0dN-E9-hO0"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOT-LE-Fqc">
@@ -1162,13 +1162,13 @@ it’s way to being processed</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your mobile number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtF-co-X9p">
-                                <rect key="frame" x="24" y="140" width="286.5" height="31.5"/>
+                                <rect key="frame" x="24" y="96" width="286.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLv-ZI-AkU">
-                                <rect key="frame" x="24" y="199" width="111.5" height="20"/>
+                                <rect key="frame" x="24" y="155" width="111.5" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1187,24 +1187,21 @@ it’s way to being processed</string>
                                         <real key="value" value="33.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="MwN-G2-Zbe" kind="show" id="s4D-Xv-XMl"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAL-PM-tql">
-                                <rect key="frame" x="24" y="233" width="30" height="24"/>
+                                <rect key="frame" x="24" y="189" width="30" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="R3B-KY-jKA"/>
                                 </constraints>
                                 <state key="normal" title="🇰🇿"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+880" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="me4-HR-yWE">
-                                <rect key="frame" x="66" y="233" width="324" height="24"/>
+                                <rect key="frame" x="66" y="189" width="324" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TOv-6W-btK">
-                                <rect key="frame" x="24" y="267" width="366" height="1"/>
+                                <rect key="frame" x="24" y="223" width="366" height="1"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="dzf-KM-gnV"/>
@@ -1264,13 +1261,13 @@ it’s way to being processed</string>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your 4-digit code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWE-YF-2Ih">
-                                <rect key="frame" x="24" y="140" width="258" height="31.5"/>
+                                <rect key="frame" x="24" y="96" width="258" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9c0-RZ-n9Q">
-                                <rect key="frame" x="24" y="198.5" width="39" height="20"/>
+                                <rect key="frame" x="24" y="154.5" width="39" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1291,12 +1288,9 @@ it’s way to being processed</string>
                                         <real key="value" value="33.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="Ve0-Z4-Nom" kind="show" id="TkG-C0-3qQ"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="- - - -" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sce-pX-Cue">
-                                <rect key="frame" x="24" y="232.5" width="46" height="23"/>
+                                <rect key="frame" x="24" y="188.5" width="46" height="23"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -1311,7 +1305,7 @@ it’s way to being processed</string>
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5HE-wX-wek">
-                                <rect key="frame" x="24" y="265.5" width="366" height="1"/>
+                                <rect key="frame" x="24" y="221.5" width="366" height="1"/>
                                 <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="sdn-zu-FTo"/>
@@ -1361,20 +1355,20 @@ it’s way to being processed</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eiu-mr-7z8">
-                                <rect key="frame" x="95" y="120" width="224" height="170"/>
+                                <rect key="frame" x="95" y="76" width="224" height="170"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="WBD-Jc-xuZ"/>
                                     <constraint firstAttribute="width" constant="224" id="mcs-VG-4su"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYK-pm-Ixy">
-                                <rect key="frame" x="24" y="330" width="366" height="35"/>
+                                <rect key="frame" x="24" y="286" width="366" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swithch on your location to stay in tune with what’s happening in your area" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lx-mz-eEp">
-                                <rect key="frame" x="24" y="380" width="366" height="38.5"/>
+                                <rect key="frame" x="24" y="336" width="366" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1434,9 +1428,6 @@ it’s way to being processed</string>
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="h3T-ED-mz0" kind="presentation" modalPresentationStyle="fullScreen" id="R39-Zb-TaG"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKz-PQ-HI2">
                                 <rect key="frame" x="24" y="707" width="366" height="1"/>
@@ -1530,9 +1521,6 @@ it’s way to being processed</string>
                                         <integer key="value" value="19"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="h3T-ED-mz0" kind="presentation" modalPresentationStyle="fullScreen" id="isV-yY-pb0"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6zE-Gm-meT">
                                 <rect key="frame" x="24" y="340" width="352" height="64.5"/>
@@ -1667,9 +1655,6 @@ it’s way to being processed</string>
                                         <state key="normal" title="Singup">
                                             <color key="titleColor" red="0.42352941176470588" green="0.68627450980392157" blue="0.47843137254901957" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="tjo-uh-e2v" kind="presentation" modalPresentationStyle="fullScreen" id="Mnz-r7-umK"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1806,9 +1791,6 @@ it’s way to being processed</string>
                                                         <integer key="value" value="19"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="h3T-ED-mz0" kind="presentation" modalPresentationStyle="fullScreen" id="IEa-y5-ocF"/>
-                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5hM-4Z-qSO">
                                                 <rect key="frame" x="24" y="390.5" width="327" height="64.5"/>
@@ -1957,9 +1939,6 @@ it’s way to being processed</string>
                                                         <state key="normal" title="Log In">
                                                             <color key="titleColor" red="0.42352941179999998" green="0.68627450980000004" blue="0.47843137250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </state>
-                                                        <connections>
-                                                            <segue destination="FPG-qb-Udc" kind="presentation" modalPresentationStyle="fullScreen" id="laG-kZ-vxL"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -2040,34 +2019,6 @@ it’s way to being processed</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HSe-vo-tFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5560" y="73"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="c3m-ga-SPc">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ego-JZ-t7M" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="chevron.backward" catalog="system" largeTitles="YES" id="8h7-Oa-QZw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <color key="textShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jMg-Sy-8iX" kind="relationship" relationship="rootViewController" id="nVQ-Bd-lHL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6P8-T1-Hj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="738" y="-630"/>
         </scene>
         <!--Favorurite-->
         <scene sceneID="WNm-kw-vQH">
@@ -2274,10 +2225,6 @@ it’s way to being processed</string>
             <point key="canvasLocation" x="2005.7971014492755" y="3610.7142857142853"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Mnz-r7-umK"/>
-        <segue reference="isV-yY-pb0"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="AcccountSvg" width="25" height="25"/>
         <image name="AcceptedLogo" width="1089" height="963"/>
@@ -2288,7 +2235,6 @@ it’s way to being processed</string>
         <image name="OrderrFailedImg" width="890" height="889"/>
         <image name="VectorbottomIcon" width="53" height="29"/>
         <image name="cartSvg" width="23" height="21"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="closeIcon" width="64" height="64"/>
         <image name="exploreSvg" width="29" height="19"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>

@@ -91,8 +91,27 @@
 		878182B3274A1C01001F8CEF /* ItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182B1274A1C01001F8CEF /* ItemsCollectionViewCell.swift */; };
 		878182B4274A1C01001F8CEF /* ItemsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878182B2274A1C01001F8CEF /* ItemsCollectionViewCell.xib */; };
 		878182B7274AA02C001F8CEF /* ProductDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878182B6274AA02C001F8CEF /* ProductDataBase.swift */; };
+		8791B7F627DDE21B002090A0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B7F527DDE21B002090A0 /* Coordinator.swift */; };
+		8791B7F827DDE3D6002090A0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B7F727DDE3D6002090A0 /* AppCoordinator.swift */; };
+		8791B7FB27DDE55C002090A0 /* RootViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B7FA27DDE55C002090A0 /* RootViewControllerPresenter.swift */; };
+		8791B80727DDE79D002090A0 /* OnbordingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B80627DDE79D002090A0 /* OnbordingPresenter.swift */; };
+		8791B80B27DDE7D3002090A0 /* RegisterModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B80A27DDE7D3002090A0 /* RegisterModuleFactory.swift */; };
+		8791B80D27DDE7E4002090A0 /* RegisterCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B80C27DDE7E4002090A0 /* RegisterCoordinatorFactory.swift */; };
+		8791B80F27DDE7F5002090A0 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B80E27DDE7F5002090A0 /* RegisterCoordinator.swift */; };
+		8791B81327DDE83D002090A0 /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B81227DDE83D002090A0 /* AppCoordinatorFactory.swift */; };
+		8791B81627DDEC0C002090A0 /* OnbordingModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B81527DDEC0C002090A0 /* OnbordingModuleFactory.swift */; };
+		8791B81927DDEC77002090A0 /* ModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B81827DDEC77002090A0 /* ModuleFactory.swift */; };
+		8791B81C27DDECE5002090A0 /* AnyModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B81B27DDECE5002090A0 /* AnyModuleFactory.swift */; };
+		8791B81F27DDEDAB002090A0 /* Instantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B81E27DDEDAB002090A0 /* Instantiatable.swift */; };
+		8791B82227DDF191002090A0 /* SingInViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B82127DDF191002090A0 /* SingInViewPresenter.swift */; };
+		8791B82427DDF2CB002090A0 /* SignInModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B82327DDF2CB002090A0 /* SignInModuleFactory.swift */; };
+		8791B82727DDF70B002090A0 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B82627DDF70B002090A0 /* TabBarCoordinator.swift */; };
+		8791B82B27DDF763002090A0 /* TabBarCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B82A27DDF763002090A0 /* TabBarCoordinatorFactory.swift */; };
+		8791B83127DDF7E6002090A0 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B83027DDF7E6002090A0 /* TabBarPresenter.swift */; };
+		8791B83327DDF80F002090A0 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B83227DDF80F002090A0 /* TabBarViewController.swift */; };
+		8791B83527DDF838002090A0 /* TabBarModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B83427DDF838002090A0 /* TabBarModuleFactory.swift */; };
+		8791B83727DDF8A7002090A0 /* TabBarModulesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791B83627DDF8A7002090A0 /* TabBarModulesFactory.swift */; };
 		879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0827436FC600252BE0 /* AppDelegate.swift */; };
-		879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0A27436FC600252BE0 /* SceneDelegate.swift */; };
 		879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879FAC0C27436FC600252BE0 /* ViewController.swift */; };
 		879FAC1027436FC600252BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879FAC0E27436FC600252BE0 /* Main.storyboard */; };
 		879FAC1227436FC700252BE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879FAC1127436FC700252BE0 /* Assets.xcassets */; };
@@ -185,9 +204,28 @@
 		878182B1274A1C01001F8CEF /* ItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsCollectionViewCell.swift; sourceTree = "<group>"; };
 		878182B2274A1C01001F8CEF /* ItemsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsCollectionViewCell.xib; sourceTree = "<group>"; };
 		878182B6274AA02C001F8CEF /* ProductDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataBase.swift; sourceTree = "<group>"; };
+		8791B7F527DDE21B002090A0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8791B7F727DDE3D6002090A0 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8791B7FA27DDE55C002090A0 /* RootViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewControllerPresenter.swift; sourceTree = "<group>"; };
+		8791B80627DDE79D002090A0 /* OnbordingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingPresenter.swift; sourceTree = "<group>"; };
+		8791B80A27DDE7D3002090A0 /* RegisterModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModuleFactory.swift; sourceTree = "<group>"; };
+		8791B80C27DDE7E4002090A0 /* RegisterCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8791B80E27DDE7F5002090A0 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
+		8791B81227DDE83D002090A0 /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8791B81527DDEC0C002090A0 /* OnbordingModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbordingModuleFactory.swift; sourceTree = "<group>"; };
+		8791B81827DDEC77002090A0 /* ModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactory.swift; sourceTree = "<group>"; };
+		8791B81B27DDECE5002090A0 /* AnyModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyModuleFactory.swift; sourceTree = "<group>"; };
+		8791B81E27DDEDAB002090A0 /* Instantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiatable.swift; sourceTree = "<group>"; };
+		8791B82127DDF191002090A0 /* SingInViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInViewPresenter.swift; sourceTree = "<group>"; };
+		8791B82327DDF2CB002090A0 /* SignInModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModuleFactory.swift; sourceTree = "<group>"; };
+		8791B82627DDF70B002090A0 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		8791B82A27DDF763002090A0 /* TabBarCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorFactory.swift; sourceTree = "<group>"; };
+		8791B83027DDF7E6002090A0 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		8791B83227DDF80F002090A0 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		8791B83427DDF838002090A0 /* TabBarModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleFactory.swift; sourceTree = "<group>"; };
+		8791B83627DDF8A7002090A0 /* TabBarModulesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModulesFactory.swift; sourceTree = "<group>"; };
 		879FAC0527436FC600252BE0 /* NectarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NectarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879FAC0827436FC600252BE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		879FAC0A27436FC600252BE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		879FAC0C27436FC600252BE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		879FAC0F27436FC600252BE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		879FAC1127436FC700252BE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -407,7 +445,6 @@
 		873026822743DAB600CA31CA /* SingIn  */ = {
 			isa = PBXGroup;
 			children = (
-				873026832743DAD800CA31CA /* SingInViewController.swift */,
 			);
 			path = "SingIn ";
 			sourceTree = "<group>";
@@ -455,7 +492,6 @@
 		873026A72746142500CA31CA /* onbording */ = {
 			isa = PBXGroup;
 			children = (
-				873026A82746143700CA31CA /* OnbordingViewController.swift */,
 			);
 			path = onbording;
 			sourceTree = "<group>";
@@ -882,6 +918,258 @@
 			path = ProductDataBase;
 			sourceTree = "<group>";
 		};
+		8791B7F327DDE1FF002090A0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8791B81D27DDED77002090A0 /* Instantiatable */,
+				8791B81A27DDECD2002090A0 /* AnyModuleFactory */,
+				8791B81727DDEC51002090A0 /* ModuleFactory */,
+				8791B7F927DDE543002090A0 /* RootViewControllerPresenter */,
+				8791B7F427DDE20A002090A0 /* Coordinator */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8791B7F427DDE20A002090A0 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8791B7F527DDE21B002090A0 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8791B7F927DDE543002090A0 /* RootViewControllerPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				8791B7FA27DDE55C002090A0 /* RootViewControllerPresenter.swift */,
+			);
+			path = RootViewControllerPresenter;
+			sourceTree = "<group>";
+		};
+		8791B7FC27DDE67C002090A0 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				8791B7FD27DDE687002090A0 /* Register */,
+				8791B82527DDF6F3002090A0 /* TabBar */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		8791B7FD27DDE687002090A0 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				8791B80E27DDE7F5002090A0 /* RegisterCoordinator.swift */,
+				8791B80927DDE7B8002090A0 /* Factory */,
+				8791B80827DDE7AC002090A0 /* Module */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		8791B7FE27DDE692002090A0 /* Onbording */ = {
+			isa = PBXGroup;
+			children = (
+				8791B81427DDEBF1002090A0 /* Factory */,
+				8791B80227DDE731002090A0 /* Model */,
+				8791B80127DDE72A002090A0 /* Presenter */,
+				8791B80027DDE71C002090A0 /* ViewController */,
+			);
+			path = Onbording;
+			sourceTree = "<group>";
+		};
+		8791B7FF27DDE706002090A0 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				8791B82027DDF17A002090A0 /* Factory */,
+				8791B80527DDE74D002090A0 /* Model */,
+				8791B80427DDE741002090A0 /* Presenter */,
+				8791B80327DDE736002090A0 /* ViewController */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8791B80027DDE71C002090A0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				873026A82746143700CA31CA /* OnbordingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8791B80127DDE72A002090A0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8791B80627DDE79D002090A0 /* OnbordingPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8791B80227DDE731002090A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8791B80327DDE736002090A0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				873026832743DAD800CA31CA /* SingInViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8791B80427DDE741002090A0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8791B82127DDF191002090A0 /* SingInViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8791B80527DDE74D002090A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8791B80827DDE7AC002090A0 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8791B7FF27DDE706002090A0 /* SignIn */,
+				8791B7FE27DDE692002090A0 /* Onbording */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8791B80927DDE7B8002090A0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8791B80A27DDE7D3002090A0 /* RegisterModuleFactory.swift */,
+				8791B80C27DDE7E4002090A0 /* RegisterCoordinatorFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		8791B81027DDE818002090A0 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				879FAC0827436FC600252BE0 /* AppDelegate.swift */,
+				8791B81127DDE82B002090A0 /* Factory */,
+				8791B7F727DDE3D6002090A0 /* AppCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		8791B81127DDE82B002090A0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8791B81227DDE83D002090A0 /* AppCoordinatorFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		8791B81427DDEBF1002090A0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8791B81527DDEC0C002090A0 /* OnbordingModuleFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		8791B81727DDEC51002090A0 /* ModuleFactory */ = {
+			isa = PBXGroup;
+			children = (
+				8791B81827DDEC77002090A0 /* ModuleFactory.swift */,
+			);
+			path = ModuleFactory;
+			sourceTree = "<group>";
+		};
+		8791B81A27DDECD2002090A0 /* AnyModuleFactory */ = {
+			isa = PBXGroup;
+			children = (
+				8791B81B27DDECE5002090A0 /* AnyModuleFactory.swift */,
+			);
+			path = AnyModuleFactory;
+			sourceTree = "<group>";
+		};
+		8791B81D27DDED77002090A0 /* Instantiatable */ = {
+			isa = PBXGroup;
+			children = (
+				8791B81E27DDEDAB002090A0 /* Instantiatable.swift */,
+			);
+			path = Instantiatable;
+			sourceTree = "<group>";
+		};
+		8791B82027DDF17A002090A0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8791B82327DDF2CB002090A0 /* SignInModuleFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		8791B82527DDF6F3002090A0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				8791B82627DDF70B002090A0 /* TabBarCoordinator.swift */,
+				8791B82827DDF70E002090A0 /* Module */,
+				8791B82927DDF74E002090A0 /* Factory */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		8791B82827DDF70E002090A0 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8791B82F27DDF7D2002090A0 /* Factory */,
+				8791B82E27DDF7C2002090A0 /* ViewController */,
+				8791B82D27DDF7B9002090A0 /* Model */,
+				8791B82C27DDF7AD002090A0 /* Preseter */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8791B82927DDF74E002090A0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8791B82A27DDF763002090A0 /* TabBarCoordinatorFactory.swift */,
+				8791B83627DDF8A7002090A0 /* TabBarModulesFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		8791B82C27DDF7AD002090A0 /* Preseter */ = {
+			isa = PBXGroup;
+			children = (
+				8791B83027DDF7E6002090A0 /* TabBarPresenter.swift */,
+			);
+			path = Preseter;
+			sourceTree = "<group>";
+		};
+		8791B82D27DDF7B9002090A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8791B82E27DDF7C2002090A0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8791B83227DDF80F002090A0 /* TabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8791B82F27DDF7D2002090A0 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				8791B83427DDF838002090A0 /* TabBarModuleFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		879FABFC27436FC600252BE0 = {
 			isa = PBXGroup;
 			children = (
@@ -902,8 +1190,10 @@
 			isa = PBXGroup;
 			children = (
 				87EB6FAE2755F9F100A48A6F /* App */,
+				8791B7FC27DDE67C002090A0 /* Flows */,
 				873026812743D9F600CA31CA /* Models */,
 				873026802743D9E500CA31CA /* Controllers */,
+				8791B7F327DDE1FF002090A0 /* Common */,
 				879FAC0C27436FC600252BE0 /* ViewController.swift */,
 				879FAC0E27436FC600252BE0 /* Main.storyboard */,
 				879FAC1127436FC700252BE0 /* Assets.xcassets */,
@@ -916,8 +1206,7 @@
 		87EB6FAE2755F9F100A48A6F /* App */ = {
 			isa = PBXGroup;
 			children = (
-				879FAC0A27436FC600252BE0 /* SceneDelegate.swift */,
-				879FAC0827436FC600252BE0 /* AppDelegate.swift */,
+				8791B81027DDE818002090A0 /* AppCoordinator */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1037,9 +1326,14 @@
 				8781826E2747B30A001F8CEF /* LogOutTableViewCell.swift in Sources */,
 				87241F6C275493150082B83F /* OrderAcceptedViewController.swift in Sources */,
 				878182682747AEE8001F8CEF /* AccountInfoTableViewCell.swift in Sources */,
+				8791B83327DDF80F002090A0 /* TabBarViewController.swift in Sources */,
+				8791B80B27DDE7D3002090A0 /* RegisterModuleFactory.swift in Sources */,
 				8757DBB8274BA34800A04367 /* homeScreenCategorySectionTableViewCell.swift in Sources */,
 				8781827A2747CA05001F8CEF /* MenuModels.swift in Sources */,
 				870737BE274F527800732BB7 /* FiltersNavigationContollers.swift in Sources */,
+				8791B80727DDE79D002090A0 /* OnbordingPresenter.swift in Sources */,
+				8791B83127DDF7E6002090A0 /* TabBarPresenter.swift in Sources */,
+				8791B83527DDF838002090A0 /* TabBarModuleFactory.swift in Sources */,
 				8730269D274612D700CA31CA /* VerificationViewController.swift in Sources */,
 				870737DD274FAA0B00732BB7 /* ExploreCollectionsProducts.swift in Sources */,
 				8781827E2747FF9A001F8CEF /* FavoritesTableViewCell.swift in Sources */,
@@ -1051,30 +1345,42 @@
 				8781829A274A1A0C001F8CEF /* ExploreVcViewController.swift in Sources */,
 				873026A92746143700CA31CA /* OnbordingViewController.swift in Sources */,
 				870737C2274F539800732BB7 /* FiltersViewController.swift in Sources */,
+				8791B81F27DDEDAB002090A0 /* Instantiatable.swift in Sources */,
+				8791B7F627DDE21B002090A0 /* Coordinator.swift in Sources */,
 				873026AC2746539C00CA31CA /* VerificationModels.swift in Sources */,
 				870737D3274F788200732BB7 /* SectionFooterTableViewCell.swift in Sources */,
+				8791B81627DDEC0C002090A0 /* OnbordingModuleFactory.swift in Sources */,
+				8791B83727DDF8A7002090A0 /* TabBarModulesFactory.swift in Sources */,
 				8757DB9D274B84A900A04367 /* HomeSreenBannerCollectionViewCell.swift in Sources */,
+				8791B81C27DDECE5002090A0 /* AnyModuleFactory.swift in Sources */,
 				878182772747B9D5001F8CEF /* AccountViewController.swift in Sources */,
 				873026AF274664C600CA31CA /* phoneMaskModels.swift in Sources */,
 				879FAC0D27436FC600252BE0 /* ViewController.swift in Sources */,
 				8781828D2748FC8C001F8CEF /* MyCartViewController.swift in Sources */,
+				8791B7FB27DDE55C002090A0 /* RootViewControllerPresenter.swift in Sources */,
 				870737CE274F727B00732BB7 /* FilterNameTableViewCell.swift in Sources */,
 				8757DBE5274D061A00A04367 /* ProductImagesTableViewCell.swift in Sources */,
 				8757DBF9274DF5D500A04367 /* ParametrElementsTableViewCell.swift in Sources */,
 				873026A3274613C800CA31CA /* LogInViewController.swift in Sources */,
+				8791B82227DDF191002090A0 /* SingInViewPresenter.swift in Sources */,
 				878182AC274A1B35001F8CEF /* ItemsTableViewCell.swift in Sources */,
 				8757DBFF274DFC9700A04367 /* ParametrElementFooterTableViewCell.swift in Sources */,
 				8757DBC0274BA39100A04367 /* homeScreenCategorySectionElementsCollectionViewCell.swift in Sources */,
 				87241F6F2754BBD70082B83F /* MainViewController.swift in Sources */,
 				8757DBDF274D039D00A04367 /* ProductDetailViewController.swift in Sources */,
+				8791B80F27DDE7F5002090A0 /* RegisterCoordinator.swift in Sources */,
 				87241F73275542D10082B83F /* ReviewTableViewCell.swift in Sources */,
 				870737C9274F6A7000732BB7 /* FiltersTableViewCell.swift in Sources */,
+				8791B80D27DDE7E4002090A0 /* RegisterCoordinatorFactory.swift in Sources */,
 				879FAC0927436FC600252BE0 /* AppDelegate.swift in Sources */,
-				879FAC0B27436FC600252BE0 /* SceneDelegate.swift in Sources */,
+				8791B82727DDF70B002090A0 /* TabBarCoordinator.swift in Sources */,
 				873026B62746831900CA31CA /* LoginModels.swift in Sources */,
 				870737D7274F85A400732BB7 /* Checkout.swift in Sources */,
+				8791B81327DDE83D002090A0 /* AppCoordinatorFactory.swift in Sources */,
+				8791B82B27DDF763002090A0 /* TabBarCoordinatorFactory.swift in Sources */,
 				873026A6274613E900CA31CA /* SignUpAlternativeViewController.swift in Sources */,
 				878182B3274A1C01001F8CEF /* ItemsCollectionViewCell.swift in Sources */,
+				8791B82427DDF2CB002090A0 /* SignInModuleFactory.swift in Sources */,
 				8757DBDA274CBC0A00A04367 /* ProductsLineTableViewCell.swift in Sources */,
 				8757DB8D274B60A500A04367 /* HomeScreenHeaderTableViewCell.swift in Sources */,
 				878182962748FD53001F8CEF /* MyCartItemsTableViewCell.swift in Sources */,
@@ -1082,12 +1388,14 @@
 				870737BA274E6D8500732BB7 /* SearchViewController.swift in Sources */,
 				873026872744201100CA31CA /* NumberViewController.swift in Sources */,
 				878182B7274AA02C001F8CEF /* ProductDataBase.swift in Sources */,
+				8791B81927DDEC77002090A0 /* ModuleFactory.swift in Sources */,
 				8757DBC5274CA7D600A04367 /* GroceriesStoriesTableViewCell.swift in Sources */,
 				870737C5274F66D400732BB7 /* FilterMenu.swift in Sources */,
 				8757DB97274B846600A04367 /* HomeSreenBannerTableViewCell.swift in Sources */,
 				87EB6FB12756285E00A48A6F /* ErrorViewController.swift in Sources */,
 				873026B92747572100CA31CA /* CustomTabBarVc.swift in Sources */,
 				8757DB92274B646000A04367 /* homeScreeSearchBarTableViewCell.swift in Sources */,
+				8791B7F827DDE3D6002090A0 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

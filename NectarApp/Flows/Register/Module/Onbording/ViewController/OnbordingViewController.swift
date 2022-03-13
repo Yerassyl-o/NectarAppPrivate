@@ -7,11 +7,24 @@
 
 import UIKit
 
+protocol OnbordingView: AnyObject {
+    
+}
+
 class OnbordingViewController: UIViewController {
+
+    var presenter: OnbordingPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
+    
+    @IBAction func onButtonDidTap(_ sender: Any) {
+        presenter.onButtonDidTap()
+    }
+}
+
+extension OnbordingViewController: OnbordingView {
+    
 }

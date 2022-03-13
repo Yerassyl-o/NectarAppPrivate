@@ -7,7 +7,15 @@
 
 import UIKit
 
+protocol SingInView: AnyObject {
+    func configureNavigationTitle(with text: String)
+}
+
 class SingInViewController: UIViewController {
+    
+    // MARK: - Public Properties
+    
+    var presenter: SignInresenter!
     
     var logic = [true, true, true, true]
     
@@ -24,27 +32,29 @@ class SingInViewController: UIViewController {
         
         setUpnumberEnterField()
         keyBoardSetUp()
-        setUpNavController()
-        
     }
     
     @IBAction func locationButtonAction(_ sender: Any) {}
-    @IBAction func contnueGoogleAction(_ sender: Any) {}
-    @IBAction func contnueFacebookAction(_ sender: Any) {}
+    @IBAction func contnueGoogleAction(_ sender: Any) {
+        presenter.onGoogleButtonDidTap()
+    }
+    @IBAction func contnueFacebookAction(_ sender: Any) {
+        presenter.onFacebookButtonDiDTap()
+    }
     
 }
 
+// MARK: - SingInView
+
+extension SingInViewController: SingInView {
+    func configureNavigationTitle(with text: String) {
+        title = text
+    }
+}
 
 
 // MARK: SetUp NavController
 extension SingInViewController {
-    
-    func setUpNavController() {
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clear
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()

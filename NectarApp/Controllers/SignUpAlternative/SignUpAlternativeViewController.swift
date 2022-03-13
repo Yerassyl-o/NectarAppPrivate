@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class SignUpAlternativeViewController: UIViewController {
 
     override func viewDidLoad() {
